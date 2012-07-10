@@ -28,12 +28,12 @@ set expandtab
 
 " ref. http://qiita.com/items/3211
 function! s:set_fileformat()
-        if &fileformat != "unix" && input("setlocal fileformat=unix?[y/n]") == "y"
-                try
-                        setlocal fileformat=unix
-                catch
-                endtry
-        endif
+  if &fileformat != "unix" && input("setlocal fileformat=unix?[y/n]") == "y"
+    try
+      setlocal fileformat=unix
+    catch
+    endtry
+  endif
 endfunction
 autocmd BufWritePre * :call <SID>set_fileformat()
 
