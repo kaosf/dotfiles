@@ -1,5 +1,9 @@
 set nobk
-set visualbell
+
+" ref. https://github.com/alwei/dotfiles/blob/master/.gvimrc#L14
+"  t_vb=  makes vim not to flash
+set visualbell t_vb=
+
 set encoding=utf-8
 
 " @rch850 taught to me
