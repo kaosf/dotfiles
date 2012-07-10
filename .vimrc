@@ -36,3 +36,35 @@ function! s:set_fileformat()
         endif
 endfunction
 autocmd BufWritePre * :call <SID>set_fileformat()
+
+" autocomplete end bracket
+" ref. http://d.hatena.ne.jp/babie/20110130/1296348203
+" via. https://github.com/sue445/dotfiles/blob/master/_vimrc
+inoremap ( ()<ESC>i
+inoremap <expr> ) ClosePair(')')
+inoremap < <><ESC>i
+inoremap <expr> ) ClosePair('>')
+inoremap { {}<ESC>i
+inoremap <expr> } ClosePair('}')
+inoremap [ []<ESC>i
+inoremap <expr> ] ClosePair(']')
+" pair close checker.
+" from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
+function! ClosePair(char)
+  if getline('.')[col('.') - 1] == a:char
+    return "\<Right>"
+  else
+    return a:char
+  endif
+endf
+" autocomplete end bracket of erb
+" ref. http://d.hatena.ne.jp/yamitzky/20111213/1323739808
+" via. https://github.com/sue445/dotfiles/blob/master/_vimrc
+inoremap <expr> % Lt_Percent_Completion()
+function! Lt_Percent_Completion()
+  if matchstr(getline('.'), '.', col('.') -1 ) == ">"
+  return "\%\%\<Left>"
+  else
+  return "\%"
+end
+endf
