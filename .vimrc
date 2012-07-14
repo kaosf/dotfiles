@@ -43,7 +43,7 @@ autocmd BufWritePre * :call <SID>set_fileformat()
 inoremap ( ()<ESC>i
 inoremap <expr> ) ClosePair(')')
 inoremap < <><ESC>i
-inoremap <expr> ) ClosePair('>')
+inoremap <expr> > ClosePair('>')
 inoremap { {}<ESC>i
 inoremap <expr> } ClosePair('}')
 inoremap [ []<ESC>i
