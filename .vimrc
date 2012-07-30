@@ -46,8 +46,6 @@ autocmd BufWritePre * :call <SID>set_fileformat()
 " via. https://github.com/sue445/dotfiles/blob/master/_vimrc
 inoremap ( ()<ESC>i
 inoremap <expr> ) ClosePair(')')
-inoremap < <><ESC>i
-inoremap <expr> > ClosePair('>')
 inoremap { {}<ESC>i
 inoremap <expr> } ClosePair('}')
 inoremap [ []<ESC>i
