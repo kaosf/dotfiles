@@ -1,0 +1,30 @@
+escape ^Tt
+bind k prev
+bind j next
+bind l windowlist
+
+autodetach on
+bell_msg "^G"
+defkanji utf-8
+encoding utf-8 utf-8
+defscrollback 10000
+escape ^Tt
+startup_message off
+vbell off
+
+hardstatus alwayslastline "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %y-%m-%d %{=b wm}%c"
+# caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %y-%m-%d %{=b wm}%c"
+# caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D> %{=b wm}%c"
+
+# # ref. http://www.ftnk.jp/~fumi/cl/2009-05-29-2.html
+# caption always "%{= Wk}%110`%109`[%n]: [%-w%{=b Bw}%n %t%{-}%+w] %= %122`%111`"
+
+# # ref. http://blog.remora.cx/2010/02/gnu-screen-2.html
+# hardstatus alwayslastline "%{= Gk} %-Lw%40L>%{b kg} %n %t %{-}%+Lw%-040=%{b km} %l %{.b} %Y/%m/%d %C:%s %A "
+# caption always "%{= Rk} %?%F%{b kr}%? %?%h%:%t (screen #%n)%? %{-}"
+
+screen 0
+screen 1
+screen 2
+screen 3
+select 0
