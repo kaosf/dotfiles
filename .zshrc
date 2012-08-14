@@ -61,3 +61,9 @@ alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias glg='git lg'
 alias gst='git status'
+
+# 'cd ..' with C-^
+# ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
+function cdup() { echo; cd ..; zle reset-prompt; }
+zle -N cdup
+bindkey "^\^" cdup
