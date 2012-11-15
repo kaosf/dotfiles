@@ -1,3 +1,6 @@
+" ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
+syntax on
+
 " ref. https://github.com/tpope/vim-pathogen/
 call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
