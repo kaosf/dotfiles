@@ -90,29 +90,3 @@
     (select-window w2)
     (eshell)
     (select-window w)))
-
-;; CEDET
-(load-file "~/.emacs.d/elisp/cedet-1.0pre7/common/cedet.el")
-(global-ede-mode 1)                 ; Enable the Project management system
-(semantic-load-enable-code-helpers) ; Enable prototype help and smart completion
-(global-srecode-minor-mode 1)       ; Enable template insertion menu
-
-;; ECB
-(add-to-list 'load-path
-             "~/.emacs.d/elisp/ecb-2.41")
-(require 'ecb)
-
-;;;; default setting (Ubuntu Server only?)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40")
- '(inhibit-startup-screen t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
