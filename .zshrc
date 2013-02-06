@@ -56,10 +56,13 @@ alias be='bundle exec'
 
 alias g='git'
 alias gbr='git branch'
+alias gci='git commit'
 alias gco='git checkout'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
-alias glg='git lg'
+alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
+%Creset%s'"
+alias glggo='git log --graph --oneline'
 alias gst='git status'
 
 # 'cd ..' with C-^
