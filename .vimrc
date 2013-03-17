@@ -33,6 +33,9 @@ set laststatus=2
 set autoindent
 set expandtab
 
+" ref. http://qiita.com/items/56f6363fdaf5e9e8a3a4
+set hlsearch
+
 " ref. http://qiita.com/items/3211
 function! s:set_fileformat()
   if &fileformat != "unix" && input("setlocal fileformat=unix?[y/n]") == "y"
