@@ -72,3 +72,5 @@ zle -N cdup
 bindkey "^\^" cdup
 
 alias scr='screen -xR'
+
+alias ack=ack-grep
