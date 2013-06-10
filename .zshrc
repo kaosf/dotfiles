@@ -63,6 +63,7 @@ alias gdfc='git diff --cached'
 alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
 %Creset%s'"
 alias glggo='git log --graph --oneline'
+alias gs='git status'
 alias gst='git status'
 
 # 'cd ..' with C-^
