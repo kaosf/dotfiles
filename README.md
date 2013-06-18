@@ -1,6 +1,6 @@
 # How to setup
 
-Clone repository to home directory. (I recommend to clone there.)
+Clone the repository to home directory. (I recommend to clone there.)
 
 ```
 cd
@@ -19,7 +19,7 @@ git clone git@bitbucket.org:kaosf/dotfiles.git
 git clone https://bitbucket.org/kaosf/dotfiles.git # read only
 ```
 
-Move to dotfiles directory and run setup.sh. Then the symbolic links are generated.
+Go to `dotfiles` directory and execute `setup.sh`, and then the symbolic links will be generated.
 
 ```
 cd dotfiles
