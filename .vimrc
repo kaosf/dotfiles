@@ -36,6 +36,9 @@ set expandtab
 " ref. http://qiita.com/items/56f6363fdaf5e9e8a3a4
 set hlsearch
 
+" ref. http://vimblog.hatenablog.com/entry/vimrc_set_cursor_movement_options
+set scrolloff=8
+
 " ref. https://github.com/rhysd/dotfiles/blob/7faa1e5b83788bdc8b67462e23479cc285b8ab6b/vimrc#L200-201
 nnoremap <silent><expr>m "i".nr2char(getchar())."\<Esc>"
 
