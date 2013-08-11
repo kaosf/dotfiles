@@ -163,3 +163,16 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 " ref. https://github.com/vim-scripts/groovy.vim/blob/0.1.9b/syntax/groovy.vim#L24-27
 au BufNewFile,BufRead *.gradle setf groovy
+
+"""" vim-indent-guides configurations
+" ref.
+"   https://github.com/nathanaelkane/vim-indent-guides
+"   http://www.camelstudio.jp/note/vim/186/
+"   http://room6933.com/blog/2011/11/30/vimrc_for_python/
+set shiftwidth=2
+colorscheme default
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors=0
+let g:indent_guides_guide_size=1
+hi IndentGuidesOdd  ctermbg=4
+hi IndentGuidesEven ctermbg=6
