@@ -55,6 +55,8 @@ function cd() { builtin cd $@ && ls; }
 alias be='bundle exec'
 
 alias g='git'
+alias gad='git add'
+alias gadd='git add'
 alias gbr='git branch'
 alias gci='git commit'
 alias gco='git checkout'
