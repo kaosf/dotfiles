@@ -69,6 +69,7 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gs='git status'
 alias gst='git status'
+alias gphm='git push heroku master'
 
 # 'cd ..' with C-^
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
