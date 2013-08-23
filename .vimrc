@@ -31,7 +31,9 @@ set laststatus=2
 
 " ref. http://labs.timedia.co.jp/2011/04/9-points-to-customize-automatic-indentation-in-vim.html
 set autoindent
-set expandtab
+" set expandtab
+set et " it's same as 'set expandtab'
+" set noet " it's same as 'set noexpandtab' to disable expandtab
 
 " ref. http://qiita.com/items/56f6363fdaf5e9e8a3a4
 set hlsearch
