@@ -24,4 +24,6 @@ Go to `dotfiles` directory and execute `setup.sh`, and then the symbolic links w
 ```
 cd dotfiles
 ./setup.sh
+
+./x-setup.sh # for X (e.g. Desktop Edition, VNC Server)
 ```
