@@ -1,6 +1,7 @@
 #! /bin/sh
 
 ln -s $PWD/.xmodmap                 $HOME/.xmodmap
+ln -s $PWD/.xsessionrc              $HOME/.xsessionrc
 ln -s $PWD/.xmodmap-for-hhkb        $HOME/.xmodmap-for-hhkb
 ln -s $PWD/.xmodmap-for-hhkb-revert $HOME/.xmodmap-for-hhkb-revert
 
