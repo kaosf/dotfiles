@@ -65,6 +65,7 @@ alias gdfc='git diff --cached'
 alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
 %Creset%s'"
 alias glggo='git log --graph --oneline'
+alias gp='git push'
 alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gs='git status'
