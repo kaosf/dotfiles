@@ -52,6 +52,8 @@ export SVN_EDITOR=vim
 # execute 'ls' anytime after 'cd'
 function cd() { builtin cd $@ && ls; }
 
+alias df='df -Th'
+
 alias be='bundle exec'
 
 alias g='git'
