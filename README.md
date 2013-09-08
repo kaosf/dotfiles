@@ -27,3 +27,7 @@ cd dotfiles
 
 ./x-setup.sh # for X (e.g. Desktop Edition, VNC Server)
 ```
+
+## License
+
+[Public Domain (Unlicense)](http://choosealicense.com/licenses/public-domain/)
