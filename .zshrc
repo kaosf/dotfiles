@@ -53,6 +53,7 @@ export SVN_EDITOR=vim
 function cd() { builtin cd $@ && ls; }
 
 alias df='df -Th'
+alias google='w3m www.google.co.jp'
 
 alias be='bundle exec'
 
