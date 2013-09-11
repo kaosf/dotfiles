@@ -14,7 +14,7 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; I executed following commands for install clojure-mode
+;; I executed following commands to install "clojure-mode"
 ;; 2013-09-11
 ;; M-x eval-buffer
 ;; M-x package-refresh-contents
