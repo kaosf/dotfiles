@@ -1,3 +1,6 @@
+" disable vi compatible
+set nocompatible
+
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
 
