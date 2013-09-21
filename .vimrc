@@ -1,12 +1,37 @@
 " disable vi compatible
 set nocompatible
 
+" configurations for NeoBundle
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" ref. http://vim-users.jp/2010/10/hack177/
+"      http://vim-users.jp/2010/11/hack185/
+"      http://vim-users.jp/2011/01/hack193/
+"      http://d.hatena.ne.jp/gabuchan/20110930/1317374566
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'kchmck/vim-coffee-script'
+" ref. http://d.hatena.ne.jp/mizchi/20120706/1341568588
+NeoBundle 'gkz/vim-ls'
+NeoBundle 'pekepeke/titanium-vim'
+NeoBundle 'rhysd/neco-ruby-keyword-args'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'vim-scripts/groovy.vim'
+NeoBundle 'wavded/vim-stylus'
+" ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'joker1007/vim-markdown-quote-syntax'
+" ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
+NeoBundle 'thinca/vim-ft-clojure'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
-
-" ref. https://github.com/tpope/vim-pathogen/
-call pathogen#incubate()
-call pathogen#infect()
 
 set nobk
 
