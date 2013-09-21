@@ -81,6 +81,9 @@ nnoremap <silent><expr>m "i".nr2char(getchar())."\<Esc>"
 " ref. https://github.com/rhysd/dotfiles/blob/7faa1e5b83788bdc8b67462e23479cc285b8ab6b/vimrc#L204-205
 nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
+" @ggkuron taught me
+" h and BackSpace move from top to the previous line tail
+" l and Space move from tail to the next line top
 set whichwrap=h,l,b,s
 
 " ref. http://qiita.com/items/3211
