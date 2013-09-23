@@ -47,7 +47,7 @@ alias l='ls -CF'
 alias v='vim'
 alias e='emacs -nw'
 export SVN_EDITOR=vim
-# export EDITOR=vim
+export EDITOR=vim
 
 # execute 'ls' anytime after 'cd'
 function cd() { builtin cd $@ && ls; }
