@@ -19,11 +19,3 @@
 ;; M-x eval-buffer
 ;; M-x package-refresh-contents
 ;; M-x package-install [RET] clojure-mode [RET]
-
-;; ref. http://boronology.blogspot.jp/2011/06/emacs-eshell.html
-(add-hook 'after-init-hook (lambda()
-  (setq w (selected-window))
-  (setq w2 (split-window w (- (window-height w) 4)))
-  (select-window w2)
-  (eshell)
-  (select-window w)))
