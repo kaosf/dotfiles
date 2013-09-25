@@ -45,6 +45,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias v='vim'
+alias view='vim -R'
 alias e='emacs -nw'
 export SVN_EDITOR=vim
 export EDITOR=vim
