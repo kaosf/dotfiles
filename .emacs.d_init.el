@@ -1,6 +1,13 @@
 ;; set C-h to backspace
 (global-set-key "\C-h" 'backward-delete-char-untabify)
 
+;; configuration for smooth scroll
+;; ref.
+;;   http://www-section.cocolog-nifty.com/blog/2008/10/1-080c.html
+;;   http://stackoverflow.com/questions/3470518/is-there-a-visual-studio-equivalent-of-vim-scrolloff-or-emacs-scroll-margin
+(setq scroll-step 1)
+(setq scroll-margin 8)
+
 (setq visible-bell t)
 
 (setq make-backup-files nil)
