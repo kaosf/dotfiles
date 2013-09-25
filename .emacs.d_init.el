@@ -10,8 +10,8 @@
 ;;   http://d.hatena.ne.jp/syohex/20130624/1372082597
 ;;   https://github.com/clojure-emacs/clojure-mode
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 ;; I executed following commands to install "clojure-mode"
