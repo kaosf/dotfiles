@@ -8,3 +8,8 @@ then
   mkdir $HOME/.emacs.d
 fi
 ln -s $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
+if [ ! -d $HOME/.lein ]
+then
+  mkdir $home/.lein
+fi
+ln -s $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
