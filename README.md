@@ -19,13 +19,13 @@ git clone git@bitbucket.org:kaosf/dotfiles.git
 git clone https://bitbucket.org/kaosf/dotfiles.git # read only
 ```
 
-Go to `dotfiles` directory and execute `setup.sh`, and then the symbolic links will be generated.
+Go to `dotfiles` directory and execute `setup`, and then the symbolic links will be generated.
 
 ```
 cd dotfiles
-./setup.sh
+./setup
 
-./x-setup.sh # for X (e.g. Desktop Edition, VNC Server)
+./x-setup # for X (e.g. Desktop Edition, VNC Server)
 ```
 
 ## License
