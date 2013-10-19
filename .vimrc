@@ -224,6 +224,5 @@ hi IndentGuidesEven ctermbg=6
 " ref.
 "   http://blog.hanschen.org/2012/10/24/different-background-color-in-vim-past-80-columns/
 "   http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
-set textwidth=80
-set colorcolumn=+1
+set colorcolumn=81
 hi ColorColumn ctermbg=0
