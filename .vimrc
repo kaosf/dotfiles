@@ -86,9 +86,6 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 " l and Space move from tail to the next line top
 set whichwrap=h,l,b,s
 
-" ref. https://github.com/justinforce/dotfiles/blob/6549c9f50aa3e15e794f372cf2ead3fdd40b8e38/files/vim/vimrc#L21
-set cursorline
-
 " ref. http://qiita.com/items/3211
 function! s:set_fileformat()
   if &fileformat != "unix" && input("setlocal fileformat=unix?[y/n]") == "y"
