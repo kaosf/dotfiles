@@ -74,6 +74,7 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gpl='git pull'
 alias grfh='git reset FETCH_HEAD --hard'
+alias grfhh=grfh
 alias grhh='git reset HEAD --hard'
 alias grh1h='git reset HEAD^ --hard'
 alias gs='git status'
