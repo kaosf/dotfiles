@@ -64,7 +64,7 @@ alias gadd='git add'
 alias gbr='git branch'
 alias gci='git commit'
 alias gco='git checkout'
-alias gdf='git diff'
+alias gdf='git diff --color'
 alias gdfc='git diff --cached'
 alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
 %Creset%s'"
