@@ -53,6 +53,13 @@ export EDITOR=vim
 # execute 'ls' anytime after 'cd'
 function cd() { builtin cd $@ && ls; }
 
+# use "colordiff" if it exists
+which colordiff > /dev/null
+if [ $? -eq 0 ]
+then
+  alias diff=colordiff
+fi
+
 alias df='df -Th'
 alias google='w3m www.google.co.jp'
 
