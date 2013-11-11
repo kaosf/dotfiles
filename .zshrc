@@ -54,7 +54,7 @@ export EDITOR=vim
 function cd() { builtin cd $@ && ls; }
 
 # use "colordiff" if it exists
-which colordiff > /dev/null
+type colordiff > /dev/null
 if [ $? -eq 0 ]
 then
   alias diff=colordiff
