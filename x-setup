@@ -1,5 +1,6 @@
 #! /bin/sh
 
+ln -s $PWD/.vimperatorrc            $HOME/.vimperatorrc
 ln -s $PWD/.xmodmap                 $HOME/.xmodmap
 ln -s $PWD/.xsessionrc              $HOME/.xsessionrc
 ln -s $PWD/.xmodmap-for-hhkb        $HOME/.xmodmap-for-hhkb
