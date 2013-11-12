@@ -29,6 +29,8 @@ NeoBundle 'joker1007/vim-markdown-quote-syntax'
 " ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
 NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
 
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
@@ -223,3 +225,6 @@ hi IndentGuidesEven ctermbg=6
 "   http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
 set colorcolumn=81
 hi ColorColumn ctermbg=0
+
+" post gist private by default (for safety)
+let g:gist_post_private = 1
