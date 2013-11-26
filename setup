@@ -12,4 +12,7 @@ if [ ! -d $HOME/.lein ]
 then
   mkdir $HOME/.lein
 fi
-cp $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
+if [ ! -f $HOME/.lein/profiles.clj ]
+then
+  cp $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
+fi
