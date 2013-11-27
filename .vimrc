@@ -31,6 +31,8 @@ NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
+" ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
+NeoBundle 'osyo-manga/vim-over'
 
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
