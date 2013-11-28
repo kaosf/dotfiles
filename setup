@@ -16,3 +16,10 @@ if [ ! -f $HOME/.lein/profiles.clj ]
 then
   cp $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
 fi
+if [ `which git` ]
+then
+  git config --global user.name ka
+  git config --global user.email ka.kaosf@gmail.com
+  git config --global core.editor vim
+  git config --global color.ui true
+fi
