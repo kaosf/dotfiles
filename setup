@@ -22,4 +22,5 @@ then
   git config --global user.email ka.kaosf@gmail.com
   git config --global core.editor vim
   git config --global color.ui true
+  git config --global github.user kaosf
 fi
