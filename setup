@@ -24,4 +24,5 @@ then
   git config --global color.ui true
   git config --global github.user kaosf
   git config --global merge.ff false
+  git config --global pull.rebase true
 fi
