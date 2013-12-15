@@ -84,8 +84,8 @@ alias grfh='git reset FETCH_HEAD --hard'
 alias grfhh=grfh
 alias grhh='git reset HEAD --hard'
 alias grh1h='git reset HEAD^ --hard'
-alias gs='git status'
-alias gst='git status'
+alias gs='git status -sb'
+alias gst='git status -sb'
 alias gphm='git push heroku master'
 
 # 'cd ..' with C-^
