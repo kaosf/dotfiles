@@ -2,6 +2,8 @@
 
 ln -s $PWD/.bashrc \
       $HOME/.bashrc
+ln -s $PWD/.bash_aliases \
+      $HOME/.bash_aliases
 ln -s $PWD/.zshrc \
       $HOME/.zshrc
 ln -s $PWD/.vimrc \
