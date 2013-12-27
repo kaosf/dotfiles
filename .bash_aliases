@@ -29,6 +29,7 @@ alias glggo='git log --graph --oneline'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpom='git push origin master'
+alias gpomgh='git push origin master && git push origin master:gh-pages'
 alias gpl='git pull'
 alias grfh='git reset FETCH_HEAD --hard'
 alias grfhh=grfh
