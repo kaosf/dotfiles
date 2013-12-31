@@ -1,15 +1,14 @@
 #! /bin/sh
 
-ln -s $PWD/.bashrc \
-      $HOME/.bashrc
-ln -s $PWD/.bash_aliases \
-      $HOME/.bash_aliases
-ln -s $PWD/.zshrc \
-      $HOME/.zshrc
-ln -s $PWD/.vimrc \
-      $HOME/.vimrc
-ln -s $PWD/.tmux.conf \
-      $HOME/.tmux.conf
+for i in \
+  .bashrc \
+  .bash_aliases \
+  .zshrc \
+  .vimrc \
+  .tmux.conf
+do
+  ln -s $PWD/$i $HOME/$i
+done
 if [ ! -d $HOME/.emacs.d ]
 then
   mkdir $HOME/.emacs.d
