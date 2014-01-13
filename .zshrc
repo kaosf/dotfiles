@@ -61,6 +61,7 @@ then
   alias diff=colordiff
 fi
 
+alias date-yymmddhhmmss='date +%Y%m%d%H%M%S'
 alias df='df -Th'
 alias google='w3m www.google.co.jp'
 
