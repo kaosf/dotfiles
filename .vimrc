@@ -38,6 +38,9 @@ NeoBundle 'jnwhiteh/vim-golang'
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
 
+" ref. https://github.com/sue445/dotfiles/blob/d1251d6fe2effe72d385bb90d4409fe19f4ee006/_vimrc#L42
+filetype indent on
+
 set nobk
 
 " ref. http://itcweb.cc.affrc.go.jp/affrit/faq/tips/vim-enc
