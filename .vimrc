@@ -105,6 +105,13 @@ function! s:set_fileformat()
 endfunction
 autocmd BufWritePre * :call <SID>set_fileformat()
 
+" don't expand tabs when editing
+"   Go
+"   Python
+" source files
+autocmd FileType go set noexpandtab
+autocmd FileType python set noexpandtab
+
 " autocomplete end bracket
 " ref. http://d.hatena.ne.jp/babie/20110130/1296348203
 " via. https://github.com/sue445/dotfiles/blob/master/_vimrc
