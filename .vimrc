@@ -140,8 +140,11 @@ hi IndentGuidesEven ctermbg=6
 " ref.
 "   http://blog.hanschen.org/2012/10/24/different-background-color-in-vim-past-80-columns/
 "   http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
-set colorcolumn=81
-hi ColorColumn ctermbg=0
+"   http://vim-users.jp/2011/05/hack217/
+if exists('&colorcolumn')
+  set colorcolumn=81
+  hi ColorColumn ctermbg=0
+endif
 
 " post gist private by default (for safety)
 let g:gist_post_private = 1
