@@ -249,3 +249,7 @@ let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " For using with vim-rails
 " ref. http://d.hatena.ne.jp/senggonghaza/?via=201007
 let g:neocomplcache_force_overwrite_completefunc=1
+
+" @ggkuron taught me
+" open *.md files as markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
