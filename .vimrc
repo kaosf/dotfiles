@@ -97,6 +97,10 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 " l and Space move from tail to the next line top
 set whichwrap=h,l,b,s
 
+" collaboration with clipboard
+" ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
+set clipboard=unnamedplus
+
 " ref. http://qiita.com/items/3211
 function! s:set_fileformat()
   if &fileformat != "unix" && input("setlocal fileformat=unix?[y/n]") == "y"
