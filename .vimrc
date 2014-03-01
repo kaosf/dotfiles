@@ -35,6 +35,7 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'dag/vim2hs'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 
