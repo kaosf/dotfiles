@@ -7,11 +7,7 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-" ref. http://vim-users.jp/2010/10/hack177/
-"      http://vim-users.jp/2010/11/hack185/
-"      http://vim-users.jp/2011/01/hack193/
-"      http://d.hatena.ne.jp/gabuchan/20110930/1317374566
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'kchmck/vim-coffee-script'
