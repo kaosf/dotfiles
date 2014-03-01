@@ -35,6 +35,8 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'dag/vim2hs'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimshell'
 
 " ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit+=block
