@@ -47,7 +47,7 @@ filetype indent on
 set nobk
 
 " ref. http://itcweb.cc.affrc.go.jp/affrit/faq/tips/vim-enc
-set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
+set fileencodings=utf-8,utf-16le,sjis,euc-jp,iso-2022-jp
 
 " ref. https://github.com/alwei/dotfiles/blob/master/.gvimrc#L14
 "  t_vb=  makes vim not to flash
