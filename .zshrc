@@ -55,7 +55,7 @@ precmd () {
 }
 # default $PROMPT in walters is "%B%(?..[%?] )%b%n@%U%m%u> "
 PROMPT="%B%(?..[%?] )%b$ "
-RPROMPT="%1(v|%F{green}%1v%f|) %F{green}%~%f"
+RPROMPT="%1(v|%F{blue}%1v%f|) %F{green}%~%f"
 
 alias rm='rm -i'
 
