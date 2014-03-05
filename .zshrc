@@ -53,6 +53,7 @@ precmd () {
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
+PROMPT="$ "
 RPROMPT="%1(v|%F{green}%1v%f|) %F{green}%~%f"
 
 alias rm='rm -i'
