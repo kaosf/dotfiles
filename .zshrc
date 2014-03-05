@@ -1,8 +1,26 @@
 # Set up the prompt
-
 autoload -Uz promptinit
 promptinit
 prompt walters
+# ref.
+#   http://kitak.hatenablog.jp/entry/2013/05/25/103059
+#   http://mollifier.hatenablog.com/entry/20100906/p1
+#   http://liosk.blog103.fc2.com/blog-entry-209.html
+#   `man zshcontrib` # for vcs_infor
+#   `man zshmics` # for other zsh features
+#   http://news.mynavi.jp/column/zsh/002/
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+# default $PROMPT in walters is "%B%(?..[%?] )%b%n@%U%m%u> "
+PROMPT="%B%(?..[%?] )%b$ "
+RPROMPT="%1(v|%F{blue}%1v%f|) %F{green}%~%f"
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -34,29 +52,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-
-## Configure manually by ka
-
-# ref.
-#   http://kitak.hatenablog.jp/entry/2013/05/25/103059
-#   http://mollifier.hatenablog.com/entry/20100906/p1
-#   http://liosk.blog103.fc2.com/blog-entry-209.html
-#   `man zshcontrib` # for vcs_infor
-#   `man zshmics` # for other zsh features
-#   http://news.mynavi.jp/column/zsh/002/
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' formats '[%b]'
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () {
-  psvar=()
-  LANG=en_US.UTF-8 vcs_info
-  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-# default $PROMPT in walters is "%B%(?..[%?] )%b%n@%U%m%u> "
-PROMPT="%B%(?..[%?] )%b$ "
-RPROMPT="%1(v|%F{blue}%1v%f|) %F{green}%~%f"
-
+# My aliases
 alias rm='rm -i'
 
 alias ls='ls --color=auto'
