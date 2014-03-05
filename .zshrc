@@ -43,6 +43,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #   http://liosk.blog103.fc2.com/blog-entry-209.html
 #   `man zshcontrib` # for vcs_infor
 #   `man zshmics` # for other zsh features
+#   http://news.mynavi.jp/column/zsh/002/
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git hg
 zstyle ':vcs_info:*' formats '[%b]'
@@ -52,8 +53,8 @@ precmd () {
   LANG=en_US.UTF-8 vcs_info
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
-
-PROMPT="$ "
+# default $PROMPT in walters is "%B%(?..[%?] )%b%n@%U%m%u> "
+PROMPT="%B%(?..[%?] )%b$ "
 RPROMPT="%1(v|%F{green}%1v%f|) %F{green}%~%f"
 
 alias rm='rm -i'
