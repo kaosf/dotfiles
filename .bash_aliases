@@ -41,3 +41,6 @@ alias gst='git status -sb'
 alias gphm='git push heroku master'
 
 alias ta='tig --all'
+
+alias suvi='sudo -H vi'
+alias suv=suvi

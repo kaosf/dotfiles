@@ -114,3 +114,6 @@ zle -N cdup
 bindkey "^\^" cdup
 
 alias ta='tig --all'
+
+alias suvi='sudo -H vim'
+alias suv=suvi
