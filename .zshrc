@@ -6,7 +6,7 @@ prompt walters
 #   http://kitak.hatenablog.jp/entry/2013/05/25/103059
 #   http://mollifier.hatenablog.com/entry/20100906/p1
 #   http://liosk.blog103.fc2.com/blog-entry-209.html
-#   `man zshcontrib` # for vcs_infor
+#   `man zshcontrib` # for vcs_info
 #   `man zshmics` # for other zsh features
 #   http://news.mynavi.jp/column/zsh/002/
 autoload -Uz vcs_info
