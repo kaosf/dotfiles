@@ -7,13 +7,19 @@ for i in \
   .vimrc \
   .tmux.conf
 do
-  ln -s $PWD/$i $HOME/$i
+  if [ ! -s $HOME/$i ]
+  then
+    ln -s $PWD/$i $HOME/$i
+  fi
 done
 if [ ! -d $HOME/.emacs.d ]
 then
   mkdir $HOME/.emacs.d
 fi
-ln -s $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
+if [ ! -s $HOME/.emacs.d/init.el ]
+then
+  ln -s $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
+fi
 if [ ! -d $HOME/.lein ]
 then
   mkdir $HOME/.lein
