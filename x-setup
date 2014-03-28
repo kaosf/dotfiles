@@ -1,10 +1,17 @@
 #! /bin/sh
 
-ln -s $PWD/.vimperatorrc            $HOME/.vimperatorrc
-ln -s $PWD/.xmodmap                 $HOME/.xmodmap
-ln -s $PWD/.xsessionrc              $HOME/.xsessionrc
-ln -s $PWD/.xmodmap-for-hhkb        $HOME/.xmodmap-for-hhkb
-ln -s $PWD/.xmodmap-for-hhkb-revert $HOME/.xmodmap-for-hhkb-revert
+for i in \
+  .vimperatorrc \
+  .xmodmap \
+  .xsessionrc \
+  .xmodmap-for-hhkb \
+  .xmodmap-for-hhkb-revert \
+do
+  if [ ! -s $HOME/$i ]
+  then
+    ln -s $PWD/$i $HOME/$i
+  fi
+done
 
 if [ -d $HOME/local/bin ]
 then
