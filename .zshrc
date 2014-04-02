@@ -65,7 +65,6 @@ alias view='vim -R'
 alias e='emacs -nw'
 export SVN_EDITOR=vim
 export EDITOR=vim
-export BROWSER=firefox
 
 # execute 'ls' anytime after 'cd'
 function cd() { builtin cd $@ && ls; }
