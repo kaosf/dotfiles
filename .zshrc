@@ -77,7 +77,7 @@ then
 fi
 
 alias date-yymmddhhmmss='date +%Y%m%d%H%M%S'
-alias date-rfc-3339="date --rfc-3339=seconds | awk '{print $1 \"T\" $2}'"
+alias date-rfc-3339="date --rfc-3339=seconds | awk '{print \$1 \"T\" \$2}'"
 alias df='df -Th'
 alias google='w3m www.google.co.jp'
 
