@@ -84,6 +84,7 @@ alias google='w3m www.google.co.jp'
 alias be='bundle exec'
 
 alias g='git'
+alias gac='git add -A :/ && git commit'
 alias gad='git add'
 alias gadd='git add'
 alias gbr='git branch'
