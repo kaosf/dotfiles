@@ -135,6 +135,9 @@ augroup END
 " ref. https://github.com/vim-scripts/groovy.vim/blob/0.1.9b/syntax/groovy.vim#L24-27
 au BufNewFile,BufRead *.gradle setf groovy
 
+" ref. for "set lisp" https://bbs.archlinux.org/viewtopic.php?id=91335
+autocmd FileType clojure set lisp
+
 """" vim-indent-guides configurations
 " ref.
 "   https://github.com/nathanaelkane/vim-indent-guides
