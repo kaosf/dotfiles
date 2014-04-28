@@ -47,7 +47,7 @@ then
   git config --global alias.co checkout
   git config --global alias.st status
   GIT_VERSION=`git --version | cut -d ' ' -f 3`
-  if [ `echo "${GIT_VERSION}\n1.9" | sort -V | head -1` = 1.9 ]
+  if [ `printf "${GIT_VERSION}\n1.9" | sort -V | head -1` = 1.9 ]
   then
     git config --global push.default simple
   fi
