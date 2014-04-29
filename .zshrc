@@ -107,6 +107,8 @@ alias grh1h='git reset HEAD^ --hard'
 alias gs='git status -sb'
 alias gst='git status'
 alias gphm='git push heroku master'
+export CDIAD=--committer-date-is-author-date
+export cdiad=$CDIAD
 
 # 'cd ..' with C-^
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
