@@ -82,6 +82,7 @@ alias df='df -Th'
 alias google='w3m www.google.co.jp'
 
 alias be='bundle exec'
+alias bi-binstubs='bundle install --binstubs .bundle/bin'
 
 alias g='git'
 alias gac='git add -A :/ && git commit'
