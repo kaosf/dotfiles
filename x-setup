@@ -16,10 +16,10 @@ done
 
 if [ -d $HOME/local/bin ]
 then
-  echo 'xmodmap .xmodmap-for-hhkb' \
+  echo 'xmodmap $HOME/.xmodmap-for-hhkb' \
     > $HOME/local/bin/hhkb-start
   chmod +x $HOME/local/bin/hhkb-start
-  echo 'xmodmap .xmodmap-for-hhkb-revert' \
+  echo 'xmodmap $HOME/.xmodmap-for-hhkb-revert' \
     > $HOME/local/bin/hhkb-finish
   chmod +x $HOME/local/bin/hhkb-finish
 fi
