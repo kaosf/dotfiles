@@ -122,3 +122,48 @@ alias ta='tig --all'
 
 alias suvi='sudo -H vim'
 alias suv=suvi
+
+# 'hub' subcommand completion
+# ref.
+#   http://blog.glidenote.com/blog/2012/05/03/zsh-completion/
+#   http://gihyo.jp/dev/serial/01/zsh-book/0005
+#   http://gihyo.jp/dev/serial/01/zsh-book
+function _hub () {
+  local -a cmds
+  if (( CURRENT == 2));then
+    # 'repositories' is for https://github.com/kaosf/hub-repositories
+    cmds=( \
+      'init'         \
+      'add'          \
+      'rm'           \
+      'mv'           \
+      'status'       \
+      'commit'       \
+      'log'          \
+      'diff'         \
+      'show'         \
+      'branch'       \
+      'checkout'     \
+      'merge'        \
+      'tag'          \
+      'clone'        \
+      'fetch'        \
+      'pull'         \
+      'push'         \
+      'remote'       \
+      'reset'        \
+      'rebase'       \
+      'bisect'       \
+      'grep'         \
+      'pull-request' \
+      'fork'         \
+      'create'       \
+      'browse'       \
+      'compare'      \
+      'repositories' \
+    )
+    _describe -t commands "subcommand" cmds
+  fi
+  return 1;
+}
+compdef _hub hub
