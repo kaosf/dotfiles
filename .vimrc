@@ -34,7 +34,8 @@ NeoBundle 'dag/vim2hs'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'heavenshell/vim-sudden-death'
+" ref. https://github.com/heavenshell
+NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 
 " ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit+=block
