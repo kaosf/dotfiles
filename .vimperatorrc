@@ -1,2 +1,10 @@
 " ref. http://vimperator.g.hatena.ne.jp/nokturnalmortum/20100426/1272270280
 :command! backgroundimage :js let (doc = content.document) let (m = doc.defaultView.getComputedStyle(doc.body, '').backgroundImage.match(/url\s*\(\s*['"](.+)['"]\s*\)/)) m ? liberator.open(m[1], liberator.NEW_TAB) : liberator.echoerr('background image not found')
+
+" Copy the page title or Markdown link syntax text with it and its URL to the clipboard
+" ref.
+"   http://www.mozdev.org/pipermail/vimperator/2008-October/002547.html
+" about the 2nd argument of copyToClipboard function
+"   https://code.google.com/p/vimperator-labs/source/browse/common/content/util.js#79 (on 2014-05-07)
+:command! yanktitle :js util.copyToClipboard(content.document.title,true)
+:command! yankmdlink :js util.copyToClipboard('['+content.document.title+']('+content.location+')',true)
