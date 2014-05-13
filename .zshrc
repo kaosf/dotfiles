@@ -7,7 +7,8 @@ prompt walters
 #   http://mollifier.hatenablog.com/entry/20100906/p1
 #   http://liosk.blog103.fc2.com/blog-entry-209.html
 #   `man zshcontrib` # for vcs_info
-#   `man zshmics` # for other zsh features
+#   `man zshmisc` # for other zsh features
+#     and find '^SIMPLE PROMPT ESCAPES' for PROMPT and RPROMPT
 #   http://news.mynavi.jp/column/zsh/002/
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git hg
