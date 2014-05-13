@@ -173,10 +173,6 @@ let g:gist_post_private = 1
 " ref. http://d.hatena.ne.jp/tyru/20130113/gist_update_on_write
 let g:gist_update_on_write = 2
 
-" For using with vim-rails
-" ref. http://d.hatena.ne.jp/senggonghaza/?via=201007
-let g:neocomplcache_force_overwrite_completefunc=1
-
 " @ggkuron taught me
 " open *.md files as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
