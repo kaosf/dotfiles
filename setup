@@ -5,6 +5,7 @@ for i in \
   .bash_aliases \
   .zshrc \
   .vimrc \
+  .tigrc \
   .tmux.conf
 do
   if [ ! -s $HOME/$i ]
