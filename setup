@@ -47,6 +47,16 @@ then
   git config --global alias.ci commit
   git config --global alias.co checkout
   git config --global alias.st status
+  if [ ! -f $HOME/local/bin/diff-highlight ]
+  then
+    wget https://raw.githubusercontent.com/git/git/34d9819e0a387be6d49cffe67458036450d6d0d5/contrib/diff-highlight/diff-highlight
+    chmod +x diff-highlight
+    mkdir -p $HOME/local/bin
+    mv diff-highlight $HOME/local/bin
+  fi
+  git config --global pager.log 'diff-highlight | less'
+  git config --global pager.show 'diff-highlight | less'
+  git config --global pager.diff 'diff-highlight | less'
   GIT_VERSION=`git --version | cut -d ' ' -f 3`
   if [ `printf "${GIT_VERSION}\n1.9" | sort -V | head -1` = 1.9 ]
   then
