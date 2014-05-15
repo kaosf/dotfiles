@@ -53,3 +53,8 @@ then
     git config --global push.default simple
   fi
 fi
+if [ ! -s $HOME/.lesskey ]
+then
+  ln -s $PWD/.lesskey $HOME/.lesskey
+  lesskey
+fi
