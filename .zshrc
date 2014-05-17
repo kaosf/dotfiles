@@ -169,3 +169,30 @@ function _hub () {
   return 1;
 }
 compdef _hub hub
+
+function _bb () {
+  local -a cmds
+  if (( CURRENT == 2));then
+    # 'browse', 'download-archive', 'fork', 'group-privilege' and 'services'
+    # are for https://bitbucket.org/kaosf/bitbucket-cli-sub-commands
+    cmds=( \
+      'create'            \
+      'update'            \
+      'delete'            \
+      'clone'             \
+      'create_from_local' \
+      'pull'              \
+      'download'          \
+      'list'              \
+      'privilege'         \
+      'browse'            \
+      'download-archive'  \
+      'fork'              \
+      'group-privilege'   \
+      'services'          \
+    )
+    _describe -t commands "subcommand" cmds
+  fi
+  return 1;
+}
+compdef _bb bb
