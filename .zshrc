@@ -98,6 +98,7 @@ alias gic='git init && git add -A :/ && git commit -m "Initial commit"'
 alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
 %Creset%s'"
 alias glggo='git log --graph --oneline'
+alias gnow='git add -A :/ && git commit --allow-empty-message -m ""'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpom='git push origin master'
