@@ -197,3 +197,5 @@ function _bb () {
   return 1;
 }
 compdef _bb bb
+
+[ -f $HOME/.zshrc-local ] && source $HOME/.zshrc-local
