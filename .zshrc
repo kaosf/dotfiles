@@ -104,6 +104,7 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gpomgh='git push origin master && git push origin master:gh-pages'
 alias gpl='git pull'
+alias grbh1id='git rebase HEAD^ --ignore-date'
 alias grfh='git reset FETCH_HEAD --hard'
 alias grfhh=grfh
 alias grhh='git reset HEAD --hard'
