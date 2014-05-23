@@ -8,3 +8,4 @@
 "   https://code.google.com/p/vimperator-labs/source/browse/common/content/util.js#79 (on 2014-05-07)
 :command! yanktitle :js util.copyToClipboard(content.document.title,true)
 :command! yankmdlink :js util.copyToClipboard('['+content.document.title+']('+content.location+')',true)
+:command! yanktwitterlink :js util.copyToClipboard(content.document.title+' '+content.location+' ',true)
