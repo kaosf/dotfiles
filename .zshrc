@@ -199,4 +199,7 @@ function _bb () {
 }
 compdef _bb bb
 
-[ -f $HOME/.zshrc-local ] && source $HOME/.zshrc-local
+if [ -f $HOME/.zshrc-local ]
+then
+  source $HOME/.zshrc-local
+fi
