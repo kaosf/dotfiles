@@ -281,4 +281,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+" For my snippets
+" ref. https://github.com/kaosf/ka-vim-snippets
+let g:neosnippet#snippets_directory="~/.vim/ka-vim-snippets"
 """' vim-snippet end
