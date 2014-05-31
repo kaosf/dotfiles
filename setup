@@ -67,11 +67,7 @@ then
   git config --global pager.log 'diff-highlight | less'
   git config --global pager.show 'diff-highlight | less'
   git config --global pager.diff 'diff-highlight | less'
-  GIT_VERSION=`git --version | cut -d ' ' -f 3`
-  if [ `printf "${GIT_VERSION}\n1.9" | sort -V | head -1` = 1.9 ]
-  then
-    git config --global push.default simple
-  fi
+  git config --global push.default simple
 fi
 if [ ! -s $HOME/.lesskey ]
 then
