@@ -188,6 +188,7 @@ function _bb () {
       'list'              \
       'privilege'         \
       'browse'            \
+      'deploy-keys'       \
       'download-archive'  \
       'fork'              \
       'group-privilege'   \
