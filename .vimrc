@@ -92,12 +92,8 @@ nnoremap <silent><expr>m "i".nr2char(getchar())."\<Esc>"
 " ref. https://github.com/rhysd/dotfiles/blob/7faa1e5b83788bdc8b67462e23479cc285b8ab6b/vimrc#L204-205
 nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
-" ref. https://twitter.com/rbtnn/status/485418077324980226
-for c1 in ['j','J','k','K']
-  for c2 in ['j','J','k','K']
-    execute 'inoremap ' . c1 . c2 . ' <esc>'
-  endfor
-endfor
+" ref. https://twitter.com/anekos/status/485416150541402112
+inoremap kk <Esc>
 
 " @ggkuron taught me
 " h and BackSpace move from top to the previous line tail
@@ -289,4 +285,3 @@ endif
 " For my snippets
 " ref. https://github.com/kaosf/ka-vim-snippets
 let g:neosnippet#snippets_directory="~/.vim/ka-vim-snippets"
-"""' vim-snippet end
