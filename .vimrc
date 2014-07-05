@@ -92,6 +92,13 @@ nnoremap <silent><expr>m "i".nr2char(getchar())."\<Esc>"
 " ref. https://github.com/rhysd/dotfiles/blob/7faa1e5b83788bdc8b67462e23479cc285b8ab6b/vimrc#L204-205
 nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
+" ref. https://twitter.com/rbtnn/status/485418077324980226
+for c1 in ['j','J','k','K']
+  for c2 in ['j','J','k','K']
+    execute 'inoremap ' . c1 . c2 . ' <esc>'
+  endfor
+endfor
+
 " @ggkuron taught me
 " h and BackSpace move from top to the previous line tail
 " l and Space move from tail to the next line top
