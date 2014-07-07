@@ -55,6 +55,10 @@ set visualbell t_vb=
 
 set encoding=utf-8
 
+" Make not to have to press "Shift+;" to switch to command mode
+nnoremap ; :
+nnoremap : ;
+
 " @rch850 taught to me
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
