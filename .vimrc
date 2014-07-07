@@ -58,6 +58,9 @@ set encoding=utf-8
 " @rch850 taught to me
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
+" Make not to have to press Ctrl
+nnoremap gj :bn<CR>
+nnoremap gk :bp<CR>
 
 " forgot where I did copy&paste from
 set list
