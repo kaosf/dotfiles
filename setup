@@ -6,7 +6,9 @@ for i in \
   .zshrc \
   .vimrc \
   .tigrc \
-  .tmux.conf
+  .tmux.conf \
+  .gemrc \
+
 do
   if [ ! -s $HOME/$i ]
   then
