@@ -2,6 +2,8 @@
 
 for i in \
   .vimperatorrc \
+  .xmodmap \
+  .xmodmap-revert \
   .xmodmap-for-hhkb \
   .xmodmap-for-hhkb-revert \
 
