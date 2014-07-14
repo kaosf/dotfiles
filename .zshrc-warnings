@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+
+function arp {
+  echo "use 'ip n' instead."
+  return 1
+}
+
+function ifconfig {
+  echo "use 'ip a (ip addr)', 'ip link', or 'ip -s (ip -stats)' instead."
+  return 1
+}
+
+function iptunnel {
+  echo "use 'ip tunnel' instead."
+  return 1
+}
+
+function iwconfig {
+  echo "use 'iw' instead."
+  return 1
+}
+
+function nameif {
+  echo "use 'ip link' or 'ifrename' instead."
+  return 1
+}
+
+function netstat {
+  echo "use 'ss', 'ip route (for netstat-r)', 'ip -s link (for netstat -i)', or 'ip maddr (for netstat-g)' instead"
+  return 1
+}
+
+function route {
+  echo "use 'ip r' instead."
+  return 1
+}
+
+# ref.
+#   https://twitter.com/penguin2716/status/486459234305855488
+#   https://gist.github.com/penguin2716/088126c7f59e5cca33e5
