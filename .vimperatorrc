@@ -1,3 +1,6 @@
+nnoremap gj :bn<CR>
+nnoremap gk :bp<CR>
+
 " ref. http://vimperator.g.hatena.ne.jp/nokturnalmortum/20100426/1272270280
 :command! backgroundimage :js let (doc = content.document) let (m = doc.defaultView.getComputedStyle(doc.body, '').backgroundImage.match(/url\s*\(\s*['"](.+)['"]\s*\)/)) m ? liberator.open(m[1], liberator.NEW_TAB) : liberator.echoerr('background image not found')
 
