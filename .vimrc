@@ -101,6 +101,7 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
 " ref. https://twitter.com/anekos/status/485416150541402112
 inoremap kk <Esc>
+inoremap jj <Esc>
 
 " @ggkuron taught me
 " h and BackSpace move from top to the previous line tail
