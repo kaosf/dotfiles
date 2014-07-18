@@ -150,6 +150,10 @@ au BufNewFile,BufRead *.gradle setf groovy
 " ref. for "set lisp" https://bbs.archlinux.org/viewtopic.php?id=91335
 autocmd FileType clojure set lisp
 
+"""" NERDTree width
+" ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
+let g:NERDTreeWinSize = 20
+
 """" vim-indent-guides configurations
 " ref.
 "   https://github.com/nathanaelkane/vim-indent-guides
