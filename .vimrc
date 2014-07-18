@@ -103,6 +103,9 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap kk <Esc>
 inoremap jj <Esc>
 
+nnoremap j gj
+nnoremap k gk
+
 " @ggkuron taught me
 " h and BackSpace move from top to the previous line tail
 " l and Space move from tail to the next line top
