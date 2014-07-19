@@ -205,7 +205,11 @@ then
   source $HOME/.zshrc-local
 fi
 
-if [ -f $HOME/.zshrc-warnings ]
+ismac () {
+  which sw_vers > /dev/null 2>&1
+}
+
+if ! ismac && [ -f $HOME/.zshrc-warnings ]
 then
   source $HOME/.zshrc-warnings
 fi
