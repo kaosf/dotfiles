@@ -106,6 +106,7 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+vnoremap ff <Esc>
 
 " @ggkuron taught me
 " h and BackSpace move from top to the previous line tail
