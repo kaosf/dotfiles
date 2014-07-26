@@ -32,6 +32,11 @@ NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'dag/vim2hs'
 " ref. https://github.com/heavenshell
 NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
+" ref.
+"   https://github.com/tpope/vim-surround
+"   http://blog.nico0927.net/20110115/vim/152
+"   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
+NeoBundle 'tpope/vim-surround'
 
 " ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit+=block
