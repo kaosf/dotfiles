@@ -1,0 +1,63 @@
+alias rm='rm -i'
+
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias v='vim'
+alias view='vim -R'
+alias e='emacs -nw'
+
+alias suvi='sudo -H vim'
+alias suv=suvi
+
+# use "colordiff" if it exists
+type colordiff > /dev/null
+if [ $? -eq 0 ]
+then
+  alias diff=colordiff
+fi
+
+alias date-yymmddhhmmss='date +%Y%m%d%H%M%S'
+alias date-rfc-3339="date --rfc-3339=seconds | sed 's/ /T/'"
+alias df='df -Th'
+alias google='w3m www.google.co.jp'
+
+# Ruby
+alias be='bundle exec'
+alias bi-binstubs='bundle install --binstubs .bundle/bin'
+
+# Git
+alias g='git'
+alias gac='git add -A :/ && git commit'
+alias gad='git add'
+alias gadd='git add'
+alias gbr='git branch'
+alias gci='git commit'
+alias gco='git checkout'
+alias gdf='git diff'
+alias gdfc='git diff --cached'
+alias gic='git init && git add -A :/ && git commit -m "Initial commit"'
+alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
+%Creset%s'"
+alias glggo='git log --graph --oneline'
+alias gnow='git add -A :/ && git commit --allow-empty-message -m ""'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpom='git push origin master'
+alias gpomgh='git push origin master && git push origin master:gh-pages'
+alias gpl='git pull'
+alias grbh1id='git rebase HEAD^ --ignore-date'
+alias grfh='git reset FETCH_HEAD --hard'
+alias grfhh=grfh
+alias grhh='git reset HEAD --hard'
+alias grh1h='git reset HEAD^ --hard'
+alias gs='git status -sb'
+alias gst='git status'
+alias gphm='git push heroku master'
+export CDIAD=--committer-date-is-author-date
+export cdiad=$CDIAD
+alias gacarbh1cdiad='git add -A :/ && git commit --amend && git rebase HEAD^ --committer-date-is-author-date'
+
+alias ta='tig --all'

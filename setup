@@ -1,6 +1,7 @@
 #!/bin/bash
 
 for i in \
+  .aliases \
   .bashrc \
   .bash_aliases \
   .zshrc \
