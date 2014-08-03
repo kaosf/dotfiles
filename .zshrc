@@ -68,11 +68,11 @@ export SVN_EDITOR=vim
 export EDITOR=vim
 
 # execute 'ls' anytime after 'cd'
-function cd() { builtin cd $@ && ls; }
+cd() { builtin cd $@ && ls; }
 
 # 'cd ..' with C-^
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
-function cdup() { echo; cd ..; zle reset-prompt; }
+cdup() { echo; cd ..; zle reset-prompt; }
 zle -N cdup
 bindkey "^\^" cdup
 
@@ -81,7 +81,7 @@ bindkey "^\^" cdup
 #   http://blog.glidenote.com/blog/2012/05/03/zsh-completion/
 #   http://gihyo.jp/dev/serial/01/zsh-book/0005
 #   http://gihyo.jp/dev/serial/01/zsh-book
-function _hub () {
+_hub () {
   local -a cmds
   if (( CURRENT == 2));then
     # 'repositories' is for https://github.com/kaosf/hub-repositories
@@ -121,7 +121,7 @@ function _hub () {
 }
 compdef _hub hub
 
-function _bb () {
+_bb () {
   local -a cmds
   if (( CURRENT == 2));then
     # 'browse', 'download-archive', 'fork', 'group-privilege' and 'services'
@@ -149,7 +149,7 @@ function _bb () {
 }
 compdef _bb bb
 
-function peco-cdr () {
+peco-cdr () {
     local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
