@@ -175,4 +175,4 @@ then
   source $HOME/.zshrc-warnings
 fi
 
-alias disablescreensaver='xset s 0 0'
+alias disablescreensaver='xset s off'
