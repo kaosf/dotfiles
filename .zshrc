@@ -174,3 +174,5 @@ if ! ismac && [ -f $HOME/.zshrc-warnings ]
 then
   source $HOME/.zshrc-warnings
 fi
+
+alias disablescreensaver='xset s 0 0'
