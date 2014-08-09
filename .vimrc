@@ -108,10 +108,12 @@ inoremap kk <Esc>
 inoremap jj <Esc>
 
 function! s:swap_brackets()
-  inoremap ( [
-  inoremap ) ]
   inoremap [ (
   inoremap ] )
+  inoremap { [
+  inoremap } ]
+  inoremap ( {
+  inoremap ) }
 endfunction
 autocmd FileType clojure :call <SID>swap_brackets()
 
