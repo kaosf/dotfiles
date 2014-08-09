@@ -107,6 +107,14 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap kk <Esc>
 inoremap jj <Esc>
 
+function! s:swap_brackets()
+  inoremap ( [
+  inoremap ) ]
+  inoremap [ (
+  inoremap ] )
+endfunction
+autocmd FileType clojure :call <SID>swap_brackets()
+
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
