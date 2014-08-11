@@ -107,6 +107,25 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap kk <Esc>
 inoremap jj <Esc>
 
+" pair close checker.
+" from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
+function! ClosePair(char)
+  if getline('.')[col('.') - 1] == a:char
+    return "\<Right>"
+  else
+    return a:char
+  endif
+endf
+function! s:swap_brackets()
+  inoremap [ ()<Esc>i
+  inoremap <expr> ] ClosePair(')')
+  inoremap { []<Esc>i
+  inoremap <expr> } ClosePair(']')
+  inoremap ( {}<Esc>i
+  inoremap <expr> ) ClosePair('}')
+endfunction
+autocmd FileType clojure :call <SID>swap_brackets()
+
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
