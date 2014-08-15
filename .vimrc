@@ -48,6 +48,7 @@ syntax on
 filetype indent on
 
 set nobk
+set noswf
 
 " ref. http://itcweb.cc.affrc.go.jp/affrit/faq/tips/vim-enc
 set fileencodings=utf-8,utf-16le,sjis,euc-jp,iso-2022-jp
