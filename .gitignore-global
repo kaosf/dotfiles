@@ -1,6 +1,10 @@
 ### ctags ###
 /tags
 
+### Bundler ###
+# ref. http://bundler.io/v1.7/bundle_install.html
+/vendor/bundle
+
 ### rbenv ###
 .ruby-version
 
