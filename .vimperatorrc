@@ -4,6 +4,11 @@ nnoremap gk :bp<CR>
 " Use alphabetical characters as hint characters
 " ref. https://github.com/ggkuron/dotfiles/blob/e7f13c5c9a644d659171cc9fe70df7f24b673847/.vimperatorrc
 set hintchars=afjghdkslio
+" Make hint characters font size bigger and print them with upper case
+" ref.
+"   http://blog.ruedap.com/2011/03/27/vimperator3-hint-mode-alphabet-uppercase
+"   http://superuser.com/questions/230741/how-to-make-vimperators-numbered-links-bigger-hints
+:highlight Hint font-size:120%;color:white;background-color:red;padding:2px;text-transform:uppercase;
 
 " ref. http://vimperator.g.hatena.ne.jp/nokturnalmortum/20100426/1272270280
 :command! backgroundimage :js let (doc = content.document) let (m = doc.defaultView.getComputedStyle(doc.body, '').backgroundImage.match(/url\s*\(\s*['"](.+)['"]\s*\)/)) m ? liberator.open(m[1], liberator.NEW_TAB) : liberator.echoerr('background image not found')
