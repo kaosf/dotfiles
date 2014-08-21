@@ -37,6 +37,10 @@ NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 "   http://blog.nico0927.net/20110115/vim/152
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 NeoBundle 'tpope/vim-surround'
+" ref.
+"   https://github.com/kana/vim-altercmd/
+"   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
+NeoBundle 'kana/vim-altercmd'
 
 " ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit+=block
