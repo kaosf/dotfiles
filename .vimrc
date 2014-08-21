@@ -335,6 +335,9 @@ endif
 let g:neosnippet#snippets_directory="~/.vim/ka-vim-snippets"
 
 " Swap BD (kill buffer but don't close the window) and bd (default)
-" ref. http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
+" ref.
+"   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
+"   https://gist.github.com/LeafCage/4085361
+call altercmd#load()
 AlterCommand bd BD
 AlterCommand BD bd
