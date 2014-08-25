@@ -1,3 +1,5 @@
+nnoremap ; :
+nnoremap : ;
 nnoremap gj :bn<CR>
 nnoremap gk :bp<CR>
 
