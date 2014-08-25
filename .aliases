@@ -26,7 +26,11 @@ alias google='w3m www.google.co.jp'
 
 # Ruby
 alias be='bundle exec'
-alias bi-binstubs='bundle install --binstubs .bundle/bin'
+alias bi='bundle install'
+alias bi-pvb='bundle --path vendor/bundle'
+alias bi-bbb='bundle install --binstubs .bundle/bin'
+alias bi-pvb-bbb='bundle install --path vendor/bundle --binstubs .bundle/bin'
+alias bi-bbb-pvb='bundle install --binstubs .bundle/bin --path vendor/bundle'
 
 # Git
 alias g='git'
