@@ -330,3 +330,7 @@ let g:neosnippet#snippets_directory="~/.vim/ka-vim-snippets"
 call altercmd#load()
 AlterCommand bd BD
 AlterCommand BD bd
+
+" Enable to change buffers quickly
+" ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
+nnoremap gls :ls<CR>:buf 
