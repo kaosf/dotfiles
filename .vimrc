@@ -43,9 +43,6 @@ NeoBundle 'tpope/vim-surround'
 "   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
 NeoBundle 'kana/vim-altercmd'
 NeoBundle 'vim-scripts/bufkill.vim'
-" Autosave
-" ref. http://qiita.com/kentaro/items/833075356d41e9d9bc75
-NeoBundle 'vim-scripts/vim-auto-save'
 
 " ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit+=block
@@ -56,11 +53,13 @@ syntax on
 " ref. https://github.com/sue445/dotfiles/blob/d1251d6fe2effe72d385bb90d4409fe19f4ee006/_vimrc#L42
 filetype indent on
 
-set nobk
-set noswf
-" ref.
+" Auto saving configurations
+" ref. about vim-auto-save plugin
 "   http://qiita.com/kentaro/items/833075356d41e9d9bc75
 "   https://github.com/vim-scripts/vim-auto-save
+set nobk
+set noswf
+NeoBundle 'vim-scripts/vim-auto-save'
 let g:auto_save = 1
 let g:auto_save_updatetime = 200
 
