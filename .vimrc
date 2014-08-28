@@ -61,7 +61,7 @@ set nobk
 set noswf
 NeoBundle 'vim-scripts/vim-auto-save'
 let g:auto_save = 1
-let g:auto_save_no_updatetime = 1
+let g:auto_save_updatetime = 200
 
 " ref. http://itcweb.cc.affrc.go.jp/affrit/faq/tips/vim-enc
 set fileencodings=utf-8,utf-16le,sjis,euc-jp,iso-2022-jp
