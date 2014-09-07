@@ -334,9 +334,12 @@ let g:neosnippet#snippets_directory="~/.vim/ka-vim-snippets"
 " ref.
 "   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
 "   https://gist.github.com/LeafCage/4085361
-call altercmd#load()
-AlterCommand bd BD
-AlterCommand BD bd
+try
+  call altercmd#load()
+  AlterCommand bd BD
+  AlterCommand BD bd
+catch
+endtry
 
 " Enable to change buffers quickly
 " ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
