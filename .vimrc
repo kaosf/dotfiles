@@ -339,6 +339,7 @@ try
   AlterCommand bd BD
   AlterCommand BD bd
 catch
+  echo 'Run ":NeoBundleInstall" to "altercmd#load"'
 endtry
 
 " Enable to change buffers quickly
