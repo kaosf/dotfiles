@@ -53,15 +53,9 @@ syntax on
 " ref. https://github.com/sue445/dotfiles/blob/d1251d6fe2effe72d385bb90d4409fe19f4ee006/_vimrc#L42
 filetype indent on
 
-" Auto saving configurations
-" ref. about vim-auto-save plugin
-"   http://qiita.com/kentaro/items/833075356d41e9d9bc75
-"   https://github.com/vim-scripts/vim-auto-save
+" Disable backup
 set nobk
 set noswf
-NeoBundle 'vim-scripts/vim-auto-save'
-let g:auto_save = 1
-let g:auto_save_updatetime = 200
 
 " ref. http://itcweb.cc.affrc.go.jp/affrit/faq/tips/vim-enc
 set fileencodings=utf-8,utf-16le,sjis,euc-jp,iso-2022-jp
