@@ -37,12 +37,6 @@ NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 "   http://blog.nico0927.net/20110115/vim/152
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 NeoBundle 'tpope/vim-surround'
-" ref.
-"   https://github.com/kana/vim-altercmd/
-"   https://github.com/vim-scripts/bufkill.vim
-"   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
-NeoBundle 'kana/vim-altercmd'
-NeoBundle 'vim-scripts/bufkill.vim'
 
 " ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit+=block
@@ -326,8 +320,12 @@ let g:neosnippet#snippets_directory="~/.vim/ka-vim-snippets"
 
 " Swap BD (kill buffer but don't close the window) and bd (default)
 " ref.
+"   https://github.com/kana/vim-altercmd/
+"   https://github.com/vim-scripts/bufkill.vim
 "   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
 "   https://gist.github.com/LeafCage/4085361
+NeoBundle 'kana/vim-altercmd'
+NeoBundle 'vim-scripts/bufkill.vim'
 try
   call altercmd#load()
   AlterCommand bd BD
