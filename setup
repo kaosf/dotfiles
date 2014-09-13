@@ -54,17 +54,10 @@ then
   if [ ! -f $HOME/local/bin/diff-highlight ]
   then
     wget https://raw.githubusercontent.com/git/git/34d9819e0a387be6d49cffe67458036450d6d0d5/contrib/diff-highlight/diff-highlight
-    LINENUMBER=`grep 'use strict;' diff-highlight -n | cut -d : -f 1`
-    cat diff-highlight | head -$LINENUMBER > diff-highlight-1
-    echo 'use Encode qw(decode_utf8 encode_utf8);' >> diff-highlight-1
-    cat diff-highlight | tail -n +$(($LINENUMBER+1)) >> diff-highlight-1
-    sed 's/push @removed, $_;/push @removed, decode_utf8($_);/' diff-highlight-1 | \
-    sed 's/push @added, $_;/push @added, decode_utf8($_);/' | \
-    sed 's/print $rm;/print encode_utf8($rm);/' | \
-    sed 's/print @queue;/print encode_utf8($_) for @queue;/' > diff-highlight-2
-    rm diff-highlight-1
-    mv diff-highlight-2 diff-highlight
+    wget https://gist.githubusercontent.com/a2ikm/2dbfb89114dfa5c543ed/raw/e2d8d550ef601c9310712f4187b803658427dd42/diff-highlight.utf8.patch
+    patch -u diff-highlight < diff-highlight.utf8.patch
     chmod +x diff-highlight
+    rm diff-hilight.orig diff-hilight.utf8.patch
     mkdir -p $HOME/local/bin
     mv diff-highlight $HOME/local/bin
   fi
