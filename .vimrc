@@ -23,7 +23,6 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 " ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
 NeoBundle 'thinca/vim-ft-clojure'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 " ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
@@ -177,6 +176,7 @@ let g:NERDTreeWinSize = 20
 "   https://github.com/nathanaelkane/vim-indent-guides
 "   http://www.camelstudio.jp/note/vim/186/
 "   http://room6933.com/blog/2011/11/30/vimrc_for_python/
+NeoBundle 'nathanaelkane/vim-indent-guides'
 set shiftwidth=2
 colorscheme default
 let g:indent_guides_enable_on_vim_startup=1
