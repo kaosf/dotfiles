@@ -21,8 +21,6 @@ NeoBundle 'wavded/vim-stylus'
 " ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
-" ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
-NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 " ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
@@ -117,6 +115,12 @@ function! ClosePair(char)
     return a:char
   endif
 endf
+
+" Clojure configurations
+" ref. for "set lisp" https://bbs.archlinux.org/viewtopic.php?id=91335
+autocmd FileType clojure set lisp
+" ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
+NeoBundle 'thinca/vim-ft-clojure'
 function! s:autocomplete_brackets()
   inoremap ( ()<Esc>i
   inoremap <expr> ) ClosePair(')')
@@ -163,9 +167,6 @@ augroup END
 
 " ref. https://github.com/vim-scripts/groovy.vim/blob/0.1.9b/syntax/groovy.vim#L24-27
 au BufNewFile,BufRead *.gradle setf groovy
-
-" ref. for "set lisp" https://bbs.archlinux.org/viewtopic.php?id=91335
-autocmd FileType clojure set lisp
 
 """" NERDTree width
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
