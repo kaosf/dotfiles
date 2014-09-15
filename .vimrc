@@ -117,15 +117,15 @@ function! ClosePair(char)
     return a:char
   endif
 endf
-function! s:swap_brackets()
-  inoremap [ ()<Esc>i
-  inoremap <expr> ] ClosePair(')')
-  inoremap { []<Esc>i
-  inoremap <expr> } ClosePair(']')
-  inoremap ( {}<Esc>i
-  inoremap <expr> ) ClosePair('}')
+function! s:autocomplete_brackets()
+  inoremap ( ()<Esc>i
+  inoremap <expr> ) ClosePair(')')
+  inoremap [ []<Esc>i
+  inoremap <expr> ] ClosePair(']')
+  inoremap { {}<Esc>i
+  inoremap <expr> } ClosePair('}')
 endfunction
-autocmd FileType clojure :call <SID>swap_brackets()
+autocmd FileType clojure :call <SID>autocomplete_brackets()
 
 nnoremap j gj
 nnoremap k gk
