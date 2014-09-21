@@ -57,7 +57,7 @@ then
     wget https://gist.githubusercontent.com/a2ikm/2dbfb89114dfa5c543ed/raw/e2d8d550ef601c9310712f4187b803658427dd42/diff-highlight.utf8.patch
     patch -u diff-highlight < diff-highlight.utf8.patch
     chmod +x diff-highlight
-    rm diff-hilight.orig diff-hilight.utf8.patch
+    rm diff-highlight.orig diff-highlight.utf8.patch
     mkdir -p $HOME/local/bin
     mv diff-highlight $HOME/local/bin
   fi
