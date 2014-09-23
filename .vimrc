@@ -338,3 +338,9 @@ endtry
 " Enable to change buffers quickly
 " ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
 nnoremap gls :ls<CR>:buf 
+
+" Enable to move between `do` and `end`, `def` and `end` or etc by `%`.
+" ref. http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
+if !exists('loaded_matchit')
+  runtime macros/matchit.vim
+endif
