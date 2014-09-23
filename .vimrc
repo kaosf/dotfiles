@@ -344,10 +344,3 @@ nnoremap gls :ls<CR>:buf
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
-
-" ref.
-"   https://github.com/tpope/vim-endwise
-"   http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
-"   https://gist.github.com/4521460
-NeoBundle 'tpope/vim-endwise'
-let g:endwise_no_mappings=1
