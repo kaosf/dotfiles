@@ -23,3 +23,5 @@ set hintchars=afjghdkslio
 :command! yanktitle :js util.copyToClipboard(content.document.title,true)
 :command! yankmdlink :js util.copyToClipboard('['+content.document.title+']('+content.location+')',true)
 :command! yanktwitterlink :js util.copyToClipboard(content.document.title+' '+content.location+' ',true)
+
+:command! reloadconfig :source .vimperatorrc
