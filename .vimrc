@@ -107,6 +107,16 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap kk <Esc>
 inoremap jj <Esc>
 
+" Disable IME when exiting insert mode
+" ref. about `system`
+"   https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/xvkbd
+" ref. about `v:shell_error`
+"   http://stackoverflow.com/questions/2302846/running-a-shell-script-in-vimrc-and-processing-the-output
+call system('type ibus > /dev/null')
+if v:shell_error == 0
+  inoremap <Esc> <Esc>:call system('ibus engine "xkb:us::eng"')<CR>
+endif
+
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
 function! ClosePair(char)
