@@ -107,6 +107,11 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap kk <Esc>
 inoremap jj <Esc>
 
+" Disable IME when exiting insert mode
+" ref. about `system`
+"   https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/xvkbd
+inoremap <Esc> <Esc>:call system('ibus engine "xkb:us::eng"')<CR>
+
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
 function! ClosePair(char)
