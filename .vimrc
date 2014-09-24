@@ -112,7 +112,7 @@ inoremap jj <Esc>
 "   https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/xvkbd
 " ref. about `v:shell_error`
 "   http://stackoverflow.com/questions/2302846/running-a-shell-script-in-vimrc-and-processing-the-output
-call system('type ibus > /dev/null')
+call system('type ibus')
 if v:shell_error == 0
   inoremap <Esc> <Esc>:call system('ibus engine "xkb:us::eng"')<CR>
 endif
