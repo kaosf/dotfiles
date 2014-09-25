@@ -355,3 +355,7 @@ nnoremap gls :ls<CR>:buf
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
+
+" GitGutter
+" ref. https://github.com/airblade/vim-gitgutter
+NeoBundle 'airblade/vim-gitgutter'
