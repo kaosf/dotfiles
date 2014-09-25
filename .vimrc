@@ -355,13 +355,3 @@ nnoremap gls :ls<CR>:buf
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
-
-" GitGutter
-" ref.
-"   https://github.com/airblade/vim-gitgutter
-"   http://kazuph.hateblo.jp/entry/2013/04/17/145339
-NeoBundle 'airblade/vim-gitgutter'
-let g:gitgutter_sign_column_always=1
-" Key bindings for enabling/disabling GitGutter
-nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
-nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
