@@ -1,8 +1,11 @@
 " About :!{cmd}
 " ref. http://d.hatena.ne.jp/kei-os2007/20080428/1209379483
-nnoremap ; :!{ibus engine 'xkb:us::eng'}<CR>:
-nnoremap t :!{ibus engine 'xkb:us::eng'}<CR>:tabopen 
-nnoremap o :!{ibus engine 'xkb:us::eng'}<CR>:open 
+" Disable these IME turning off features for now.
+"nnoremap ; :!{ibus engine 'xkb:us::eng'}<CR>:
+"nnoremap t :!{ibus engine 'xkb:us::eng'}<CR>:tabopen 
+"nnoremap o :!{ibus engine 'xkb:us::eng'}<CR>:open 
+
+nnoremap ; :
 nnoremap : ;
 nnoremap gj :bn<CR>
 nnoremap gk :bp<CR>
