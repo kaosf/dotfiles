@@ -1,14 +1,14 @@
+nnoremap ; :
+nnoremap : ;
+nnoremap gj :bn<CR>
+nnoremap gk :bp<CR>
+
 " About :!{cmd}
 " ref. http://d.hatena.ne.jp/kei-os2007/20080428/1209379483
 " Disable these IME turning off features for now.
 "nnoremap ; :!{ibus engine 'xkb:us::eng'}<CR>:
 "nnoremap t :!{ibus engine 'xkb:us::eng'}<CR>:tabopen 
 "nnoremap o :!{ibus engine 'xkb:us::eng'}<CR>:open 
-
-nnoremap ; :
-nnoremap : ;
-nnoremap gj :bn<CR>
-nnoremap gk :bp<CR>
 
 " Use alphabetical characters as hint characters
 " ref. https://github.com/ggkuron/dotfiles/blob/e7f13c5c9a644d659171cc9fe70df7f24b673847/.vimperatorrc
