@@ -114,7 +114,10 @@ inoremap jj <Esc>
 "   http://stackoverflow.com/questions/2302846/running-a-shell-script-in-vimrc-and-processing-the-output
 call system('type ibus')
 if v:shell_error == 0
-  inoremap <Esc> <Esc>:call system('ibus engine "xkb:us::eng"')<CR>
+  " Disable this feature for now.
+  " Because the process of turning off IME spends a little time,
+  " and it irritates me a little sometimes.
+  "inoremap <Esc> <Esc>:call system('ibus engine "xkb:us::eng"')<CR>
 endif
 
 " pair close checker.
