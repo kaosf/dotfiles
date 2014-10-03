@@ -13,11 +13,7 @@ alias suvi='sudo -H vim'
 alias suv=suvi
 
 # use "colordiff" if it exists
-type colordiff > /dev/null
-if [ $? -eq 0 ]
-then
-  alias diff=colordiff
-fi
+if type colordiff > /dev/null; then alias diff=colordiff; fi
 
 alias date-yymmddhhmmss='date +%Y%m%d%H%M%S'
 alias date-rfc-3339="date --rfc-3339=seconds | sed 's/ /T/'"
