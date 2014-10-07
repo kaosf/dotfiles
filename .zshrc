@@ -178,10 +178,10 @@ fi
 alias disablescreensaver='xset s off'
 
 randstr () {
-  local LENGTH=40
-  if [ $# -gt 0 ]
+  local length=$1
+  if [ $# -lt 1 ]
   then
-    LENGTH=$1
+    length=40
   fi
-  echo `tr -dc A-Za-z0-9 < /dev/urandom | head -c $LENGTH`
+  echo `tr -dc A-Za-z0-9 < /dev/urandom | head -c $length`
 }
