@@ -19,8 +19,8 @@ Session.vim
 .netrwhist
 *~
 
-# 2014-04-25T04:00:18+09:00
-# Created by http://www.gitignore.io
+# 2014-10-11T17:02:14+0900
+# Created by https://www.gitignore.io
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -50,3 +50,5 @@ tramp
 # reftex files
 *.rel
 
+# AUCTeX auto folder
+/auto/
