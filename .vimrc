@@ -35,8 +35,11 @@ NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 NeoBundle 'tpope/vim-surround'
 
-" ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
-set virtualedit+=block
+" Enable to move freely
+" ref.
+"   :help virtualedit
+"   http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
+set virtualedit=all
 
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
@@ -66,8 +69,8 @@ nnoremap : ;
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 " Make not to have to press Ctrl
-nnoremap gj :bn<CR>
-nnoremap gk :bp<CR>
+nnoremap gh :bp<CR>
+nnoremap gl :bn<CR>
 
 " forgot where I did copy&paste from
 set list
@@ -147,14 +150,13 @@ autocmd FileType clojure :call <SID>autocomplete_brackets()
 
 nnoremap j gj
 nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 vnoremap j gj
 vnoremap k gk
+vnoremap gj j
+vnoremap gk k
 vnoremap ff <Esc>
-
-" @ggkuron taught me
-" h and BackSpace move from top to the previous line tail
-" l and Space move from tail to the next line top
-set whichwrap=h,l,b,s
 
 if !has('mac')
   " collaboration with clipboard
@@ -351,7 +353,7 @@ endtry
 
 " Enable to change buffers quickly
 " ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
-nnoremap gls :ls<CR>:buf 
+nnoremap gbf :ls<CR>:buf 
 
 " Enable to move between `do` and `end`, `def` and `end` or etc by `%`.
 " ref. http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
