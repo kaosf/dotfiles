@@ -154,11 +154,6 @@ vnoremap j gj
 vnoremap k gk
 vnoremap ff <Esc>
 
-" @ggkuron taught me
-" h and BackSpace move from top to the previous line tail
-" l and Space move from tail to the next line top
-set whichwrap=h,l,b,s
-
 if !has('mac')
   " collaboration with clipboard
   " ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
