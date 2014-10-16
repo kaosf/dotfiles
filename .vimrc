@@ -35,8 +35,11 @@ NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 NeoBundle 'tpope/vim-surround'
 
-" ref. http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
-set virtualedit+=block
+" Enable to move freely
+" ref.
+"   :help virtualedit
+"   http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
+set virtualedit=all
 
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
