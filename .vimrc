@@ -69,8 +69,8 @@ nnoremap : ;
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 " Make not to have to press Ctrl
-nnoremap gj :bn<CR>
-nnoremap gk :bp<CR>
+nnoremap gh :bp<CR>
+nnoremap gl :bn<CR>
 
 " forgot where I did copy&paste from
 set list
@@ -150,8 +150,12 @@ autocmd FileType clojure :call <SID>autocomplete_brackets()
 
 nnoremap j gj
 nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 vnoremap j gj
 vnoremap k gk
+vnoremap gj j
+vnoremap gk k
 vnoremap ff <Esc>
 
 if !has('mac')
@@ -349,7 +353,7 @@ endtry
 
 " Enable to change buffers quickly
 " ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
-nnoremap gls :ls<CR>:buf 
+nnoremap gbf :ls<CR>:buf 
 
 " Enable to move between `do` and `end`, `def` and `end` or etc by `%`.
 " ref. http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
