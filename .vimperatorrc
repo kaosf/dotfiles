@@ -1,7 +1,7 @@
 nnoremap ; :
 nnoremap : ;
-nnoremap gj :bn<CR>
-nnoremap gk :bp<CR>
+nnoremap gh :bp<CR>
+nnoremap gl :bn<CR>
 
 " About :!{cmd}
 " ref. http://d.hatena.ne.jp/kei-os2007/20080428/1209379483
