@@ -8,6 +8,9 @@
 ### rbenv ###
 .ruby-version
 
+### rbenv-binstubs ###
+/.bundle
+
 # 2014-10-22T01:06:28+0900
 # Created by http://www.gitignore.io
 
