@@ -32,3 +32,8 @@ set hintchars=afjghdkslio
 :command! yanktwitterlink :js util.copyToClipboard(content.document.title+' '+content.location+' ',true)
 
 :command! reloadconfig :source .vimperatorrc
+
+" Disabling IME
+" ref. http://d.hatena.ne.jp/tarao/20110523/1306161796
+let g:imeoff='cmd'
+let g:imekeys_methods='x,w'
