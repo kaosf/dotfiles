@@ -1,3 +1,7 @@
+### Temporary files ###
+# ref. http://qiita.com/uasi/items/cedae627b7596a837c57
+/,*
+
 ### ctags ###
 /tags
 
