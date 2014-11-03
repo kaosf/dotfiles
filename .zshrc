@@ -68,7 +68,7 @@ export SVN_EDITOR=vim
 export EDITOR=vim
 
 # execute 'ls' anytime after 'cd'
-cd() { builtin cd $@ && ls; }
+cd() { builtin cd "$@" && ls; }
 
 # 'cd ..' with C-^
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
