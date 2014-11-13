@@ -35,12 +35,20 @@ HISTFILE=~/.zsh_history
 autoload -Uz compinit
 compinit
 
+# Check mac or others
+ismac () {
+  which sw_vers > /dev/null 2>&1
+}
+
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
+if ! ismac || type dircolors > /dev/null
+then
+  eval "$(dircolors -b)"
+fi
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -165,10 +173,6 @@ if [ -f $HOME/.zshrc-local ]
 then
   source $HOME/.zshrc-local
 fi
-
-ismac () {
-  which sw_vers > /dev/null 2>&1
-}
 
 if ! ismac && [ -f $HOME/.zshrc-warnings ]
 then
