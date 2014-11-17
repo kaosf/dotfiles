@@ -43,6 +43,10 @@ NeoBundle 'tpope/vim-surround'
 "   http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit=all
 
+" Make backspace key freely
+" ref. http://qiita.com/omega999/items/23aec6a7f6d6735d033f
+set backspace=indent,eol,start
+
 " ref. http://vim.sourceforge.net/scripts/script.php?script_id=2175
 syntax on
 
