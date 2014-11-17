@@ -366,3 +366,5 @@ nnoremap gbf :ls<CR>:buf
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
+
+NeoBundle 'todesking/ruby_hl_lvar.vim'
