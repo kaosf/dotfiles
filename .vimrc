@@ -368,3 +368,5 @@ if !exists('loaded_matchit')
 endif
 
 NeoBundle 'todesking/ruby_hl_lvar.vim'
+
+NeoBundle 'tpope/vim-fugitive'
