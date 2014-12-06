@@ -164,6 +164,12 @@ vnoremap gj j
 vnoremap gk k
 vnoremap ff <Esc>
 
+" Modify window size by cursor keys
+nnoremap <Left>  <C-w><
+nnoremap <Right> <C-w>>
+nnoremap <Down>  <C-w>+
+nnoremap <Up>    <C-w>-
+
 if !has('mac')
   " collaboration with clipboard
   " ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
