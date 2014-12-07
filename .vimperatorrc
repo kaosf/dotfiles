@@ -2,6 +2,8 @@ nnoremap ; :
 nnoremap : ;
 nnoremap gh :bp<CR>
 nnoremap gl :bn<CR>
+nnoremap <F2> :bp<CR>
+nnoremap <F3> :bn<CR>
 
 " About :!{cmd}
 " ref. http://d.hatena.ne.jp/kei-os2007/20080428/1209379483
