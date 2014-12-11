@@ -12,7 +12,6 @@ call neobundle#end()
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'rhysd/neco-ruby-keyword-args'
@@ -196,9 +195,10 @@ augroup END
 " ref. https://github.com/vim-scripts/groovy.vim/blob/0.1.9b/syntax/groovy.vim#L24-27
 au BufNewFile,BufRead *.gradle setf groovy
 
-"""" NERDTree width
+"""" NERDTree
+NeoBundle 'scrooloose/nerdtree'
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
-let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize=20
 
 """" vim-indent-guides configurations
 " ref.
@@ -326,9 +326,9 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " ref. https://github.com/Shougo/neosnippet.vim
 "      https://github.com/Shougo/neosnippet.vim/tree/a7c05372bad5408ab3e87851330bbac4b5a646fd#configuration
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
