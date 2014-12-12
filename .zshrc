@@ -86,7 +86,7 @@ bindkey "^\^" cdup
 #   http://gihyo.jp/dev/serial/01/zsh-book
 _hub () {
   local -a cmds
-  if (( CURRENT == 2));then
+  if ((CURRENT == 2)); then
     # 'repositories' is for https://github.com/kaosf/hub-repositories
     cmds=( \
       'init'         \
@@ -126,7 +126,7 @@ compdef _hub hub
 
 _bb () {
   local -a cmds
-  if (( CURRENT == 2));then
+  if ((CURRENT == 2)); then
     # 'browse', 'download-archive', 'fork', 'group-privilege' and 'services'
     # are for https://bitbucket.org/kaosf/bitbucket-cli-sub-commands
     cmds=( \
