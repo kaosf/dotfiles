@@ -376,3 +376,7 @@ endif
 NeoBundle 'todesking/ruby_hl_lvar.vim'
 
 NeoBundle 'tpope/vim-fugitive'
+
+" MRU (Most Recently Used)
+" ref. http://nanasi.jp/articles/vim/mru_vim.html
+NeoBundle 'vim-scripts/mru.vim'
