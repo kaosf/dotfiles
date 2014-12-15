@@ -78,6 +78,7 @@ cd() { builtin cd "$@" && ls; }
 cdup() { echo; cd ..; zle reset-prompt; }
 zle -N cdup
 bindkey "^\^" cdup
+bindkey "^u" cdup
 
 # 'hub' subcommand completion
 # ref.
