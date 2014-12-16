@@ -165,6 +165,12 @@ zle -N peco-cdr
 
 bindkey '^@' peco-cdr
 
+if [ -f $HOME/.cdd-source ]
+then
+  source $HOME/.cdd-source
+  chpwd() { _cdd_chpwd }
+fi
+
 if [ -f $HOME/.zshrc-local ]
 then
   source $HOME/.zshrc-local
