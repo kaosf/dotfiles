@@ -115,19 +115,6 @@ nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap kk <Esc>
 inoremap jj <Esc>
 
-" Disable IME when exiting insert mode
-" ref. about `system`
-"   https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/xvkbd
-" ref. about `v:shell_error`
-"   http://stackoverflow.com/questions/2302846/running-a-shell-script-in-vimrc-and-processing-the-output
-call system('type ibus')
-if v:shell_error == 0
-  " Disable this feature for now.
-  " Because the process of turning off IME spends a little time,
-  " and it irritates me a little sometimes.
-  "inoremap <Esc> <Esc>:call system('ibus engine "xkb:us::eng"')<CR>
-endif
-
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
 function! ClosePair(char)
