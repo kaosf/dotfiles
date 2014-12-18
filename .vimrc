@@ -21,7 +21,6 @@ NeoBundle 'vim-scripts/groovy.vim'
 NeoBundle 'wavded/vim-stylus'
 " ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'joker1007/vim-markdown-quote-syntax'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 " ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
@@ -367,3 +366,6 @@ NeoBundle 'tpope/vim-fugitive'
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
 NeoBundle 'vim-scripts/mru.vim'
+
+" Disable this plugin now because it takes too long time.
+"NeoBundle 'joker1007/vim-markdown-quote-syntax'
