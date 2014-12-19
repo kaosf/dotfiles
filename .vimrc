@@ -369,3 +369,5 @@ NeoBundle 'vim-scripts/mru.vim'
 
 " Disable this plugin now because it takes too long time.
 "NeoBundle 'joker1007/vim-markdown-quote-syntax'
+
+NeoBundle 'rhysd/committia.vim'
