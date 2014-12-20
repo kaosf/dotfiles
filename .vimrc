@@ -374,3 +374,4 @@ NeoBundle 'rhysd/committia.vim'
 
 """" unite
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Kocha/vim-unite-tig'
