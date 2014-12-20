@@ -371,3 +371,6 @@ NeoBundle 'vim-scripts/mru.vim'
 "NeoBundle 'joker1007/vim-markdown-quote-syntax'
 
 NeoBundle 'rhysd/committia.vim'
+
+"""" unite
+NeoBundle 'Shougo/unite.vim'
