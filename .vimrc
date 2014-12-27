@@ -155,6 +155,13 @@ nnoremap <Right> <C-w>>
 nnoremap <Down>  <C-w>+
 nnoremap <Up>    <C-w>-
 
+" Enable to move cursor in command mode
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Delete>
+
 if !has('mac')
   " collaboration with clipboard
   " ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
