@@ -108,6 +108,7 @@ nnoremap <silent><expr>m "i".nr2char(getchar())."\<Esc>"
 
 " ref. https://github.com/rhysd/dotfiles/blob/7faa1e5b83788bdc8b67462e23479cc285b8ab6b/vimrc#L204-205
 nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
+nnoremap <silent>ff :<C-u>nohlsearch<CR>
 
 " Exit insert mode by "kk" or "jj"
 " ref. https://twitter.com/anekos/status/485416150541402112
