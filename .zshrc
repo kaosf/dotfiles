@@ -32,11 +32,6 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # Use modern completion system
-# ref. https://gist.github.com/juno/5546179
-if [ -d $HOME/.linuxbrew/share/zsh/site-functions ]
-then
-  fpath=($HOME/.linuxbrew/share/zsh/site-functions $fpath)
-fi
 autoload -Uz compinit
 compinit
 
