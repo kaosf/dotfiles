@@ -73,11 +73,10 @@ export EDITOR=vim
 # Execute 'ls' anytime after 'cd'
 cd() { builtin cd "$@" && ls; }
 
-# 'cd ..' with C-^
+# 'cd ..' with C-u
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
 cdup() { echo; cd ..; zle reset-prompt; }
 zle -N cdup
-bindkey "^\^" cdup
 bindkey "^u" cdup
 
 # 'hub' subcommand completion
