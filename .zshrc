@@ -70,7 +70,7 @@ fi
 export SVN_EDITOR=vim
 export EDITOR=vim
 
-# execute 'ls' anytime after 'cd'
+# Execute 'ls' anytime after 'cd'
 cd() { builtin cd "$@" && ls; }
 
 # 'cd ..' with C-^
