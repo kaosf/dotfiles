@@ -12,3 +12,5 @@ bind generic <C-B> move-page-up
 bind main B ?git rebase -i %(commit)
 bind diff B ?git rebase -i %(commit)
 bind main V ?git revert %(commit)
+bind main M ?git reset --hard %(commit)
+bind diff M ?git reset --hard %(commit)
