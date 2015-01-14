@@ -12,7 +12,6 @@ call neobundle#end()
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-rails'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'rhysd/neco-ruby-keyword-args'
 NeoBundle 'digitaltoad/vim-jade'
