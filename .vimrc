@@ -157,8 +157,8 @@ nnoremap <Down>  <C-w>+
 nnoremap <Up>    <C-w>-
 
 " Use g] mainly for tag jump
-nnoremap g]     g<C-]>
-nnoremap g<C-]> g]
+nnoremap <C-]>  g<C-]>
+nnoremap g<C-]> <C-]>
 
 " Enable to move cursor in command mode
 cnoremap <C-a> <Home>
