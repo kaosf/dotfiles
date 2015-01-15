@@ -20,8 +20,14 @@ precmd () {
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 # default $PROMPT in walters is "%B%(?..[%?] )%b%n@%U%m%u> "
-PROMPT="%B%(?..[%?] )%b$ "
-RPROMPT="%1(v|%F{blue}%1v%f|) %F{green}%~%f"
+if [[ $ZSH_NO_RPROMPT = 1 ]]
+then
+  PROMPT="%F{green}%~%f %1(v|%F{blue}%1v %f|)%B%(?..[%?] )%b$ "
+  RPROMPT=""
+else
+  PROMPT="%B%(?..[%?] )%b$ "
+  RPROMPT="%1(v|%F{blue}%1v%f|) %F{green}%~%f"
+fi
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
