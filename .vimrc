@@ -372,6 +372,7 @@ if !exists('loaded_matchit')
 endif
 
 NeoBundle 'todesking/ruby_hl_lvar.vim'
+"let g:ruby_hl_lvar_show_warnings = 1
 
 NeoBundle 'tpope/vim-fugitive'
 
