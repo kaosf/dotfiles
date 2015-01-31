@@ -395,8 +395,6 @@ NeoBundle 'vim-scripts/mru.vim'
 
 NeoBundle 'rhysd/committia.vim'
 
-"""" unite
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Kocha/vim-unite-tig'
 
 " Command for "Where is This file?"
