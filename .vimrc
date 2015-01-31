@@ -35,6 +35,16 @@ NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 NeoBundle 'tpope/vim-surround'
 
+"" vimproc
+" Run commands below;
+"   cd ~/.vim/bundle/vimproc/
+"   make
+NeoBundle 'Shougo/vimproc'
+
+NeoBundle 'Shougo/vimshell'
+
+NeoBundle 'Shougo/unite.vim'
+
 " Enable to move freely
 " ref.
 "   :help virtualedit
