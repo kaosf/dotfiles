@@ -42,6 +42,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'Shougo/vimproc'
 
 NeoBundle 'Shougo/vimshell'
+command VSH VimShell
+command Vsh VimShell
 
 NeoBundle 'Shougo/unite.vim'
 
