@@ -406,3 +406,5 @@ NeoBundle 'Kocha/vim-unite-tig'
 
 " Command for "Where is This file?"
 command WT echo @%
+
+"NeoBundle 'tpope/vim-fireplace'
