@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ ! -f $HOME/.vimrc-local ]
+then
+  cp .vimrc-local-remote $HOME/.vimrc-local
+fi
