@@ -408,3 +408,7 @@ NeoBundle 'Kocha/vim-unite-tig'
 command WT echo @%
 
 "NeoBundle 'tpope/vim-fireplace'
+
+if filereadable($HOME . "/.vimrc-local")
+  source ~/.vimrc-local
+endif
