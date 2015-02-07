@@ -392,6 +392,19 @@ NeoBundle 'todesking/ruby_hl_lvar.vim'
 "let g:ruby_hl_lvar_show_warnings = 1
 
 NeoBundle 'tpope/vim-fugitive'
+" ref. http://vim.wikia.com/wiki/Multiple_commands_at_once
+command Gdf Gdiff
+
+" vimdiff color
+" ref.
+"   http://qiita.com/takaakikasai/items/b46a0b8c94e476e57e31
+"   http://d.hatena.ne.jp/acotie/20090707/1246969274
+" Run on Vim to check color name;
+"   :runtime syntax/colortest.vim
+highlight DiffAdd    cterm=bold ctermfg=green ctermbg=black
+highlight DiffDelete cterm=bold ctermfg=red   ctermbg=black
+highlight DiffChange cterm=bold ctermfg=white ctermbg=black
+highlight DiffText   cterm=bold ctermfg=white ctermbg=yellow
 
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
