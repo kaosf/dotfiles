@@ -392,6 +392,10 @@ NeoBundle 'todesking/ruby_hl_lvar.vim'
 "let g:ruby_hl_lvar_show_warnings = 1
 
 NeoBundle 'tpope/vim-fugitive'
+" ref. http://vim.wikia.com/wiki/Multiple_commands_at_once
+command Gad Git add -A :/
+command Gac Git add -A :/ | Gcommit
+command Gdf Gdiff
 
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
