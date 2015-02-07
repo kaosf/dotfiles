@@ -395,6 +395,13 @@ NeoBundle 'tpope/vim-fugitive'
 " ref. http://vim.wikia.com/wiki/Multiple_commands_at_once
 command Gdf Gdiff
 
+" vimdiff color
+" ref. http://qiita.com/takaakikasai/items/b46a0b8c94e476e57e31
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
+
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
 NeoBundle 'vim-scripts/mru.vim'
