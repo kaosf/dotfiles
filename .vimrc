@@ -393,6 +393,7 @@ NeoBundle 'todesking/ruby_hl_lvar.vim'
 
 NeoBundle 'tpope/vim-fugitive'
 " ref. http://vim.wikia.com/wiki/Multiple_commands_at_once
+command Gadd Git add -A :/
 command Gdf Gdiff
 
 " vimdiff color
