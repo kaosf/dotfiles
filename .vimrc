@@ -60,6 +60,8 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 " Shortcut for VimFiler command
 nnoremap <silent> <leader>f :VimFiler<CR>
+" Show cursor line only in vimfiler buffer
+autocmd filetype vimfiler setlocal cursorline
 
 " Enable to move freely
 " ref.
