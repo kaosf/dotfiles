@@ -52,6 +52,8 @@ vmap <silent> <leader>s :VimShellSendString<cr>
 
 NeoBundle 'Shougo/unite.vim'
 
+NeoBundle 'Shougo/vimfiler'
+
 " Enable to move freely
 " ref.
 "   :help virtualedit
