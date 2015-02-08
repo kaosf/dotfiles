@@ -53,6 +53,8 @@ vmap <silent> <leader>s :VimShellSendString<cr>
 NeoBundle 'Shougo/unite.vim'
 
 NeoBundle 'Shougo/vimfiler'
+" Shortcut for VimFiler command
+nnoremap <silent> <leader>f :VimFiler<CR>
 
 " Enable to move freely
 " ref.
