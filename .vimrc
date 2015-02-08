@@ -52,6 +52,17 @@ vmap <silent> <leader>s :VimShellSendString<cr>
 
 NeoBundle 'Shougo/unite.vim'
 
+NeoBundle 'Shougo/vimfiler'
+" ref. https://github.com/mizoki/dotfiles/blob/42c377ed5e003ac921f1874c5a62d04f8cf5301e/.vimrc#L675-L686
+" Set vimfiler to default explorer
+let g:vimfiler_as_default_explorer = 1
+" Enable file operation commands
+let g:vimfiler_safe_mode_by_default = 0
+" Shortcut for VimFiler command
+nnoremap <silent> <leader>f :VimFiler<CR>
+" Show cursor line only in vimfiler buffer
+autocmd filetype vimfiler setlocal cursorline
+
 " Enable to move freely
 " ref.
 "   :help virtualedit
@@ -226,7 +237,7 @@ colorscheme default
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
-let g:indent_guides_exclude_filetypes=['clojure']
+let g:indent_guides_exclude_filetypes=['clojure', 'vimfiler']
 hi IndentGuidesOdd  ctermbg=4
 hi IndentGuidesEven ctermbg=6
 
