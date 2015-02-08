@@ -53,6 +53,11 @@ vmap <silent> <leader>s :VimShellSendString<cr>
 NeoBundle 'Shougo/unite.vim'
 
 NeoBundle 'Shougo/vimfiler'
+" ref. https://github.com/mizoki/dotfiles/blob/42c377ed5e003ac921f1874c5a62d04f8cf5301e/.vimrc#L675-L686
+" Set vimfiler to default explorer
+let g:vimfiler_as_default_explorer = 1
+" Enable file operation commands
+let g:vimfiler_safe_mode_by_default = 0
 " Shortcut for VimFiler command
 nnoremap <silent> <leader>f :VimFiler<CR>
 
