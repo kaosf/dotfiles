@@ -235,7 +235,7 @@ colorscheme default
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
-let g:indent_guides_exclude_filetypes=['clojure']
+let g:indent_guides_exclude_filetypes=['clojure', 'vimfiler']
 hi IndentGuidesOdd  ctermbg=4
 hi IndentGuidesEven ctermbg=6
 
