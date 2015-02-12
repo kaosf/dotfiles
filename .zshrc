@@ -1,33 +1,5 @@
-# Set up the prompt
-autoload -Uz promptinit
-promptinit
-prompt walters
-# ref.
-#   http://kitak.hatenablog.jp/entry/2013/05/25/103059
-#   http://mollifier.hatenablog.com/entry/20100906/p1
-#   http://liosk.blog103.fc2.com/blog-entry-209.html
-#   `man zshcontrib` # for vcs_info
-#   `man zshmisc` # for other zsh features
-#     and find '^SIMPLE PROMPT ESCAPES' for PROMPT and RPROMPT
-#   http://news.mynavi.jp/column/zsh/002/
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' formats '[%b]'
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () {
-  psvar=()
-  LANG=en_US.UTF-8 vcs_info
-  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-# default $PROMPT in walters is "%B%(?..[%?] )%b%n@%U%m%u> "
-if [[ $ZSH_NO_RPROMPT = 1 ]]
-then
-  PROMPT="%F{green}%~%f %1(v|%F{blue}%1v %f|)%B%(?..[%?] )%b$ "
-  RPROMPT=""
-else
-  PROMPT="%B%(?..[%?] )%b$ "
-  RPROMPT="%1(v|%F{blue}%1v%f|) %F{green}%~%f"
-fi
+# Prompt configuration
+[ -s ~/.zshrc-local ] && . ~/.zshrc-prompt
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
