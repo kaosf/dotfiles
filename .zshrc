@@ -1,5 +1,5 @@
 # Prompt configuration
-[ -s ~/.zshrc-local ] && . ~/.zshrc-prompt
+[ -s ~/.zshrc-prompt ] && . ~/.zshrc-prompt
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
