@@ -97,10 +97,7 @@ set encoding=utf-8
 nnoremap ; :
 nnoremap : ;
 
-" @rch850 taught to me
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
-" Make not to have to press Ctrl
+" Switch tabs easily
 nnoremap gh :bp<CR>
 nnoremap gl :bn<CR>
 
