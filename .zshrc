@@ -40,11 +40,9 @@ zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
+[ -f ~/.envvars ] && . ~/.envvars
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.zshrc-functions ] && . ~/.zshrc-functions
-
-export SVN_EDITOR=vim
-export EDITOR=vim
 
 # Execute 'ls' anytime after 'cd'
 cd() { builtin cd "$@" && ls; }

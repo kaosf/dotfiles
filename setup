@@ -4,6 +4,7 @@ for i in \
   .aliases \
   .bashrc \
   .bash_aliases \
+  .envvars \
   .zshrc \
   .zshrc-functions \
   .zshrc-prompt \
