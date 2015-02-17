@@ -49,6 +49,9 @@ export EDITOR=vim
 # Execute 'ls' anytime after 'cd'
 cd() { builtin cd "$@" && ls; }
 
+# use "colordiff" if it exists
+if type colordiff > /dev/null 2>&1; then alias diff=colordiff; fi
+
 # 'cd ..' with C-u
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
 cdup() { echo; cd ..; zle reset-prompt; }
@@ -146,27 +149,7 @@ then
   chpwd() { _cdd_chpwd }
 fi
 
-if [ -f $HOME/.zshrc-local ]
-then
-  source $HOME/.zshrc-local
-fi
+[ -f $HOME/.zshrc-local ] && . ~/.zshrc-local
 
-ismac () {
-  which sw_vers > /dev/null 2>&1
-}
-
-if ! ismac && [ -f $HOME/.zshrc-warnings ]
-then
-  source $HOME/.zshrc-warnings
-fi
-
-alias disablescreensaver='xset s off'
-
-randstr () {
-  local length=$1
-  if [ $# -lt 1 ]
-  then
-    length=40
-  fi
-  echo `tr -dc A-Za-z0-9 < /dev/urandom | head -c $length`
-}
+alias ismac='which sw_vers > /dev/null 2>&1'
+! ismac && [ -f ~/.zshrc-warnings ] && . ~/.zshrc-warnings

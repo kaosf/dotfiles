@@ -1,0 +1,8 @@
+randstr () {
+  local length=$1
+  if [ $# -lt 1 ]
+  then
+    length=40
+  fi
+  echo `tr -dc A-Za-z0-9 < /dev/urandom | head -c $length`
+}

@@ -14,9 +14,6 @@ alias e='emacs -nw'
 alias suvi='sudo -H vim'
 alias suv=suvi
 
-# use "colordiff" if it exists
-if type colordiff > /dev/null 2>&1; then alias diff=colordiff; fi
-
 alias date-yymmddhhmmss='date +%Y%m%d%H%M%S'
 alias date-rfc-3339="date --rfc-3339=seconds | sed 's/ /T/'"
 alias df='df -Th'
@@ -70,3 +67,5 @@ alias ta='tig --all'
 alias iamonssh='[ ! -z "$SSH_CLIENT" ]'
 
 alias ctags-ruby='ctags-exuberant --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
+
+alias disablescreensaver='xset s off'
