@@ -41,6 +41,7 @@ zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
 [ -f ~/.aliases ] && . ~/.aliases
+[ -f ~/.zshrc-functions ] && . ~/.zshrc-functions
 
 export SVN_EDITOR=vim
 export EDITOR=vim
