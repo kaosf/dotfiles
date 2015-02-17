@@ -40,10 +40,7 @@ zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
-if [ -f $HOME/.aliases ]
-then
-  source $HOME/.aliases
-fi
+[ -f ~/.aliases ] && . ~/.aliases
 
 export SVN_EDITOR=vim
 export EDITOR=vim
