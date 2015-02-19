@@ -45,10 +45,16 @@ NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
 NeoBundle 'tpope/vim-surround'
 
 "" vimproc
-" Run commands below;
-"   cd ~/.vim/bundle/vimproc/
-"   make
-NeoBundle 'Shougo/vimproc'
+" ref. https://github.com/Shougo/vimproc.vim#neobundle
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 NeoBundle 'Shougo/vimshell'
 command VSH VimShell
