@@ -137,7 +137,7 @@ set hlsearch
 
 " ref. http://vimblog.hatenablog.com/entry/vimrc_set_cursor_movement_options
 " ref. https://twitter.com/ggkuron/status/375226033756061697
-set scrolloff=8
+set scrolloff=4
 set sidescroll=1
 set sidescrolloff=16
 
