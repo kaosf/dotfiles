@@ -67,3 +67,6 @@ alias iamonssh='[ ! -z "$SSH_CLIENT" ]'
 alias ctags-ruby='ctags-exuberant --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 
 alias disablescreensaver='xset s off'
+
+# ref. http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim
+alias tmux='tmux -2'
