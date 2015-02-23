@@ -32,7 +32,7 @@ precmd () {
 }
 
 # Prompt (left prompt) and rprompt (right prompt) configrations
-PROMPT="%F{green}%~%f %1(v|%F{blue}%1v %f|)%B%(?..[%?] )%b
+PROMPT="%F{green}%~%f %1(v|%F{blue}%1v %f|)%F{yellow}%n@%m%f %B%F{red}%(?..[%?])%f%b
 $ "
 RPROMPT=""
 # To show command logs to copy (for multiple lines prompt)
