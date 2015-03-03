@@ -1,0 +1,3 @@
+! Alt_R -> Menu
+remove mod1 = Alt_R
+keycode 108 = Menu NoSymbol Menu

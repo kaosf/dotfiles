@@ -1,10 +1,16 @@
 #!/bin/bash
 
 for i in \
-  .gvimrc \
-  .vimperatorrc \
   .xmodmap \
   .xmodmap-revert \
+
+do
+  cp $PWD/$i $HOME/$i
+done
+
+for i in \
+  .gvimrc \
+  .vimperatorrc \
   .xmodmap-for-hhkb \
   .xmodmap-for-hhkb-revert \
 
@@ -23,4 +29,10 @@ then
   echo 'xmodmap $HOME/.xmodmap-for-hhkb-revert' \
     > $HOME/local/bin/hhkb-finish
   chmod +x $HOME/local/bin/hhkb-finish
+fi
+
+if [[ $1 == menukey ]]
+then
+  cat $PWD/.xmodmap-for-menukey        >> $HOME/.xmodmap
+  cat $PWD/.xmodmap-for-menukey-revert >> $HOME/.xmodmap-revert
 fi

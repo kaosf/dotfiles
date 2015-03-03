@@ -6,9 +6,13 @@
 ./setup
 
 ./x-setup # for X (e.g. Desktop Edition, VNC Server)
+
+./x-setup menukey # for HP Stream 11 d012tu (This laptop has no menu key)
 ```
 
 `~/.lein/profiles.clj` is created as a copy. Modify it after `./setup` command.
+
+`~/.xmodmap` and `/.xmodmap-revert` are not created as a symlink.
 
 ## License
 
