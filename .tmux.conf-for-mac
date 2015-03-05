@@ -1,0 +1,1 @@
+bind-key > run-shell 'rm ~/.tmux-buffer' \; save-buffer ~/.tmux-buffer \; run-shell 'pbcopy < ~/.tmux-buffer' \; display-message "Copied to clipboard."

@@ -13,7 +13,6 @@ for i in \
   .vimrc-neocomplete \
   .vimrc-neosnippet \
   .tigrc \
-  .tmux.conf \
   .gemrc \
 
 do
@@ -75,4 +74,13 @@ if [ ! -s $HOME/.lesskey ]
 then
   ln -s $PWD/.lesskey $HOME/.lesskey
   lesskey
+fi
+
+[ -f $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
+cp $PWD/.tmux.conf $HOME/.tmux.conf
+if [[ $1 = mac ]]
+then
+  cat $PWD/.tmux.conf-for-mac >> $HOME/.tmux.conf
+else
+  cat $PWD/.tmux.conf-for-linux >> $HOME/.tmux.conf
 fi
