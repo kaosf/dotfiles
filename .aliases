@@ -7,8 +7,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias v='vim'
-alias vi='vim'
+alias v=vim
+alias vi=vim
 alias view='vim -R'
 alias e='emacs -nw'
 
@@ -29,7 +29,7 @@ alias bi-pvb-bbb='bundle install --path vendor/bundle --binstubs .bundle/bin'
 alias bi-bbb-pvb='bundle install --binstubs .bundle/bin --path vendor/bundle'
 
 # Git
-alias g='git'
+alias g=git
 alias gac='git add -A :/ && git commit'
 alias gad='git add'
 alias gadd='git add'
