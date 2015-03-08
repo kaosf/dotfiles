@@ -8,6 +8,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias v='vim'
+alias vi='vim'
 alias view='vim -R'
 alias e='emacs -nw'
 
