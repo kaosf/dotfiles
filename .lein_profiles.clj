@@ -4,6 +4,8 @@
       [lein-exec "0.3.1"]
       [lein-droid/lein-droid "0.2.0"]
       [lein-typed "0.3.1"]
+      ; ref. https://github.com/jakepearson/quickie
+      [quickie "0.3.6"]
       ; ref.
       ;   http://dev.classmethod.jp/client-side/language-client-side/lein-autoexpect/
       ;   https://github.com/jakemcc/lein-autoexpect
