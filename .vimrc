@@ -231,6 +231,10 @@ augroup END
 " ref. https://github.com/vim-scripts/groovy.vim/blob/0.1.9b/syntax/groovy.vim#L24-27
 au BufNewFile,BufRead *.gradle setf groovy
 
+" *last-position-jump*
+" ref. http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 """" NERDTree
 NeoBundle 'scrooloose/nerdtree'
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
