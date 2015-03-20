@@ -19,6 +19,7 @@
       ;[lein-autoexpect "1.4.2"]
 
       ; For tmux status bar notification
+      ; Now, I can do automated test by running "lein test-refresh" command.
       ; ref. http://www.stathis.co.uk/lein-test-refresh-notification-workflow/
       [com.jakemccrary/lein-test-refresh "0.5.0"]
     ]
