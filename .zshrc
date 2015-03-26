@@ -68,6 +68,24 @@ zle -N peco-cdr
 
 bindkey '^@' peco-cdr
 
+# ref. http://qiita.com/kp_ohnishi/items/3009e2083831af3a7c5c
+peco-select-history () {
+  local tac
+  if which tac > /dev/null; then
+    tac="tac"
+  else
+    tac="tail -r"
+  fi
+  BUFFER=$( \
+    history -n 1 | \
+    eval $tac | \
+    peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
 if [ -f $HOME/.cdd-source ]
 then
   source $HOME/.cdd-source
