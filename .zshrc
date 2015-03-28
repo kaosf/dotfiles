@@ -78,6 +78,7 @@ peco-select-history () {
   fi
   BUFFER=$( \
     history -n 1 | \
+    uniq | \
     eval $tac | \
     peco --query "$LBUFFER")
   CURSOR=$#BUFFER
