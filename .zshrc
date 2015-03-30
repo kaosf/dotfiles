@@ -43,6 +43,7 @@ zstyle ':completion:*' recent-dirs-insert both
 [ -f ~/.envvars ] && . ~/.envvars
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.zshrc-functions ] && . ~/.zshrc-functions
+[ -f ~/.zshrc-peco ] && . ~/.zshrc-peco
 
 # Execute 'ls' anytime after 'cd'
 cd() { builtin cd "$@" && ls; }
@@ -55,38 +56,6 @@ if type colordiff > /dev/null 2>&1; then alias diff=colordiff; fi
 cdup() { echo; cd ..; zle reset-prompt; }
 zle -N cdup
 bindkey "^u" cdup
-
-peco-cdr () {
-    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-    zle clear-screen
-}
-zle -N peco-cdr
-
-bindkey '^@' peco-cdr
-
-# ref. http://qiita.com/kp_ohnishi/items/3009e2083831af3a7c5c
-peco-select-history () {
-  local tac
-  if which tac > /dev/null; then
-    tac="tac"
-  else
-    tac="tail -r"
-  fi
-  BUFFER=$( \
-    history -n 1 | \
-    sort | \
-    uniq | \
-    eval $tac | \
-    peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
 
 if [ -f $HOME/.cdd-source ]
 then
