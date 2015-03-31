@@ -10,6 +10,7 @@ zle -N peco-cdr
 bindkey '^@' peco-cdr
 
 # ref. http://qiita.com/kp_ohnishi/items/3009e2083831af3a7c5c
+# ref. for uniquness http://qiita.com/arcizan/items/9cf19cd982fa65f87546
 peco-select-history () {
   local tac
   if which tac > /dev/null; then
@@ -19,8 +20,7 @@ peco-select-history () {
   fi
   BUFFER=$( \
     history -n 1 | \
-    sort | \
-    uniq | \
+    awk '!a[$0]++' | \
     eval $tac | \
     peco --query "$LBUFFER")
   CURSOR=$#BUFFER
