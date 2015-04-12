@@ -59,7 +59,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/vimshell'
 command VSH VimShell
 command Vsh VimShell
-nnoremap <silent> <leader>sh :VimShell<CR>
+nnoremap <silent> <leader>vs :VimShell<CR>
 " Open Leiningen REPL or Rails console by "iexe lein repl" or "iexe rails c".
 " Select lines in visual mode and then press ,s to run the selected code.
 vmap <silent> <leader>s :VimShellSendString<cr>
