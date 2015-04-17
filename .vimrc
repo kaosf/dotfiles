@@ -77,6 +77,11 @@ nnoremap <silent> <leader>f :VimFiler<CR>
 " Show cursor line only in vimfiler buffer
 autocmd filetype vimfiler setlocal cursorline
 
+"""" NERDTree
+NeoBundle 'scrooloose/nerdtree'
+" ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
+let g:NERDTreeWinSize=20
+
 " Enable to move freely
 " ref.
 "   :help virtualedit
@@ -236,11 +241,6 @@ au BufNewFile,BufRead *.gradle setf groovy
 " *last-position-jump*
 " ref. http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-"""" NERDTree
-NeoBundle 'scrooloose/nerdtree'
-" ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
-let g:NERDTreeWinSize=20
 
 """" vim-indent-guides configurations
 " ref.
