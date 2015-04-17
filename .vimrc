@@ -83,7 +83,7 @@ let g:NERDTreeWinSize=20
 " Show hidden files
 let NERDTreeShowHidden=1
 " Shortcut for NERDTree command
-nnoremap <silent> <leader>f :NERDTree<CR>
+nnoremap <silent> <leader>f :NERDTreeFocus<CR>
 
 " Enable to move freely
 " ref.
