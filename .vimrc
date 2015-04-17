@@ -80,6 +80,8 @@ autocmd filetype vimfiler setlocal cursorline
 NeoBundle 'scrooloose/nerdtree'
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
 let g:NERDTreeWinSize=20
+" Show hidden files
+let NERDTreeShowHidden=1
 " Shortcut for NERDTree command
 nnoremap <silent> <leader>f :NERDTree<CR>
 
