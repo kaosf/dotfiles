@@ -66,16 +66,22 @@ vmap <silent> <leader>s :VimShellSendString<cr>
 
 NeoBundle 'Shougo/unite.vim'
 
+"" vimfiler
 NeoBundle 'Shougo/vimfiler'
 " ref. https://github.com/mizoki/dotfiles/blob/42c377ed5e003ac921f1874c5a62d04f8cf5301e/.vimrc#L675-L686
 " Set vimfiler to default explorer
 let g:vimfiler_as_default_explorer = 1
 " Enable file operation commands
 let g:vimfiler_safe_mode_by_default = 0
-" Shortcut for VimFiler command
-nnoremap <silent> <leader>f :VimFiler<CR>
 " Show cursor line only in vimfiler buffer
 autocmd filetype vimfiler setlocal cursorline
+
+"" NERDTree
+NeoBundle 'scrooloose/nerdtree'
+" ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
+let g:NERDTreeWinSize=20
+" Shortcut for NERDTree command
+nnoremap <silent> <leader>f :NERDTree<CR>
 
 " Enable to move freely
 " ref.
@@ -236,11 +242,6 @@ au BufNewFile,BufRead *.gradle setf groovy
 " *last-position-jump*
 " ref. http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-"""" NERDTree
-NeoBundle 'scrooloose/nerdtree'
-" ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
-let g:NERDTreeWinSize=20
 
 """" vim-indent-guides configurations
 " ref.
