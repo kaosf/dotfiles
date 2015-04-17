@@ -1,4 +1,1 @@
-if [ -f $HOME/.aliases ]
-then
-  source $HOME/.aliases
-fi
+[ -f $HOME/.aliases ] && source $HOME/.aliases
