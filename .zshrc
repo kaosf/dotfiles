@@ -42,6 +42,7 @@ zstyle ':completion:*' recent-dirs-insert both
 
 [ -f ~/.envvars ] && . ~/.envvars
 [ -f ~/.aliases ] && . ~/.aliases
+[ -f ~/.aliases-local ] && . ~/.aliases-local
 [ -f ~/.zshrc-functions ] && . ~/.zshrc-functions
 [ -f ~/.zshrc-peco ] && . ~/.zshrc-peco
 
