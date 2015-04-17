@@ -73,8 +73,6 @@ NeoBundle 'Shougo/vimfiler'
 let g:vimfiler_as_default_explorer = 1
 " Enable file operation commands
 let g:vimfiler_safe_mode_by_default = 0
-" Shortcut for VimFiler command
-nnoremap <silent> <leader>f :VimFiler<CR>
 " Show cursor line only in vimfiler buffer
 autocmd filetype vimfiler setlocal cursorline
 
@@ -82,6 +80,8 @@ autocmd filetype vimfiler setlocal cursorline
 NeoBundle 'scrooloose/nerdtree'
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
 let g:NERDTreeWinSize=20
+" Shortcut for NERDTree command
+nnoremap <silent> <leader>f :NERDTree<CR>
 
 " Enable to move freely
 " ref.
