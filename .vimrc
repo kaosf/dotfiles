@@ -91,6 +91,9 @@ nnoremap <silent> <leader>f :NERDTreeFocus<CR>
 "   http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit=all
 
+" Set nowrap to enhance cursor moving speed
+set nowrap
+
 " Make backspace key freely
 " ref. http://qiita.com/omega999/items/23aec6a7f6d6735d033f
 set backspace=indent,eol,start
