@@ -71,3 +71,5 @@ alias disablescreensaver='xset s off'
 
 # ref. http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim
 alias tmux='tmux -2'
+
+alias ht=htop
