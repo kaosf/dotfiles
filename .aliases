@@ -38,7 +38,7 @@ alias gci='git commit'
 alias gco='git checkout'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
-alias gic='git init && git add -A :/ && git commit -m "Initial commit"'
+alias gic='git init && git add -A :/ && git commit'
 alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
 %Creset%s'"
 alias glggo='git log --graph --oneline'
