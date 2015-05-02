@@ -293,6 +293,7 @@ globalkeys = awful.util.table.join(
     ,
     awful.key({ modkey, "Control" }, "j", function () awful.client.incwfact( 0.05) end),
     awful.key({ modkey, "Control" }, "k", function () awful.client.incwfact(-0.05) end),
+    awful.key({}, "Hiragana_Katakana", function () mypromptbox[mouse.screen]:run() end),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -q sset Master 3%+ unmute", false) end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -q sset Master 3%- unmute", false) end)
     --awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -q sset Master toggle", false) end)
