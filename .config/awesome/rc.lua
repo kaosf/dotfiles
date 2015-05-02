@@ -276,6 +276,20 @@ globalkeys = awful.util.table.join(
               end),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end)
+
+    ---- My configuration
+    ,
+    awful.key({ modkey }, "n",
+              function (c)
+                  current = client.focus
+                  master = awful.client.getmaster()
+                  if current then
+                      client.focus = master
+                      master:raise()
+                  end
+                  awful.client.swap.byidx(  1)
+                  awful.client.focus.byidx(-1)
+              end)
 )
 
 clientkeys = awful.util.table.join(
@@ -285,7 +299,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
-    awful.key({ modkey,           }, "n",
+    awful.key({ modkey, "Shift"   }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
             -- minimized, since minimized clients can't have the focus.
