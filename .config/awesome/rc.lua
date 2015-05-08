@@ -291,6 +291,15 @@ globalkeys = awful.util.table.join(
                   awful.client.focus.byidx(-1)
               end)
     ,
+    awful.key({ modkey }, "i",
+              function ()
+                  local next_index = mouse.screen + 1
+                  if next_index > screen.count() then
+                      next_index = next_index - screen.count()
+                  end
+                  awful.screen.focus(next_index)
+              end)
+    ,
     awful.key({ modkey, "Shift" }, ",",
               function ()
                   local prev_index = awful.tag.getidx() - 1
