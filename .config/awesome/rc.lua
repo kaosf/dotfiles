@@ -291,15 +291,6 @@ globalkeys = awful.util.table.join(
                   awful.client.focus.byidx(-1)
               end)
     ,
-    awful.key({ modkey }, "i",
-              function ()
-                  local next_index = mouse.screen + 1
-                  if next_index > screen.count() then
-                      next_index = next_index - screen.count()
-                  end
-                  awful.screen.focus(next_index)
-              end)
-    ,
     awful.key({ modkey, "Shift" }, ",",
               function ()
                   local prev_index = awful.tag.getidx() - 1
@@ -317,6 +308,7 @@ globalkeys = awful.util.table.join(
     ,
     awful.key({ modkey, "Control" }, "j", function () awful.client.incwfact( 0.05) end),
     awful.key({ modkey, "Control" }, "k", function () awful.client.incwfact(-0.05) end),
+    awful.key({ modkey }, "i", function () awful.screen.focus_relative(1) end),
     awful.key({}, "Hiragana_Katakana", function () mypromptbox[mouse.screen]:run() end),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -q sset Master 3%+ unmute", false) end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -q sset Master 3%- unmute", false) end)
