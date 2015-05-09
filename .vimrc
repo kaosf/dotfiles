@@ -1,50 +1,64 @@
-" disable vi compatible
-set nocompatible
+"--- NeoBundle configurations --------------------------------------------------
+"--- ref. https://github.com/Shougo/neobundle.vim#if-you-want-to-install-manually-or-you-are-using-windows
 
-" configurations for NeoBundle
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
+  if &compatible
+    set nocompatible " Be iMproved
+  endif
+
+  " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+" Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
-let g:mapleader = ","
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
 
+"------- My Bundles ------------------------------------------------------------
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-if filereadable($HOME . "/.vimrc-neocomplete")
-  source ~/.vimrc-neocomplete
-endif
-if filereadable($HOME . "/.vimrc-neosnippet")
-  source ~/.vimrc-neosnippet
-endif
 
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'rhysd/neco-ruby-keyword-args'
+NeoBundle 'todesking/ruby_hl_lvar.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'vim-scripts/groovy.vim'
 NeoBundle 'wavded/vim-stylus'
-" ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
-" ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
-NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'dag/vim2hs'
+
+" ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
+NeoBundle 'thinca/vim-quickrun'
+
+" For gist
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
+
+" ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
+NeoBundle 'osyo-manga/vim-over'
+
 " ref. https://github.com/heavenshell
 NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
+
 " ref.
 "   https://github.com/tpope/vim-surround
 "   http://blog.nico0927.net/20110115/vim/152
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 NeoBundle 'tpope/vim-surround'
 
-"" vimproc
 " ref. https://github.com/Shougo/vimproc.vim#neobundle
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -56,7 +70,63 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 
+NeoBundle 'Shougo/unite.vim'
+
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimfiler'
+
+NeoBundle 'scrooloose/nerdtree'
+
+" ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
+NeoBundle 'thinca/vim-ft-clojure'
+"NeoBundle 'tpope/vim-fireplace'
+
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
+NeoBundle 'kana/vim-altercmd'
+NeoBundle 'vim-scripts/bufkill.vim'
+
+NeoBundle 'tpope/vim-fugitive'
+
+" MRU (Most Recently Used)
+" ref. http://nanasi.jp/articles/vim/mru_vim.html
+NeoBundle 'vim-scripts/mru.vim'
+
+" Disable this plugin now because it takes too long time.
+"NeoBundle 'joker1007/vim-markdown-quote-syntax'
+
+NeoBundle 'rhysd/committia.vim'
+
+NeoBundle 'Kocha/vim-unite-tig'
+
+if filereadable($HOME . "/.vimrc-neobundle-local")
+  source ~/.vimrc-neobundle-local
+endif
+"------- My Bundles END --------------------------------------------------------
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+"--- NeoBundle configurations END ----------------------------------------------
+
+"--- My configurations (until the tail) ----------------------------------------
+
+let g:mapleader = ","
+
+if filereadable($HOME . "/.vimrc-neocomplete")
+  source ~/.vimrc-neocomplete
+endif
+if filereadable($HOME . "/.vimrc-neosnippet")
+  source ~/.vimrc-neosnippet
+endif
+
+"" vimshell
 command VSH VimShell
 command Vsh VimShell
 nnoremap <silent> <leader>vs :VimShell<CR>
@@ -64,10 +134,7 @@ nnoremap <silent> <leader>vs :VimShell<CR>
 " Select lines in visual mode and then press ,s to run the selected code.
 vmap <silent> <leader>s :VimShellSendString<cr>
 
-NeoBundle 'Shougo/unite.vim'
-
 "" vimfiler
-NeoBundle 'Shougo/vimfiler'
 " ref. https://github.com/mizoki/dotfiles/blob/42c377ed5e003ac921f1874c5a62d04f8cf5301e/.vimrc#L675-L686
 " Set vimfiler to default explorer
 let g:vimfiler_as_default_explorer = 1
@@ -77,7 +144,6 @@ let g:vimfiler_safe_mode_by_default = 0
 autocmd filetype vimfiler setlocal cursorline
 
 "" NERDTree
-NeoBundle 'scrooloose/nerdtree'
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
 let g:NERDTreeWinSize=20
 " Show hidden files
@@ -179,8 +245,6 @@ endf
 " Clojure configurations
 " ref. for "set lisp" https://bbs.archlinux.org/viewtopic.php?id=91335
 autocmd FileType clojure set lisp
-" ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
-NeoBundle 'thinca/vim-ft-clojure'
 function! s:autocomplete_brackets()
   inoremap ( ()<Esc>i
   inoremap <expr> ) ClosePair(')')
@@ -253,7 +317,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 "   https://github.com/nathanaelkane/vim-indent-guides
 "   http://www.camelstudio.jp/note/vim/186/
 "   http://room6933.com/blog/2011/11/30/vimrc_for_python/
-NeoBundle 'nathanaelkane/vim-indent-guides'
 set shiftwidth=2
 colorscheme default
 let g:indent_guides_enable_on_vim_startup=1
@@ -289,8 +352,6 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 "   https://github.com/vim-scripts/bufkill.vim
 "   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
 "   https://gist.github.com/LeafCage/4085361
-NeoBundle 'kana/vim-altercmd'
-NeoBundle 'vim-scripts/bufkill.vim'
 try
   call altercmd#load()
   AlterCommand bd BD
@@ -309,10 +370,8 @@ if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
 
-NeoBundle 'todesking/ruby_hl_lvar.vim'
 "let g:ruby_hl_lvar_show_warnings = 1
 
-NeoBundle 'tpope/vim-fugitive'
 " ref. http://vim.wikia.com/wiki/Multiple_commands_at_once
 command Gadd Git add -A :/
 command Gdf Gdiff
@@ -328,21 +387,8 @@ highlight DiffDelete cterm=bold ctermfg=red   ctermbg=black
 highlight DiffChange cterm=bold ctermfg=white ctermbg=black
 highlight DiffText   cterm=bold ctermfg=white ctermbg=yellow
 
-" MRU (Most Recently Used)
-" ref. http://nanasi.jp/articles/vim/mru_vim.html
-NeoBundle 'vim-scripts/mru.vim'
-
-" Disable this plugin now because it takes too long time.
-"NeoBundle 'joker1007/vim-markdown-quote-syntax'
-
-NeoBundle 'rhysd/committia.vim'
-
-NeoBundle 'Kocha/vim-unite-tig'
-
 " Command for "Where is This file?"
 command WT echo @%
-
-"NeoBundle 'tpope/vim-fireplace'
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
