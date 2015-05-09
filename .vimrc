@@ -372,9 +372,33 @@ endif
 
 "let g:ruby_hl_lvar_show_warnings = 1
 
-" ref. http://vim.wikia.com/wiki/Multiple_commands_at_once
-command Gadd Git add -A :/
+" vim-fugivie configurations
+" ref.
+"   multiple commands
+"     http://vim.wikia.com/wiki/Multiple_commands_at_once
+"   silent and redraw!
+"     http://stackoverflow.com/questions/890802/how-do-i-disable-the-press-enter-or-type-command-to-continue-prompt-in-vim
+"   args, f-args and q-args
+"     http://stackoverflow.com/questions/3878692/aliasing-a-command-in-vim
+"     http://vimdoc.sourceforge.net/htmldoc/map.html#%3Cf-args%3E
+"     http://stackoverflow.com/questions/25057287/passing-and-using-arguments-to-command-in-vim-script
+"     http://stackoverflow.com/questions/5642341/is-it-possible-to-use-multiple-arguments-in-vim-command
+command Gadd silent Git add -A :/ | redraw!
+command -nargs=* Gci Gcommit <args>
+command Gac w | silent Git add -A :/ | Gcommit
+command Gaca w | silent Git add -A :/ | Gcommit --amend
+"command Gacarbh1cdiad w | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
+command Gacarbh1cdiad w | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
+"command Gacarbh1id w | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
+command Gacarbh1id w | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
+command Gnow w | silent Git add -A :/ | Gcommit -m "[WIP]"
+command Grbh1id silent Git rebase HEAD^ --ignore-date | redraw!
+command Grbh1cdiad silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
 command Gdf Gdiff
+command -nargs=* Gco silent Git checkout <args> | redraw! | e!
+command -nargs=* Gbr Git branch <args> | redraw!
+command Grhh silent Git reset HEAD --hard | redraw! | e!
+command Grh1h silent Git reset HEAD^ --hard | redraw! | e!
 
 " vimdiff color
 " ref.
