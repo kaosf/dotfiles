@@ -1,3 +1,5 @@
+" vim: filetype=vim
+
 nnoremap ; :
 nnoremap : ;
 nnoremap gh :bp<CR>
