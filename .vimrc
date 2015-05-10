@@ -385,13 +385,13 @@ endif
 "     http://stackoverflow.com/questions/5642341/is-it-possible-to-use-multiple-arguments-in-vim-command
 command Gadd silent Git add -A :/ | redraw!
 command -nargs=* Gci Gcommit <args>
-command Gac w | silent Git add -A :/ | Gcommit
-command Gaca w | silent Git add -A :/ | Gcommit --amend
-"command Gacarbh1cdiad w | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
-command Gacarbh1cdiad w | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
-"command Gacarbh1id w | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
-command Gacarbh1id w | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
-command Gnow w | silent Git add -A :/ | Gcommit -m "[WIP]"
+command Gac wa | silent Git add -A :/ | Gcommit
+command Gaca wa | silent Git add -A :/ | Gcommit --amend
+"command Gacarbh1cdiad wa | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
+command Gacarbh1cdiad wa | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
+"command Gacarbh1id wa | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
+command Gacarbh1id wa | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
+command Gnow wa | silent Git add -A :/ | Gcommit -m "[WIP]"
 command Grbh1id silent Git rebase HEAD^ --ignore-date | redraw!
 command Grbh1cdiad silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
 command Gdf Gdiff
