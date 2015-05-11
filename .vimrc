@@ -319,14 +319,16 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 "   https://github.com/nathanaelkane/vim-indent-guides
 "   http://www.camelstudio.jp/note/vim/186/
 "   http://room6933.com/blog/2011/11/30/vimrc_for_python/
+" ref. of colorcode
+"   http://h2plus.biz/hiromitsu/entry/674
 set shiftwidth=2
 colorscheme default
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
 let g:indent_guides_exclude_filetypes=['text', 'help', 'clojure', 'nerdtree', 'vimfiler', 'vimshell']
-hi IndentGuidesOdd  ctermbg=4
-hi IndentGuidesEven ctermbg=6
+hi IndentGuidesOdd  ctermbg=237
+hi IndentGuidesEven ctermbg=236
 
 """" show a vertical line on column 81
 " ref.
