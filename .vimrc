@@ -117,6 +117,8 @@ NeoBundleCheck
 
 "--- My configurations (until the tail) ----------------------------------------
 
+set t_Co=256
+
 let g:mapleader = ","
 
 if filereadable($HOME . "/.vimrc-neocomplete")
