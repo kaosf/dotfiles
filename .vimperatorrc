@@ -36,3 +36,5 @@ set hintchars=afjghdkslio
 :command! yanktwitterlink :js util.copyToClipboard(content.document.title+' '+content.location+' ',true)
 
 :command! reloadconfig :source .vimperatorrc
+
+:command! amazonsimpleuri :js content.location.href=('http://www.amazon.co.jp/dp/'+content.document.getElementById('ASIN').value)
