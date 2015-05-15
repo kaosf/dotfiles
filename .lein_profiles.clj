@@ -28,6 +28,8 @@
       ;   https://github.com/venantius/ultra
       ;   https://github.com/venantius/ultra#installation
       [venantius/ultra "0.3.3"]
+
+      [clj-time "0.9.0"]
     ]
     ;:android {:sdk-path "/path/to/android-sdk/"}
 
