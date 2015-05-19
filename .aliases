@@ -64,6 +64,7 @@ alias gacarbh1cdiad='git add -A :/ && git commit --amend && git rebase HEAD^ --c
 alias ta='tig --all'
 
 alias iamonssh='[ ! -z "$SSH_CLIENT" ]'
+alias iamontmux='[ ! -z $TMUX ]'
 
 alias ctags-ruby='ctags-exuberant --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 
