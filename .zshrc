@@ -42,7 +42,6 @@ zstyle ':completion:*' recent-dirs-insert both
 
 [ -f ~/.envvars ] && . ~/.envvars
 [ -f ~/.aliases ] && . ~/.aliases
-[ -f ~/.aliases-local ] && . ~/.aliases-local
 [ -f ~/.zshrc-functions ] && . ~/.zshrc-functions
 [ -f ~/.zshrc-peco ] && . ~/.zshrc-peco
 
@@ -64,7 +63,8 @@ then
   chpwd() { _cdd_chpwd }
 fi
 
-[ -f $HOME/.zshrc-local ] && . ~/.zshrc-local
+[ -f ~/.zshrc-local ] && . ~/.zshrc-local
+[ -f ~/.aliases-local ] && . ~/.aliases-local
 
 alias ismac='which sw_vers > /dev/null 2>&1'
 ! ismac && [ -f ~/.zshrc-warnings ] && . ~/.zshrc-warnings
