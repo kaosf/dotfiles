@@ -327,8 +327,8 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
 let g:indent_guides_exclude_filetypes=['text', 'help', 'clojure', 'nerdtree', 'vimfiler', 'vimshell']
-hi IndentGuidesOdd  ctermbg=237
-hi IndentGuidesEven ctermbg=236
+hi IndentGuidesOdd  ctermbg=237 guibg=cyan
+hi IndentGuidesEven ctermbg=236 guibg=blue
 
 """" show a vertical line on column 81
 " ref.
