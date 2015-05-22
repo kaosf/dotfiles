@@ -99,6 +99,8 @@ NeoBundle 'rhysd/committia.vim'
 
 NeoBundle 'Kocha/vim-unite-tig'
 
+NeoBundle 'thinca/vim-ref'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -436,6 +438,15 @@ if has('syntax')
   augroup END
   call ZenkakuSpace()
 endif
+
+"""" vim-ref
+" NOTE: Want to get ref_refe_cmd value dynamically.
+let g:ref_refe_cmd=$HOME.'/.rbenv/shims/refe'
+" Commands to setup
+"   gem install refe2
+"   rbenv rehash
+"   bitclust setup
+" ref. http://qiita.com/masa2sei/items/85a2c2cc3721c79a5322
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
