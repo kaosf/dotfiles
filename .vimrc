@@ -423,6 +423,20 @@ command Utig Unite tig
 " Command for "Where is This file?"
 command WT echo @%
 
+"""" Highlight zenkaku spaces
+" ref. http://inari.hatenablog.com/entry/2014/05/05/231307
+function! ZenkakuSpace()
+  highlight ZenkakuSpace cterm=reverse ctermfg=238 gui=reverse guifg=cyan
+endfunction
+if has('syntax')
+  augroup ZenkakuSpace
+    autocmd!
+    autocmd ColorScheme       * call ZenkakuSpace()
+    autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+  augroup END
+  call ZenkakuSpace()
+endif
+
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
 endif
