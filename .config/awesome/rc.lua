@@ -291,6 +291,20 @@ globalkeys = awful.util.table.join(
                   awful.client.focus.byidx(-1)
               end)
     ,
+    awful.key({ modkey }, ",",
+              function ()
+                  local prev_index = awful.tag.getidx() - 1
+                  if prev_index < 1 then prev_index = prev_index + 9 end
+                  local tag = awful.tag.gettags(mouse.screen)[prev_index]
+                  if tag then awful.tag.viewonly(tag) end
+              end),
+    awful.key({ modkey }, ".",
+              function ()
+                  local next_index = awful.tag.getidx() + 1
+                  if next_index > 9 then next_index = next_index - 9 end
+                  local tag = awful.tag.gettags(mouse.screen)[next_index]
+                  if tag then awful.tag.viewonly(tag) end
+              end),
     awful.key({ modkey, "Shift" }, ",",
               function ()
                   local prev_index = awful.tag.getidx() - 1
