@@ -101,6 +101,8 @@ NeoBundle 'Kocha/vim-unite-tig'
 
 NeoBundle 'thinca/vim-ref'
 
+NeoBundle 'suan/vim-instant-markdown'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -447,6 +449,16 @@ let g:ref_refe_cmd=$HOME.'/.rbenv/shims/refe'
 "   rbenv rehash
 "   bitclust setup
 " ref. http://qiita.com/masa2sei/items/85a2c2cc3721c79a5322
+
+"""" vim-instant-markdown
+" Commands to setup
+"   gem install redcarpet pygments.rb
+"   npm -g install instant-markdown-d
+" ref. http://slowquery.hatenablog.com/entry/2013/03/25/214325
+let g:instant_markdown_autostart = 0
+" Command to launch browser
+"   :InstantMarkdownPreview
+" ref. https://github.com/suan/vim-instant-markdown
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
