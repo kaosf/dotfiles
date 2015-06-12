@@ -427,6 +427,9 @@ command Utig Unite tig
 " Command for "Where is This file?"
 command WT echo @%
 
+command Swrap set wrap
+command Snwrap set nowrap
+
 """" Highlight zenkaku spaces
 " ref. http://inari.hatenablog.com/entry/2014/05/05/231307
 function! ZenkakuSpace()
