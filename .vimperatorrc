@@ -16,7 +16,7 @@ nnoremap <F3> :bn<CR>
 
 " Use alphabetical characters as hint characters
 " ref. https://github.com/ggkuron/dotfiles/blob/e7f13c5c9a644d659171cc9fe70df7f24b673847/.vimperatorrc
-set hintchars=afjghdkslio
+set hintchars=afjghdkslo
 " Make hint characters font size bigger and print them with upper case
 " ref.
 "   http://blog.ruedap.com/2011/03/27/vimperator3-hint-mode-alphabet-uppercase
