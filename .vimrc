@@ -103,9 +103,6 @@ NeoBundle 'thinca/vim-ref'
 
 NeoBundle 'suan/vim-instant-markdown'
 
-" ref. http://qiita.com/himinato/items/caf5a0b19ce893a75363
-NeoBundle 'Townk/vim-autoclose'
-
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
