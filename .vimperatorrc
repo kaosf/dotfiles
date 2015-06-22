@@ -21,7 +21,7 @@ set hintchars=afjghdkslo
 " ref.
 "   http://blog.ruedap.com/2011/03/27/vimperator3-hint-mode-alphabet-uppercase
 "   http://superuser.com/questions/230741/how-to-make-vimperators-numbered-links-bigger-hints
-:highlight Hint font-size:120%;color:white;background-color:red;padding:2px;text-transform:uppercase;
+:highlight Hint font-weight:bold;color:#eeffee;background-color:#dd0000;border-width:2px;border-color:#002222;text-transform:uppercase;
 
 " ref. http://vimperator.g.hatena.ne.jp/nokturnalmortum/20100426/1272270280
 :command! backgroundimage :js let (doc = content.document) let (m = doc.defaultView.getComputedStyle(doc.body, '').backgroundImage.match(/url\s*\(\s*['"](.+)['"]\s*\)/)) m ? liberator.open(m[1], liberator.NEW_TAB) : liberator.echoerr('background image not found')
