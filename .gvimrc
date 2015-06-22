@@ -5,7 +5,9 @@ set visualbell t_vb=
 " ref. http://superuser.com/questions/141685/setting-background-color-in-gvim
 colorscheme desert
 
-" Remove scrollbar from right and left side.
+" Remove all GUI parts.
 " ref. http://vim.wikia.com/wiki/Hide_toolbar_or_menus_to_see_more_text
+set guioptions-=m
+set guioptions-=T
 set guioptions-=r
 set guioptions-=L
