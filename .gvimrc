@@ -45,3 +45,15 @@ function! SmallerFont()
   call AdjustFontSize(-1)
 endfunction
 command! SmallerFont call SmallerFont()
+
+function! AdjustFontSizeDefault()
+  if has("gui_gtk2") && has("gui_running")
+    let fontname = substitute(&guifont, s:pattern, '\1', '')
+    let newsize = 15
+    let &guifont = fontname . newsize
+  else
+    echoerr "You need to run the GTK2 version of Vim to use this function."
+  endif
+endfunction
+
+command! DefaultFont call AdjustFontSizeDefault()
