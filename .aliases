@@ -74,3 +74,5 @@ alias disablescreensaver='xset s off'
 alias tmux='tmux -2'
 
 alias ht=htop
+
+alias unzipsjis='unzip -O cp932'
