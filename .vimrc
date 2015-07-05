@@ -351,6 +351,7 @@ let g:gist_post_private = 1
 " only :w! updates a gist
 " ref. http://d.hatena.ne.jp/tyru/20130113/gist_update_on_write
 let g:gist_update_on_write = 2
+command Gistlist Gist -l
 
 " @ggkuron taught me
 " open *.md files as markdown
