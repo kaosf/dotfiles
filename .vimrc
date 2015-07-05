@@ -266,6 +266,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+nnoremap gy %
 vnoremap j gj
 vnoremap k gk
 vnoremap gj j
