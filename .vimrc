@@ -396,8 +396,7 @@ endif
 "     http://stackoverflow.com/questions/5642341/is-it-possible-to-use-multiple-arguments-in-vim-command
 command Gshow Git show | redraw!
 command Gada wa | silent Git add -A :/ | redraw!
-command Gadd w | silent exe "Git add " . @% | redraw!
-command Gadp w | exe "Git add -p " . @% | redraw!
+command Gad w | silent exe "Git add " . @% | redraw!
 command -nargs=* Gci Gcommit <args>
 command Gac wa | silent Git add -A :/ | Gcommit
 command Gaca wa | silent Git add -A :/ | Gcommit --amend
