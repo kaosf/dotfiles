@@ -436,10 +436,11 @@ command Snwrap set nowrap
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+  command DiffOrig new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 endif
 " ref. http://nanasi.jp/articles/howto/diff/diff-original-file.html
 " Copy from $PREFIX/share/vim/vim74/vimrc_example.vim
+" and remove 'vert' specification.
 
 """" Highlight zenkaku spaces
 " ref. http://inari.hatenablog.com/entry/2014/05/05/231307
