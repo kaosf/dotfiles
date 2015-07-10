@@ -432,6 +432,15 @@ command WT echo @%
 command Swrap set wrap
 command Snwrap set nowrap
 
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+endif
+" ref. http://nanasi.jp/articles/howto/diff/diff-original-file.html
+" Copy from $PREFIX/share/vim/vim74/vimrc_example.vim
+
 """" Highlight zenkaku spaces
 " ref. http://inari.hatenablog.com/entry/2014/05/05/231307
 function! ZenkakuSpace()
