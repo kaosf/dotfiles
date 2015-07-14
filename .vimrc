@@ -103,6 +103,9 @@ NeoBundle 'thinca/vim-ref'
 
 NeoBundle 'suan/vim-instant-markdown'
 
+" ref. https://github.com/haya14busa/vim-undoreplay
+NeoBundle 'haya14busa/vim-undoreplay'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
