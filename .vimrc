@@ -164,8 +164,11 @@ nnoremap <silent> <leader>f :NERDTreeFocus<CR>
 "   http://qiita.com/ka_/items/8e7a5e681db857b2ee26#comment-8d7a434b595f023cd12c
 set virtualedit=all
 
-" Set nowrap to enhance cursor moving speed
+" Enhance cursor speed
 set nowrap
+" ref. https://twitter.com/igrep/status/619387078858530816
+" ref. http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+autocmd FileType ruby set re=1
 
 " Make backspace key freely
 " ref. http://qiita.com/omega999/items/23aec6a7f6d6735d033f
