@@ -31,7 +31,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'rhysd/neco-ruby-keyword-args'
-NeoBundle 'todesking/ruby_hl_lvar.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'leafgarland/typescript-vim'
@@ -105,6 +104,14 @@ NeoBundle 'suan/vim-instant-markdown'
 
 " ref. https://github.com/haya14busa/vim-undoreplay
 NeoBundle 'haya14busa/vim-undoreplay'
+
+" Disable this plugin now because of an error below.
+"
+" Error detected while processing
+" /home/username/.vim/bundle/ruby_hl_lvar.vim/autoload/ruby_hl_lvar.vim:
+" line    3:
+" LoadError: no such file to load -- ripper
+"NeoBundle 'todesking/ruby_hl_lvar.vim'
 
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
