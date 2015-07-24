@@ -510,4 +510,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn_with_shell("pgrep nm-applet > /dev/null || nm-applet &")
 awful.util.spawn_with_shell("pgrep xfce4-power-manager > /dev/null || xfce4-power-manager &")
 awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
+awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
 -- }}}
