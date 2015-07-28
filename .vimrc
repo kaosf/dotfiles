@@ -488,6 +488,10 @@ let g:instant_markdown_autostart = 0
 "   :InstantMarkdownPreview
 " ref. https://github.com/suan/vim-instant-markdown
 
+" ref.
+"   https://github.com/yegappan/mru/blob/6e6064a087e73d6376962a1b05382b6dc72f7048/plugin/mru.vim#L146-L156
+let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*\|^.*/\.git/COMMIT_EDITMSG'
+
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
 endif
