@@ -359,6 +359,11 @@ if exists('&colorcolumn')
   hi ColorColumn ctermbg=0
 endif
 
+"""" vim-quickrun
+" Split horizontally always
+" ref. http://miniman2011.blog55.fc2.com/blog-entry-293.html
+let g:quickrun_config={'*': {'split': ''}}
+
 " post gist private by default (for safety)
 let g:gist_post_private = 1
 " only :w! updates a gist
