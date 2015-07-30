@@ -58,11 +58,10 @@ then
   git config --global alias.st status
   if [ ! -f $HOME/local/bin/diff-highlight ]
   then
-    wget https://raw.githubusercontent.com/git/git/34d9819e0a387be6d49cffe67458036450d6d0d5/contrib/diff-highlight/diff-highlight
-    wget https://gist.githubusercontent.com/a2ikm/2dbfb89114dfa5c543ed/raw/e2d8d550ef601c9310712f4187b803658427dd42/diff-highlight.utf8.patch
+    wget https://raw.githubusercontent.com/git/git/7a1aa0c28876e044351e78d8b8ae6cdbb10b5dfe/contrib/diff-highlight/diff-highlight
+    wget https://gist.githubusercontent.com/kaosf/b6392be33be2e8af7904/raw/6a0f089b79ea456c2798db61381affa9f4769f16/diff-highlight.utf8.patch
     patch -u diff-highlight < diff-highlight.utf8.patch
-    chmod +x diff-highlight
-    rm diff-highlight.orig diff-highlight.utf8.patch
+    rm diff-highlight.utf8.patch
     mkdir -p $HOME/local/bin
     mv diff-highlight $HOME/local/bin
   fi
