@@ -44,12 +44,26 @@ then
   then
     ln -s $PWD/.gitignore-global $HOME/.gitignore
   fi
-  git config --global user.name ka
-  git config --global user.email ka.kaosf@gmail.com
+  echo 'Input your name for Git author.'
+  echo -n '> '
+  git config --global user.name `read line; echo $line`
+  while :; do
+    echo 'Input your Email address for Git author.'
+    echo -n '> '
+    read EMAIL
+    echo 'Input again for confirmation.'
+    echo -n '> '
+    read EMAIL_CONFIRM
+    if [[ $EMAIL = $EMAIL_CONFIRM ]]; then break; fi
+    echo 'Do not match. Input again.'
+  done
+  git config --global user.email $EMAIL
   git config --global core.editor vim
   git config --global core.excludesfile $HOME/.gitignore
   git config --global color.ui true
-  git config --global github.user kaosf
+  echo 'Input your name on GitHub.'
+  echo -n '> '
+  git config --global github.user `read line; echo $line`
   git config --global merge.ff false
   git config --global pull.rebase true
   git config --global alias.br branch
