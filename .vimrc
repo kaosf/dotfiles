@@ -430,6 +430,8 @@ command -nargs=* Gco silent Git checkout <args> | redraw! | e!
 command -nargs=* Gbr Git branch <args> | redraw!
 command Grhh silent Git reset HEAD --hard | redraw! | e!
 command Grh1h silent Git reset HEAD^ --hard | redraw! | e!
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
 
 " vimdiff color
 " ref.
