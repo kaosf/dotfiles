@@ -89,7 +89,8 @@ NeoBundle 'tpope/vim-fugitive'
 
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
-NeoBundle 'vim-scripts/mru.vim'
+"NeoBundle 'vim-scripts/mru.vim'
+NeoBundle 'kaosf/mru.vim' " Forked for my own remappings
 
 " Disable this plugin now because it takes too long time.
 "NeoBundle 'joker1007/vim-markdown-quote-syntax'
