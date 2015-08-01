@@ -499,10 +499,9 @@ let g:instant_markdown_autostart = 0
 """" vim.mru
 nnoremap <leader>m :Mru<CR>
 " ref.
-"   https://github.com/yegappan/mru/blob/6e6064a087e73d6376962a1b05382b6dc72f7048/plugin/mru.vim#L146-L156
+"   https://github.com/yegappan/mru/blob/6e6064a087e73d6376962a1b05382b6dc72f7048/plugin/mru.vim
+let MRU_Max_Entries = 5000
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*\|^.*/\.git/.*'
-" ref.
-"   https://github.com/yegappan/mru/blob/6e6064a087e73d6376962a1b05382b6dc72f7048/plugin/mru.vim#L168-L171
 let MRU_Window_Height = 15
 
 if filereadable($HOME . "/.vimrc-local")
