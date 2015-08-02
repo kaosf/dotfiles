@@ -1,10 +1,9 @@
-! Win <-> 無変換
+! 無変換 -> Win
 !   Default Win keycode: 133
 !   Default Muhenkan keycode: 102
 !   Win key symbol: Super_L
 !   Muhenkan keysymbol: Muhenkan
 !   Modifier key: 4
 remove mod4 = Super_L
-keycode 133 = Muhenkan NoSymbol Muhenkan
 keycode 102 = Super_L NoSymbol Super_L
 add mod4 = Super_L
