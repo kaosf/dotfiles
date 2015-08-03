@@ -16,14 +16,12 @@ for i in \
   .xmodmap-for-hhkb-revert \
 
 do
-  if [ ! -s $HOME/$i ]
-  then
+  if [ ! -s $HOME/$i ]; then
     ln -s $PWD/$i $HOME/$i
   fi
 done
 
-if [ -d $HOME/local/bin ]
-then
+if [ -d $HOME/local/bin ]; then
   echo 'xmodmap $HOME/.xmodmap-for-hhkb' \
     > $HOME/local/bin/hhkb-start
   chmod +x $HOME/local/bin/hhkb-start
@@ -32,8 +30,7 @@ then
   chmod +x $HOME/local/bin/hhkb-finish
 fi
 
-if [[ $1 == menukey ]]
-then
+if [[ $1 == menukey ]]; then
   cat $PWD/.xmodmap-for-menukey        >> $HOME/.xmodmap
   cat $PWD/.xmodmap-for-menukey-revert >> $HOME/.xmodmap-revert
 fi
