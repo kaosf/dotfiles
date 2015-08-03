@@ -17,31 +17,27 @@ for i in \
   .gemrc \
 
 do
-  if [ ! -s $HOME/$i ]
-  then
+  if [ ! -s $HOME/$i ]; then
     ln -s $PWD/$i $HOME/$i
   fi
 done
-if [ ! -d $HOME/.emacs.d ]
-then
+
+if [ ! -d $HOME/.emacs.d ]; then
   mkdir $HOME/.emacs.d
 fi
-if [ ! -s $HOME/.emacs.d/init.el ]
-then
+if [ ! -s $HOME/.emacs.d/init.el ]; then
   ln -s $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
 fi
-if [ ! -d $HOME/.lein ]
-then
+
+if [ ! -d $HOME/.lein ]; then
   mkdir $HOME/.lein
 fi
-if [ ! -f $HOME/.lein/profiles.clj ]
-then
+if [ ! -f $HOME/.lein/profiles.clj ]; then
   cp $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
 fi
-if [ `which git` ]
-then
-  if [ ! -f $HOME/.gitignore ]
-  then
+
+if [ `which git` ]; then
+  if [ ! -f $HOME/.gitignore ]; then
     ln -s $PWD/.gitignore-global $HOME/.gitignore
   fi
   if [ ! -f $HOME/.gitconfig ]; then
@@ -72,8 +68,7 @@ then
   git config --global alias.ci commit
   git config --global alias.co checkout
   git config --global alias.st status
-  if [ ! -f $HOME/local/bin/diff-highlight ]
-  then
+  if [ ! -f $HOME/local/bin/diff-highlight ]; then
     wget https://raw.githubusercontent.com/git/git/7a1aa0c28876e044351e78d8b8ae6cdbb10b5dfe/contrib/diff-highlight/diff-highlight
     wget https://gist.githubusercontent.com/kaosf/b6392be33be2e8af7904/raw/6a0f089b79ea456c2798db61381affa9f4769f16/diff-highlight.utf8.patch
     patch -u diff-highlight < diff-highlight.utf8.patch
@@ -86,22 +81,21 @@ then
   git config --global pager.diff 'diff-highlight | less'
   git config --global push.default simple
 fi
-if [ ! -s $HOME/.lesskey ]
-then
+
+if [ ! -s $HOME/.lesskey ]; then
   ln -s $PWD/.lesskey $HOME/.lesskey
   lesskey
 fi
 
 [ -f $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
-if [[ $1 = nostatus ]]
-then
+if [[ $1 = nostatus ]]; then
   cp $PWD/.tmux.conf-nostatus $HOME/.tmux.conf
   shift
 else
   cp $PWD/.tmux.conf $HOME/.tmux.conf
 fi
-if [[ $1 = mac ]]
-then
+
+if [[ $1 = mac ]]; then
   cat $PWD/.tmux.conf-for-mac >> $HOME/.tmux.conf
 else
   cat $PWD/.tmux.conf-for-linux >> $HOME/.tmux.conf
