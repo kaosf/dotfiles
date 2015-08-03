@@ -433,6 +433,7 @@ command Grhh silent Git reset HEAD --hard | redraw! | e!
 command Grh1h silent Git reset HEAD^ --hard | redraw! | e!
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gc :Gcommit<CR>
 
 " vimdiff color
 " ref.
