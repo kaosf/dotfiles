@@ -426,13 +426,13 @@ command Gacarbh1id wa | silent Git add -A :/ | silent Git commit --amend | silen
 command Gnow wa | silent Git add -A :/ | Gcommit -m "[WIP]"
 command Grbh1id silent Git rebase HEAD^ --ignore-date | redraw!
 command Grbh1cdiad silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
-command Gdf Gdiff
+command Gdf Gvdiff
 command -nargs=* Gco silent Git checkout <args> | redraw! | e!
 command -nargs=* Gbr Git branch <args> | redraw!
 command Grhh silent Git reset HEAD --hard | redraw! | e!
 command Grh1h silent Git reset HEAD^ --hard | redraw! | e!
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
 " vimdiff color
