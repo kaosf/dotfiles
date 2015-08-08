@@ -517,10 +517,10 @@ let g:rspec_command = "Dispatch rspec {spec}"
 "function! s:bundle.hooks.on_source(bundle)
 "  let g:rspec_command = 'Dispatch rspec {spec}'
 "endfunction
-nmap <silent><leader>c :call RunCurrentSpecFile()<CR>
-nmap <silent><leader>n :call RunNearestSpec()<CR>
-nmap <silent><leader>l :call RunLastSpec()<CR>
-nmap <silent><leader>a :call RunAllSpecs()<CR>
+nnoremap <silent><leader>c :call RunCurrentSpecFile()<CR>
+nnoremap <silent><leader>n :call RunNearestSpec()<CR>
+nnoremap <silent><leader>l :call RunLastSpec()<CR>
+nnoremap <silent><leader>a :call RunAllSpecs()<CR>
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
