@@ -114,6 +114,13 @@ NeoBundle 'haya14busa/vim-undoreplay'
 " LoadError: no such file to load -- ripper
 "NeoBundle 'todesking/ruby_hl_lvar.vim'
 
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'thoughtbot/vim-rspec'
+"NeoBundleLazy 'thoughtbot/vim-rspec', {
+"                \ 'depends'  : 'tpope/vim-dispatch',
+"                \ 'autoload' : { 'filetypes' : ['ruby'] }
+"              \ }
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -503,6 +510,17 @@ nnoremap <leader>m :Mru<CR>
 let MRU_Max_Entries = 5000
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*\|^.*/\.git/.*'
 let MRU_Window_Height = 15
+
+"""" vim-dispatch and vim-rspec
+let g:rspec_command = "Dispatch rspec {spec}"
+"let s:bundle = neobundle#get('vim-rspec')
+"function! s:bundle.hooks.on_source(bundle)
+"  let g:rspec_command = 'Dispatch rspec {spec}'
+"endfunction
+nmap <silent><leader>c :call RunCurrentSpecFile()<CR>
+nmap <silent><leader>n :call RunNearestSpec()<CR>
+nmap <silent><leader>l :call RunLastSpec()<CR>
+nmap <silent><leader>a :call RunAllSpecs()<CR>
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
