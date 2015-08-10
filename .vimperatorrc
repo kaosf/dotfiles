@@ -38,3 +38,21 @@ set hintchars=afjghdkslo
 :command! reloadconfig :source .vimperatorrc
 
 :command! amazonsimpleuri :js content.location.href=('http://www.amazon.co.jp/dp/'+content.document.getElementById('ASIN').value)
+
+" Toggle tab pin
+" ref.
+"   http://chroju89.hatenablog.jp/entry/2014/02/09/102914
+"   http://qiita.com/t3kot3ko/items/1b032940dbb79e88323e
+javascript <<EOM
+liberator.modules.commands.addUserCommand(["togglepin"], "add pin to current tab",
+function(){
+  var currentTab = gBrowser.mCurrentTab
+  if(currentTab.pinned){
+    gBrowser.unpinTab(currentTab)
+  }
+  else{
+    gBrowser.pinTab(currentTab)
+  }
+});
+EOM
+nnoremap @ :togglepin<CR>
