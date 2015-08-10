@@ -38,3 +38,23 @@ set hintchars=afjghdkslo
 :command! reloadconfig :source .vimperatorrc
 
 :command! amazonsimpleuri :js content.location.href=('http://www.amazon.co.jp/dp/'+content.document.getElementById('ASIN').value)
+
+" Toggle tab lock and protect
+" ref.
+"   http://chroju89.hatenablog.jp/entry/2014/02/09/102914
+"   http://qiita.com/t3kot3ko/items/1b032940dbb79e88323e
+javascript <<EOM
+liberator.modules.commands.addUserCommand(["togglelockprotect"], "lock and protect current tab",
+function(){
+  var currentTab = gBrowser.mCurrentTab
+  if (currentTab.locked || currentTab.protected) {
+    gBrowser.unprotectTab(currentTab)
+    gBrowser.unlockTab(currentTab)
+  }
+  else{
+    gBrowser.protectTab(currentTab)
+    gBrowser.lockTab(currentTab)
+  }
+});
+EOM
+nnoremap @ :togglelockprotect<CR>
