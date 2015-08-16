@@ -121,6 +121,8 @@ NeoBundle 'thoughtbot/vim-rspec'
 "                \ 'autoload' : { 'filetypes' : ['ruby'] }
 "              \ }
 
+NeoBundle 'elixir-lang/vim-elixir'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
