@@ -219,8 +219,14 @@ nnoremap ; :
 nnoremap : ;
 
 " Switch tabs easily
-nnoremap gh :bp<CR>
-nnoremap gl :bn<CR>
+nnoremap gp :bp<CR>
+nnoremap gn :bn<CR>
+
+" Move windows easily
+nnoremap gh <C-w>h
+nnoremap gj <C-w>j
+nnoremap gk <C-w>k
+nnoremap gl <C-w>l
 
 " forgot where I did copy&paste from
 set list
@@ -287,13 +293,9 @@ autocmd FileType clojure :call <SID>autocomplete_brackets()
 
 nnoremap j gj
 nnoremap k gk
-nnoremap gj j
-nnoremap gk k
 nnoremap gy %
 vnoremap j gj
 vnoremap k gk
-vnoremap gj j
-vnoremap gk k
 vnoremap ff <Esc>
 
 " Modify window size by cursor keys
