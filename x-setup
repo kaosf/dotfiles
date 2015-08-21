@@ -30,6 +30,11 @@ if [ -d $HOME/local/bin ]; then
   chmod +x $HOME/local/bin/hhkb-finish
 fi
 
+if [ ! -f $HOME/.vim/colors/desert256.vim ]; then
+  mkdir -p $HOME/.vim/colors
+  wget 'http://www.vim.org/scripts/download_script.php?src_id=4055' -O $HOME/.vim/colors/desert256.vim
+fi
+
 if [[ $1 == menukey ]]; then
   cat $PWD/.xmodmap-for-menukey        >> $HOME/.xmodmap
   cat $PWD/.xmodmap-for-menukey-revert >> $HOME/.xmodmap-revert
