@@ -237,7 +237,7 @@ set lcs=tab:>.,trail:_,extends:\
 set tabstop=2
 
 " forgot where I did copy&paste from
-set statusline=%t%m%=%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]
+set statusline=%t%=%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
 set laststatus=2
 
 " ref. http://labs.timedia.co.jp/2011/04/9-points-to-customize-automatic-indentation-in-vim.html
