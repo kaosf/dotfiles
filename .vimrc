@@ -126,6 +126,9 @@ NeoBundle 'elixir-lang/vim-elixir'
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
 NeoBundle 'chikatoike/concealedyank.vim'
 
+" ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
+NeoBundle 'tyru/caw.vim'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -532,6 +535,11 @@ nnoremap <leader>sa :call RunAllSpecs()<CR>
 """" concealedyank.vim
 " ref. http://d.hatena.ne.jp/chikatoike/20120918/1347923597
 xmap Y <Plug>(operator-concealedyank)
+
+"""" caw.vim
+" ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
+nmap <C-K> <Plug>(caw:i:toggle)
+vmap <C-K> <Plug>(caw:i:toggle)
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
