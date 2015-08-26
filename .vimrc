@@ -234,6 +234,15 @@ nnoremap gj <C-w>j
 nnoremap gk <C-w>k
 nnoremap gl <C-w>l
 
+" Switch tabs
+nnoremap gr gT
+"nnoremap <Space>j gt
+"nnoremap <Space>k gT
+nnoremap gi gt
+nnoremap gu gT
+nnoremap g. gt
+nnoremap g, gT
+
 " forgot where I did copy&paste from
 set list
 " set listchars=tab:>.
