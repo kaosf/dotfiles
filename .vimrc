@@ -455,7 +455,7 @@ nnoremap <leader>gc :Gcommit<CR>
 highlight DiffAdd    cterm=bold ctermfg=green ctermbg=black
 highlight DiffDelete cterm=bold ctermfg=red   ctermbg=black
 highlight DiffChange cterm=bold ctermfg=white ctermbg=black
-highlight DiffText   cterm=bold ctermfg=white ctermbg=yellow
+highlight DiffText   cterm=bold ctermfg=black ctermbg=yellow
 
 command Utig Unite tig
 
