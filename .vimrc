@@ -273,6 +273,8 @@ nnoremap <silent>ff :<C-u>nohlsearch<CR>
 " ref. https://twitter.com/anekos/status/485416150541402112
 inoremap kk <Esc>
 inoremap jj <Esc>
+" Don't have to press Ctrl
+inoremap kw <C-w>
 
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
