@@ -123,6 +123,9 @@ NeoBundle 'thoughtbot/vim-rspec'
 
 NeoBundle 'elixir-lang/vim-elixir'
 
+" ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
+NeoBundle 'chikatoike/concealedyank.vim'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -525,6 +528,10 @@ nnoremap <leader>sc :call RunCurrentSpecFile()<CR>
 nnoremap <leader>sn :call RunNearestSpec()<CR>
 nnoremap <leader>sl :call RunLastSpec()<CR>
 nnoremap <leader>sa :call RunAllSpecs()<CR>
+
+"""" concealedyank.vim
+" ref. http://d.hatena.ne.jp/chikatoike/20120918/1347923597
+xmap Y <Plug>(operator-concealedyank)
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
