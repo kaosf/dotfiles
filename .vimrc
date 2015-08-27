@@ -284,6 +284,7 @@ inoremap kk <Esc>
 inoremap jj <Esc>
 " Don't have to press Ctrl
 inoremap jw <C-w>
+inoremap jq <C-h>
 
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
