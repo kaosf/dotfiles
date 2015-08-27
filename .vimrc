@@ -229,19 +229,25 @@ nnoremap gp :bp<CR>
 nnoremap gn :bn<CR>
 
 " Move windows easily
-nnoremap gh <C-w>h
 nnoremap gj <C-w>j
 nnoremap gk <C-w>k
-nnoremap gl <C-w>l
-
-" Switch tabs
-nnoremap gr gT
-"nnoremap <Space>j gt
-"nnoremap <Space>k gT
-nnoremap gi gt
-nnoremap gu gT
-nnoremap g. gt
-nnoremap g, gT
+" Switch tabs by same key mappings for moving windows
+function s:movewinleft()
+  let before = winnr()
+  wincmd h
+  if before == winnr()
+    tabprevious
+  endif
+endfunction
+nnoremap <silent> gh :call <SID>movewinleft()<CR>
+function s:movewinright()
+  let before = winnr()
+  wincmd l
+  if before == winnr()
+    tabnext
+  endif
+endfunction
+nnoremap <silent> gl :call <SID>movewinright()<CR>
 
 " forgot where I did copy&paste from
 set list
