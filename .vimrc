@@ -224,10 +224,9 @@ set encoding=utf-8
 nnoremap ; :
 nnoremap : ;
 
-" Switch tabs easily
+" Switch buffers easily
 nnoremap gp :bp<CR>
 nnoremap gn :bn<CR>
-
 " Move windows easily
 nnoremap gj <C-w>j
 nnoremap gk <C-w>k
