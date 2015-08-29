@@ -247,6 +247,8 @@ function s:movewinright()
   endif
 endfunction
 nnoremap <silent> gl :call <SID>movewinright()<CR>
+" Create a new tab easily
+nnoremap <silent> tc :tabnew<CR>
 
 " forgot where I did copy&paste from
 set list
