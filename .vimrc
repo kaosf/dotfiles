@@ -123,7 +123,9 @@ NeoBundle 'thoughtbot/vim-rspec'
 
 NeoBundle 'elixir-lang/vim-elixir'
 
-" ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
+" ref.
+"   http://d.hatena.ne.jp/chikatoike/20120918/1347923597
+"   https://github.com/chikatoike/concealedyank.vim
 NeoBundle 'chikatoike/concealedyank.vim'
 
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
