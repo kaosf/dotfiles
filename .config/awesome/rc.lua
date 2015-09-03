@@ -354,6 +354,8 @@ clientkeys = awful.util.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
         end)
+    ,
+    awful.key({ modkey,           }, "s",      function (c) c.sticky = not c.sticky  end)
 )
 
 -- Bind all key numbers to tags.
