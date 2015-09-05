@@ -161,10 +161,12 @@ if filereadable($HOME . "/.vimrc-neosnippet")
 endif
 
 "" vimshell
-" Use VimShellPop rather than VimShell
-command VSH VimShellPop
-command Vsh VimShellPop
-nnoremap <silent> <leader>vs :VimShellPop<CR>
+function s:launchvimshell()
+  VimShellPop
+endfunction
+command VSH :call <SID>launchvimshell()
+command Vsh :call <SID>launchvimshell()
+nnoremap <silent> <leader>vs :call <SID>launchvimshell()<CR>
 " Open Leiningen REPL or Rails console by "iexe lein repl" or "iexe rails c".
 " Select lines in visual mode and then press ,s to run the selected code.
 vmap <silent> <leader>s :VimShellSendString<cr>
