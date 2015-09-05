@@ -162,7 +162,8 @@ endif
 
 "" vimshell
 function s:launchvimshell()
-  VimShellPop
+  tabnew
+  VimShell
 endfunction
 command VSH :call <SID>launchvimshell()
 command Vsh :call <SID>launchvimshell()
