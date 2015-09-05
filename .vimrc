@@ -466,6 +466,7 @@ command Gaca wa | silent Git add -A :/ | Gcommit --amend
 command Gacarbh1cdiad wa | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
 "command Gacarbh1id wa | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
 command Gacarbh1id wa | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
+command Gca wa | Gcommit --amend
 command Gnow wa | silent Git add -A :/ | Gcommit -m "[WIP]"
 command Grbh1id silent Git rebase HEAD^ --ignore-date | redraw!
 command Grbh1cdiad silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
