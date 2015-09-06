@@ -168,6 +168,8 @@ endfunction
 command VSH :call <SID>launchvimshell()
 command Vsh :call <SID>launchvimshell()
 nnoremap <silent> <leader>vs :call <SID>launchvimshell()<CR>
+command VSC VimShellCreate
+command Vsc VimShellCreate
 " Open Leiningen REPL or Rails console by "iexe lein repl" or "iexe rails c".
 " Select lines in visual mode and then press ,s to run the selected code.
 vmap <silent> <leader>s :VimShellSendString<cr>
