@@ -264,7 +264,7 @@ set lcs=tab:>.,trail:_,extends:\
 set tabstop=2
 
 " forgot where I did copy&paste from
-set statusline=%t%=%{fugitive#statusline()}%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
+set statusline=%t%=%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
 set laststatus=2
 
 " ref. http://labs.timedia.co.jp/2011/04/9-points-to-customize-automatic-indentation-in-vim.html
@@ -445,7 +445,14 @@ endif
 
 "let g:ruby_hl_lvar_show_warnings = 1
 
-" vim-fugivie configurations
+"""" vim-fugivie configurations
+" ref.
+"   http://stackoverflow.com/questions/5983906/vim-conditionally-use-fugitivestatusline-function-in-vimrc
+"   http://qiita.com/etmnk/items/7d17a045c66ef120db07
+"if exists('g:loaded_fugitive')
+if isdirectory(expand($HOME.'/.vim/bundle/vim-fugitive'))
+  set statusline=%t%=%{fugitive#statusline()}%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
+endif
 " ref.
 "   multiple commands
 "     http://vim.wikia.com/wiki/Multiple_commands_at_once
