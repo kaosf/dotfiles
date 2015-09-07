@@ -18,7 +18,7 @@ for i in \
 
 do
   if [ ! -s $HOME/$i ]; then
-    ln -s $PWD/$i $HOME/$i
+    ln -sf $PWD/$i $HOME/$i
   fi
 done
 
@@ -26,7 +26,7 @@ if [ ! -d $HOME/.emacs.d ]; then
   mkdir $HOME/.emacs.d
 fi
 if [ ! -s $HOME/.emacs.d/init.el ]; then
-  ln -s $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
+  ln -sf $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
 fi
 
 if [ ! -d $HOME/.lein ]; then
@@ -38,7 +38,7 @@ fi
 
 if [ `which git` ]; then
   if [ ! -f $HOME/.gitignore ]; then
-    ln -s $PWD/.gitignore-global $HOME/.gitignore
+    ln -sf $PWD/.gitignore-global $HOME/.gitignore
   fi
   if [ ! -f $HOME/.gitconfig ]; then
     echo 'Input your name for Git author.'
@@ -83,7 +83,7 @@ if [ `which git` ]; then
 fi
 
 if [ ! -s $HOME/.lesskey ]; then
-  ln -s $PWD/.lesskey $HOME/.lesskey
+  ln -sf $PWD/.lesskey $HOME/.lesskey
   lesskey
 fi
 
