@@ -114,13 +114,6 @@ NeoBundle 'haya14busa/vim-undoreplay'
 " LoadError: no such file to load -- ripper
 "NeoBundle 'todesking/ruby_hl_lvar.vim'
 
-NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'thoughtbot/vim-rspec'
-"NeoBundleLazy 'thoughtbot/vim-rspec', {
-"                \ 'depends'  : 'tpope/vim-dispatch',
-"                \ 'autoload' : { 'filetypes' : ['ruby'] }
-"              \ }
-
 NeoBundle 'elixir-lang/vim-elixir'
 
 " ref.
@@ -557,17 +550,6 @@ nnoremap <leader>m :Mru<CR>
 let MRU_Max_Entries = 5000
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*\|^.*/\.git/.*'
 let MRU_Window_Height = 15
-
-"""" vim-dispatch and vim-rspec
-let g:rspec_command = "Dispatch rspec {spec}"
-"let s:bundle = neobundle#get('vim-rspec')
-"function! s:bundle.hooks.on_source(bundle)
-"  let g:rspec_command = 'Dispatch rspec {spec}'
-"endfunction
-nnoremap <leader>sc :call RunCurrentSpecFile()<CR>
-nnoremap <leader>sn :call RunNearestSpec()<CR>
-nnoremap <leader>sl :call RunLastSpec()<CR>
-nnoremap <leader>sa :call RunAllSpecs()<CR>
 
 """" concealedyank.vim
 " ref. http://d.hatena.ne.jp/chikatoike/20120918/1347923597
