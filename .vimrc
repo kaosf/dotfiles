@@ -459,7 +459,6 @@ endif
 "     http://stackoverflow.com/questions/25057287/passing-and-using-arguments-to-command-in-vim-script
 "     http://stackoverflow.com/questions/5642341/is-it-possible-to-use-multiple-arguments-in-vim-command
 command Gshow Git show | redraw!
-command Gada wa | silent Git add -A :/ | redraw!
 command Gad w | silent exe "Git add " . @% | redraw!
 command -nargs=* Gci Gcommit <args>
 command Gac wa | silent Git add -A :/ | Gcommit
