@@ -425,7 +425,7 @@ try
   AlterCommand bd BD
   AlterCommand BD bd
 catch
-  echo 'Run ":NeoBundleInstall" to "altercmd#load"'
+  " Do nothing
 endtry
 
 " Enable to change buffers quickly
