@@ -493,7 +493,9 @@ highlight DiffChange cterm=bold ctermfg=white ctermbg=black
 highlight DiffText   cterm=bold ctermfg=black ctermbg=yellow
 
 command Utig Unite tig
-command Tig !tig
+"command Tig !tig
+command Tig execute 'silent !tig' | redraw!
+" ref. http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
 
 " Command for "Where is This file?"
 command WT echo @%
