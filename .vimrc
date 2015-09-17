@@ -493,6 +493,7 @@ highlight DiffChange cterm=bold ctermfg=white ctermbg=black
 highlight DiffText   cterm=bold ctermfg=black ctermbg=yellow
 
 command Utig Unite tig
+command Tig !tig
 
 " Command for "Where is This file?"
 command WT echo @%
