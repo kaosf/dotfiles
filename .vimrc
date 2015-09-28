@@ -144,6 +144,8 @@ NeoBundleCheck
 
 set t_Co=256
 
+set showcmd
+
 let g:mapleader = ","
 
 if filereadable($HOME . "/.vimrc-neocomplete")
