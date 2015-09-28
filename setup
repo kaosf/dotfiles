@@ -76,6 +76,7 @@ if [ `which git` ]; then
     patch -u diff-highlight < diff-highlight.utf8.patch
     rm diff-highlight.utf8.patch
     mkdir -p $HOME/local/bin
+    chmod +x diff-highlight
     mv diff-highlight $HOME/local/bin
   fi
   git config --global pager.log 'diff-highlight | less'
