@@ -76,3 +76,5 @@ alias tmux='tmux -2'
 alias ht=htop
 
 alias unzipsjis='unzip -O cp932'
+
+alias shs='python -m SimpleHTTPServer'
