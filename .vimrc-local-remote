@@ -1,9 +1,0 @@
-nnoremap <silent> x x:wv<CR>
-nnoremap <silent> dd dd:wv<CR>
-vnoremap <silent> y y:wv<CR>
-vnoremap <silent> x x:wv<CR>
-
-nnoremap <silent> p :rv!<CR>p
-nnoremap <silent> P :rv!<CR>P
-
-vnoremap <silent> <S-C-c> ygv:!xsel -bi<CR>u
