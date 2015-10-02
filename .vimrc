@@ -564,6 +564,10 @@ xmap Y <Plug>(operator-concealedyank)
 nmap <C-K> <Plug>(caw:i:toggle)
 vmap <C-K> <Plug>(caw:i:toggle)
 
+"""" Change directory to the current file's directory
+" ref. http://qiita.com/shiena/items/1e98fd14d0ef0084b17f
+command Cdf cd %:h
+
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
 endif
