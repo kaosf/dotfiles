@@ -42,9 +42,25 @@ if [ `which git` ]; then
   if [ ! -f $HOME/.gitignore ]; then
     ln -sf $PWD/.gitignore-global $HOME/.gitignore
   fi
-  git config --global user.name ka
-  git config --global user.email ka.kaosf@gmail.com
-  git config --global github.user kaosf
+  if [ ! -f $HOME/.gitconfig ]; then
+    echo 'Input your name for Git author.'
+    echo -n '> '
+    git config --global user.name `read line; echo $line`
+    while :; do
+      echo 'Input your Email address for Git author.'
+      echo -n '> '
+      read EMAIL
+      echo 'Input again for confirmation.'
+      echo -n '> '
+      read EMAIL_CONFIRM
+      if [[ $EMAIL = $EMAIL_CONFIRM ]]; then break; fi
+      echo 'Do not match. Input again.'
+    done
+    git config --global user.email $EMAIL
+    echo 'Input your name on GitHub.'
+    echo -n '> '
+    git config --global github.user `read line; echo $line`
+  fi
   git config --global core.editor vim
   git config --global core.excludesfile $HOME/.gitignore
   git config --global color.ui true
