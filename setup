@@ -67,18 +67,6 @@ if [ `which git` ]; then
   git config --global pager.show 'diff-highlight | less'
   git config --global pager.diff 'diff-highlight | less'
   git config --global push.default simple
-
-  # used-mem
-  mkdir -p $HOME/local/src
-  if [ -d $HOME/local/src/used-mem ]; then
-    cd $HOME/local/src/used-mem
-    git pull
-    cd -
-  else
-    git clone git://github.com/yonchu/used-mem.git $HOME/local/src/used-mem
-  fi
-  mkdir -p $HOME/local/bin
-  cp $HOME/local/src/used-mem/used-mem $HOME/local/bin
 fi
 
 if [ ! -s $HOME/.lesskey ]; then
@@ -92,6 +80,12 @@ if [[ $1 = nostatus ]]; then
   shift
 else
   cp $PWD/.tmux.conf $HOME/.tmux.conf
+fi
+# used-mem
+if [ ! -f $HOME/local/bin/used-mem ]; then
+  mkdir -p $HOME/local/bin
+  wget https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem -O $HOME/local/bin/used-mem
+  chmod $HOME/local/bin/used-mem
 fi
 
 if [[ $1 = mac ]]; then
