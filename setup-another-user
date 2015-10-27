@@ -103,8 +103,8 @@ if [ ! -f $HOME/local/bin/used-mem ]; then
   wget https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem -O $HOME/local/bin/used-mem
   chmod $HOME/local/bin/used-mem
 fi
-
-if [[ $1 = mac ]]; then
+# Switch Mac or others
+if which sw_vers > /dev/null 2>&1; then
   cat $PWD/.tmux.conf-for-mac >> $HOME/.tmux.conf
 else
   cat $PWD/.tmux.conf-for-linux >> $HOME/.tmux.conf
