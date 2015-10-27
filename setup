@@ -55,13 +55,9 @@ if [ `which git` ]; then
   git config --global alias.co checkout
   git config --global alias.st status
   if [ ! -f $HOME/local/bin/diff-highlight ]; then
-    wget https://raw.githubusercontent.com/git/git/7a1aa0c28876e044351e78d8b8ae6cdbb10b5dfe/contrib/diff-highlight/diff-highlight
-    wget https://gist.githubusercontent.com/kaosf/b6392be33be2e8af7904/raw/6a0f089b79ea456c2798db61381affa9f4769f16/diff-highlight.utf8.patch
-    patch -u diff-highlight < diff-highlight.utf8.patch
-    rm diff-highlight.utf8.patch
     mkdir -p $HOME/local/bin
-    chmod +x diff-highlight
-    mv diff-highlight $HOME/local/bin
+    wget https://gist.githubusercontent.com/kaosf/f563e42e57bfa19a5e07/raw/22ff20413b5f0fa8db32d39958ea8f96ef3ee719/diff-highlight -O $HOME/local/bin/diff-highlight
+    chmod +x $HOME/local/bin/diff-highlight
   fi
   git config --global pager.log 'diff-highlight | less'
   git config --global pager.show 'diff-highlight | less'
