@@ -5,8 +5,6 @@
 ```sh
 ./setup
 
-./setup mac # for Mac (Use "pbcopy" instead of "xsel")
-
 ./x-setup # for X (e.g. Desktop Edition, VNC Server)
 
 ./x-setup menukey # for HP Stream 11 d012tu (This laptop has no menu key)
