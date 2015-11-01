@@ -78,4 +78,4 @@ alias ht=htop
 
 alias unzipsjis='unzip -O cp932'
 
-alias shs='python -m SimpleHTTPServer'
+alias shs='python -m http.server'
