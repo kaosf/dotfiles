@@ -38,6 +38,7 @@ set hintchars=afjghdkslo
 :command! yanktwitterlink :js util.copyToClipboard(content.document.title+' '+content.location+' ',true)
 :command! yankhtml :js util.copyToClipboard('<a href="'+content.location+'">'+content.document.title+'</a>',true)
 :command! yankhtmltargetblank :js util.copyToClipboard('<a href="'+content.location+'" target="_blank">'+content.document.title+'</a>',true)
+:command! yankbookmark :js util.copyToClipboard(content.document.title+"\n"+content.location,true)
 
 :command! reloadconfig :source .vimperatorrc
 
