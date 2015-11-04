@@ -24,6 +24,13 @@ do
   fi
 done
 
+if [ ! -d $HOME/.config/nvim ]; then
+  mkdir -p $HOME/.config/nvim
+fi
+if [ ! -s $HOME/.config/nvim/init.vim ]; then
+  ln -sf $PWD/.vimrc $HOME/.config/nvim/init.vim
+fi
+
 if [ ! -d $HOME/.emacs.d ]; then
   mkdir $HOME/.emacs.d
 fi
