@@ -429,8 +429,8 @@ catch
 endtry
 
 " Enable to change buffers quickly
-" ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
-nnoremap gbf :Unite buffer<CR>
+" ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
+nnoremap gbf :ls<CR>:buf
 
 " Enable to move between `do` and `end`, `def` and `end` or etc by `%`.
 " ref. http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
