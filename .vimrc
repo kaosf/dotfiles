@@ -83,7 +83,7 @@ NeoBundle 'thinca/vim-ft-clojure'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 
 NeoBundle 'kana/vim-altercmd'
-NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'qpkorr/vim-bufkill'
 
 NeoBundle 'tpope/vim-fugitive'
 
@@ -429,6 +429,7 @@ try
 catch
   " Do nothing
 endtry
+let g:BufKillCreateMappings = 0
 
 " Enable to change buffers quickly
 " ref. http://kaworu.jpn.org/kaworu/2007-07-26-1.php
