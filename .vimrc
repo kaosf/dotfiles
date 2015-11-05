@@ -90,7 +90,9 @@ NeoBundle 'tpope/vim-fugitive'
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
 "NeoBundle 'vim-scripts/mru.vim'
-NeoBundle 'kaosf/mru.vim' " Forked for my own remappings
+"NeoBundle 'kaosf/mru.vim' " Forked for my own remappings
+" ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
+NeoBundle 'Shougo/neomru.vim'
 
 " Disable this plugin now because it takes too long time.
 "NeoBundle 'joker1007/vim-markdown-quote-syntax'
@@ -545,14 +547,6 @@ let g:instant_markdown_autostart = 0
 "   :InstantMarkdownPreview
 " ref. https://github.com/suan/vim-instant-markdown
 
-"""" vim.mru
-nnoremap <leader>m :Mru<CR>
-" ref.
-"   https://github.com/yegappan/mru/blob/6e6064a087e73d6376962a1b05382b6dc72f7048/plugin/mru.vim
-let MRU_Max_Entries = 5000
-let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*\|^.*/\.git/.*'
-let MRU_Window_Height = 15
-
 """" concealedyank.vim
 " ref. http://d.hatena.ne.jp/chikatoike/20120918/1347923597
 xmap Y <Plug>(operator-concealedyank)
@@ -565,6 +559,20 @@ vmap <C-K> <Plug>(caw:i:toggle)
 """" Change directory to the current file's directory
 " ref. http://qiita.com/shiena/items/1e98fd14d0ef0084b17f
 command Cdf cd %:h
+
+"""" Unite
+" ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable = 1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> <leader>uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> <leader>ub :<C-u>Unite buffer<CR>
+nnoremap <silent> <leader>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <leader>ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> <leader>uu :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> <leader>um :<C-u>Unite file_mru<CR>
+nnoremap <silent> <leader>b :<C-u>Unite buffer<CR>
+nnoremap <silent> <leader>m :<C-u>Unite file_mru<CR>
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
