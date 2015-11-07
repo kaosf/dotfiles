@@ -78,12 +78,7 @@ if [ ! -s $HOME/.lesskey ]; then
 fi
 
 [ -f $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
-if [[ $1 = nostatus ]]; then
-  cp $PWD/.tmux.conf-nostatus $HOME/.tmux.conf
-  shift
-else
-  cp $PWD/.tmux.conf $HOME/.tmux.conf
-fi
+cp $PWD/.tmux.conf $HOME/.tmux.conf
 # used-mem
 if [ ! -f $HOME/local/bin/used-mem ]; then
   mkdir -p $HOME/local/bin
