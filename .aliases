@@ -69,8 +69,6 @@ alias iamontmux='[ ! -z $TMUX ]'
 
 alias ctags-ruby='ctags-exuberant --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 
-alias disablemonitoroff='xset s off; xset -dpms'
-
 # ref. http://vim.wikia.com/wiki/256_colors_setup_for_console_Vim
 alias tmux='tmux -2'
 
