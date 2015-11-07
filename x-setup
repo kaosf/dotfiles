@@ -12,23 +12,12 @@ done
 for i in \
   .gvimrc \
   .vimperatorrc \
-  .xmodmap-for-hhkb \
-  .xmodmap-for-hhkb-revert \
 
 do
   if [ ! -s $HOME/$i ]; then
     ln -sf $PWD/$i $HOME/$i
   fi
 done
-
-if [ -d $HOME/local/bin ]; then
-  echo 'xmodmap $HOME/.xmodmap-for-hhkb' \
-    > $HOME/local/bin/hhkb-start
-  chmod +x $HOME/local/bin/hhkb-start
-  echo 'xmodmap $HOME/.xmodmap-for-hhkb-revert' \
-    > $HOME/local/bin/hhkb-finish
-  chmod +x $HOME/local/bin/hhkb-finish
-fi
 
 if [ ! -f $HOME/.vim/colors/desert256.vim ]; then
   mkdir -p $HOME/.vim/colors
