@@ -21,7 +21,11 @@ done
 
 if [ ! -f $HOME/.vim/colors/desert256.vim ]; then
   mkdir -p $HOME/.vim/colors
-  wget 'http://www.vim.org/scripts/download_script.php?src_id=4055' -O $HOME/.vim/colors/desert256.vim
+  if which curl > /dev/null 2>&1; then
+    curl 'http://www.vim.org/scripts/download_script.php?src_id=4055' > $HOME/.vim/colors/desert256.vim
+  else
+    wget 'http://www.vim.org/scripts/download_script.php?src_id=4055' -O $HOME/.vim/colors/desert256.vim
+  fi
 fi
 
 if [[ $1 == menukey ]]; then

@@ -63,7 +63,11 @@ if [ `which git` ]; then
   git config --global alias.st status
   if [ ! -f $HOME/local/bin/diff-highlight ]; then
     mkdir -p $HOME/local/bin
-    wget https://gist.githubusercontent.com/kaosf/f563e42e57bfa19a5e07/raw/22ff20413b5f0fa8db32d39958ea8f96ef3ee719/diff-highlight -O $HOME/local/bin/diff-highlight
+    if which curl > /dev/null 2>&1; then
+      curl https://gist.githubusercontent.com/kaosf/f563e42e57bfa19a5e07/raw/22ff20413b5f0fa8db32d39958ea8f96ef3ee719/diff-highlight > $HOME/local/bin/diff-highlight
+    else
+      wget https://gist.githubusercontent.com/kaosf/f563e42e57bfa19a5e07/raw/22ff20413b5f0fa8db32d39958ea8f96ef3ee719/diff-highlight -O $HOME/local/bin/diff-highlight
+    fi
     chmod +x $HOME/local/bin/diff-highlight
   fi
   git config --global pager.log 'diff-highlight | less'
@@ -82,7 +86,11 @@ cp $PWD/.tmux.conf $HOME/.tmux.conf
 # used-mem
 if [ ! -f $HOME/local/bin/used-mem ]; then
   mkdir -p $HOME/local/bin
-  wget https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem -O $HOME/local/bin/used-mem
+  if which curl > /dev/null 2>&1; then
+    curl https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem > $HOME/local/bin/used-mem
+  else
+    wget https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem -O $HOME/local/bin/used-mem
+  fi
   chmod +x $HOME/local/bin/used-mem
 fi
 # Switch Mac or others
