@@ -11,6 +11,9 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+-- Load xdg menu entries
+local xdg_menu = require('archmenu')
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -97,6 +100,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+                                    { "Applications", xdgmenu },
                                     { "open terminal", terminal }
                                   }
                         })
