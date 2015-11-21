@@ -18,7 +18,7 @@ alias suv=suvi
 alias date-yymmddhhmmss='date +%Y%m%d%H%M%S'
 alias date-rfc-3339="date --rfc-3339=seconds | sed 's/ /T/'"
 alias df='df -Th'
-alias google='w3m www.google.co.jp'
+alias google='w3m https://www.google.co.jp'
 
 # Ruby
 alias be='bundle exec'
