@@ -12,7 +12,11 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 
 -- Load xdg menu entries
-local xdg_menu = require('archmenu')
+local require_archmenu_result, xdg_menu = pcall(require, 'archmenu')
+-- Load Debian menu entries
+local require_debian_result = pcall(require, "debian.menu")
+local this_is_arch = require_archmenu_result
+local this_is_debian_or_ubuntu = require_debian_result
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -99,11 +103,16 @@ myawesomemenu = {
    { "quit", awesome.quit }
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Applications", xdgmenu },
-                                    { "open terminal", terminal }
-                                  }
-                        })
+local awful_menu_items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+                           { "open terminal", terminal }
+                         }
+if require_archmenu_result then
+  table.insert(awful_menu_items, 2, { "Applications", xdgmenu })
+end
+if require_debian_result then
+  table.insert(awful_menu_items, 2, { "Debian", debian.menu.Debian_menu.Debian })
+end
+mymainmenu = awful.menu({ items = awful_menu_items })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -512,8 +521,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart
 awful.util.spawn_with_shell("pgrep ibus-daemon || ibus-daemon -d")
--- awful.util.spawn_with_shell("pgrep nm-applet > /dev/null || nm-applet &")
+if this_is_debian_or_ubuntu then
+  awful.util.spawn_with_shell("pgrep nm-applet > /dev/null || nm-applet &")
+  awful.util.spawn_with_shell("pgrep xfce4-power-manager > /dev/null || xfce4-power-manager &")
+end
 awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
 awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
-awful.util.spawn_with_shell("pgrep devilspie > /dev/null || devilspie &")
+if this_is_arch then
+  awful.util.spawn_with_shell("pgrep devilspie > /dev/null || devilspie &")
+end
 -- }}}
