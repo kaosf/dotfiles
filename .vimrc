@@ -565,9 +565,10 @@ let g:unite_source_file_mru_limit = 200
 nnoremap <silent> <leader>uy :<C-u>Unite history/yank<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <leader>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> <leader>ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> <leader>ug :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> <leader>uu :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> <leader>um :<C-u>Unite file_mru<CR>
+nnoremap <silent> <leader>ur :<C-u>Unite file_rec<CR>
 nnoremap <silent> <leader>b :<C-u>Unite buffer<CR>
 nnoremap <silent> <leader>m :<C-u>Unite file_mru<CR>
 
