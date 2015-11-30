@@ -123,3 +123,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# My customized prompt string (PS1)
+# Show the last exit code
+# ref. http://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
+export PROMPT_COMMAND=__prompt_command
+function __prompt_command() {
+  local EXIT="$?"
+  PS1='[\u@\h \W]\$ '
+  if [ $EXIT != 0 ]; then
+    PS1+="[$EXIT] "
+  fi
+}
