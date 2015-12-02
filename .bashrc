@@ -1,3 +1,8 @@
+# Load the original .bashrc
+if [ -f $HOME/.bashrc.orig ]; then
+  . $HOME/.bashrc.orig
+fi
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
