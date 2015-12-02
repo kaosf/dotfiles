@@ -33,6 +33,18 @@ Input your name on GitHub.
 > github-account-name
 ```
 
+### Simple `.bashrc` setup
+
+```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh -O - | bash
+```
+
+or
+
+```sh
+curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh | bash
+```
+
 ## License
 
 [![Public Domain](http://i.creativecommons.org/p/mark/1.0/88x31.png)](http://creativecommons.org/publicdomain/mark/1.0/ "license")
