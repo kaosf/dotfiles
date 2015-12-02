@@ -19,8 +19,8 @@ fi
 # Show the last exit code
 # ref. http://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
 if [ -f $HOME/.bashrc-prompt ]; then
-  . $HOME/.bash-prompt
+  . $HOME/.bashrc-prompt
 fi
 if [ -f $HOME/.bashrc-prompt-debian ]; then
-  . $HOME/.bash-prompt-debian
+  . $HOME/.bashrc-prompt-debian
 fi
