@@ -2,8 +2,6 @@
 
 for i in \
   .aliases \
-  .bashrc \
-  .bash_aliases \
   .envvars \
   .zshrc \
   .zshrc-functions \
@@ -102,3 +100,19 @@ fi
 
 [ -f $HOME/.vimshrc ] && rm $HOME/.vimshrc
 cp $PWD/.aliases $HOME/.vimshrc
+
+# Bash
+if [ ! -L $HOME/.bashrc ]; then
+  mv $HOME/.bashrc $HOME/.bashrc.orig
+fi
+ln -sf $PWD/.bashrc $HOME/.bashrc
+ln -sf $PWD/.bash_aliases $HOME/.bash_aliases
+# Debian or Ubuntu
+if \
+  uname -ar | grep debian > /dev/null 2>&1 || \
+  uname -ar | grep ubuntu > /dev/null 2>&1
+then
+  ln -sf $PWD/.bashrc-prompt-debian $HOME/.bashrc-prompt-debian
+else
+  ln -sf $PWD/.bashrc-prompt $HOME/.bashrc-prompt
+fi

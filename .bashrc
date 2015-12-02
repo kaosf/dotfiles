@@ -127,10 +127,9 @@ fi
 # My customized prompt string (PS1)
 # Show the last exit code
 # ref. http://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
-export PROMPT_COMMAND=__prompt_command
-function __prompt_command() {
-  local EXIT="$?"
-  PS1='[\u@\h \W'
-  if [ $EXIT != 0 ]; then PS1+=" $EXIT"; fi
-  PS1+='] \$ '
-}
+if [ -f $HOME/.bashrc-prompt ]; then
+  . $HOME/.bash-prompt
+fi
+if [ -f $HOME/.bashrc-prompt-debian ]; then
+  . $HOME/.bash-prompt-debian
+fi
