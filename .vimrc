@@ -126,6 +126,11 @@ NeoBundle 'chikatoike/concealedyank.vim'
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
 NeoBundle 'tyru/caw.vim'
 
+let result=system('which w3m')
+if !v:shell_error
+  NeoBundle 'yuratomo/w3m.vim'
+endif
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -571,6 +576,13 @@ nnoremap <silent> <leader>um :<C-u>Unite file_mru<CR>
 nnoremap <silent> <leader>ur :<C-u>Unite file_rec<CR>
 nnoremap <silent> <leader>b :<C-u>Unite buffer<CR>
 nnoremap <silent> <leader>m :<C-u>Unite file_mru<CR>
+
+"""" w3m
+let result=system('which w3m')
+if !v:shell_error
+  command! W3mGoogle W3m https://www.google.co.jp
+  command! W3mgoogle W3m https://www.google.co.jp
+endif
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
