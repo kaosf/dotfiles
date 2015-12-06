@@ -131,6 +131,10 @@ if !v:shell_error
   NeoBundle 'yuratomo/w3m.vim'
 endif
 
+" Disable JSON conceal
+" ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
+NeoBundle 'elzr/vim-json'
+
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -354,6 +358,12 @@ if !has('mac')
   " ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
   set clipboard=unnamedplus
 endif
+
+" Disable JSON conceal
+" ref.
+"   http://qiita.com/kadoppe/items/ffaef1f5a69f2cfcf12e
+"   http://qiita.com/karur4n/items/a26007236c59c5fb8735
+let g:vim_json_syntax_conceal = 0
 
 " don't expand tabs when editing
 "   Go
