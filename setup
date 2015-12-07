@@ -112,7 +112,7 @@ ln -sf $PWD/.bash_aliases $HOME/.bash_aliases
 # Debian or Ubuntu
 if \
   uname -ar | grep debian > /dev/null 2>&1 || \
-  uname -ar | grep ubuntu > /dev/null 2>&1
+  uname -ar | grep Ubuntu > /dev/null 2>&1
 then
   ln -sf $PWD/.bashrc-prompt-debian $HOME/.bashrc-prompt-debian
 else
