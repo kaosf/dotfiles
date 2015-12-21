@@ -605,6 +605,7 @@ endif
 " ref. https://github.com/sert-uw/dotfiles/blob/7072496cc42232a4e2057fb4867f37cde6088138/.vimrc#L101-L103
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['ruby']}
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_check_on_wq = 0
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
