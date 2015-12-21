@@ -583,7 +583,7 @@ command Cdf cd %:h
 " ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
 call unite#custom#profile('default', 'context', {'start_insert': 1})
 let g:unite_source_history_yank_enable = 1
-let g:unite_source_file_mru_limit = 200
+let g:unite_source_file_mru_limit = 10000
 nnoremap <silent> <leader>uy :<C-u>Unite history/yank<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <leader>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
