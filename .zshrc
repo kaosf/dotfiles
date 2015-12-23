@@ -51,6 +51,12 @@ cd() { builtin cd "$@" && ls; }
 # use "colordiff" if it exists
 if type colordiff > /dev/null 2>&1; then alias diff=colordiff; fi
 
+# Use "ccat" if it exists
+# ref.
+#   http://qiita.com/maeda1991/items/896f344921a6dab393d0
+#   https://github.com/jingweno/ccat
+if type ccat > /dev/null 2>&1; then alias cat=ccat; fi
+
 # 'cd ..' with C-u
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
 cdup() { echo; cd ..; zle reset-prompt; }
