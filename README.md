@@ -37,12 +37,14 @@ Input your name on GitHub.
 
 ```sh
 wget https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh -O - | bash
+. ~/.bashrc
 ```
 
 or
 
 ```sh
 curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh | bash
+. ~/.bashrc
 ```
 
 ## License

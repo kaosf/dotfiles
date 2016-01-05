@@ -15,5 +15,3 @@ function __prompt_command() {
   PS1+='] \\\$ '
 }
 EOS
-
-source $HOME/.bashrc
