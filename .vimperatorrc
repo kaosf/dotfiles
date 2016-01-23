@@ -63,3 +63,8 @@ function(){
 });
 EOM
 nnoremap @ :togglelockprotect<CR>
+
+" ref.
+"   http://qiita.com/long_long_float/items/bc0550f127384bbf99ad
+"   https://gist.github.com/kaosf/caee5c098989504ef41f
+:command! rurimaupdate :js (function(){var VERSION="2.3.0";if("docs.ruby-lang.org"===content.location.hostname){var p=content.location.pathname,v=p.match(/^\/ja\/([\d\.]+)\//);v&&v[1]!==VERSION&&(content.location.pathname=p.replace(v[1],VERSION))};})();
