@@ -1,11 +1,11 @@
 {
   :user {
     :plugins [
-      [lein-exec "0.3.1"]
+      [lein-exec "0.3.5"]
 
-      [lein-droid/lein-droid "0.2.0"]
+      [lein-droid/lein-droid "0.4.3"]
 
-      [lein-typed "0.3.1"]
+      [lein-typed "0.3.3"]
 
       ; ref. https://github.com/weavejester/lein-auto
       ;[lein-auto "0.1.1"]
@@ -21,15 +21,15 @@
       ; For tmux status bar notification
       ; Now, I can do automated test by running "lein test-refresh" command.
       ; ref. http://www.stathis.co.uk/lein-test-refresh-notification-workflow/
-      [com.jakemccrary/lein-test-refresh "0.5.0"]
+      [com.jakemccrary/lein-test-refresh "0.12.0"]
 
       ; For colorizing on REPL
       ; ref.
       ;   https://github.com/venantius/ultra
       ;   https://github.com/venantius/ultra#installation
-      [venantius/ultra "0.3.3"]
+      [venantius/ultra "0.4.0"]
 
-      [clj-time "0.9.0"]
+      [clj-time "0.11.0"]
     ]
     ;:android {:sdk-path "/path/to/android-sdk/"}
 
