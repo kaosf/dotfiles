@@ -342,7 +342,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "i", function () awful.screen.focus_relative(1) end),
     awful.key({}, "Hiragana_Katakana", function () mypromptbox[mouse.screen]:run() end),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -q sset Master 3%+ unmute", false) end),
-    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -q sset Master 3%- unmute", false) end)
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -q sset Master 3%- unmute", false) end),
+    awful.key({}, "F4", function () awful.util.spawn("awesome-my-command f4", false) end),
+    awful.key({}, "F7", function () awful.util.spawn("awesome-my-command f7", false) end),
+    awful.key({}, "F8", function () awful.util.spawn("awesome-my-command f8", false) end)
     --awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -q sset Master toggle", false) end)
 )
 
