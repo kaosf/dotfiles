@@ -135,12 +135,6 @@ endif
 " ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
 NeoBundle 'elzr/vim-json'
 
-" Rubocop checking
-" ref.
-"   https://github.com/sert-uw/dotfiles/blob/7072496cc42232a4e2057fb4867f37cde6088138/.vimrc#L100
-"   https://github.com/scrooloose/syntastic
-NeoBundle 'scrooloose/syntastic'
-
 if filereadable($HOME . "/.vimrc-neobundle-local")
   source ~/.vimrc-neobundle-local
 endif
@@ -601,12 +595,6 @@ if !v:shell_error
   command! W3mGoogle W3m https://www.google.co.jp
   command! W3mgoogle W3m https://www.google.co.jp
 endif
-
-"""" syntastic
-" ref. https://github.com/sert-uw/dotfiles/blob/7072496cc42232a4e2057fb4867f37cde6088138/.vimrc#L101-L103
-let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['ruby']}
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_check_on_wq = 0
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
