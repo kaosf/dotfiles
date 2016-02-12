@@ -31,6 +31,7 @@ alias bi-bbb-pvb='bundle install --binstubs .bundle/bin --path vendor/bundle'
 # Git
 alias g=git
 alias gac='git add -A :/ && git commit'
+alias gaca='git add -A :/ && git commit --amend'
 alias gad='git add'
 alias gadd='git add'
 alias gbr='git branch'
