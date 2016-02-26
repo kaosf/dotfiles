@@ -577,6 +577,8 @@ command Cdf cd %:h
 """" Unite
 " ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
 call unite#custom#profile('default', 'context', {'start_insert': 1})
+" ref. https://github.com/Shougo/unite.vim/issues/523
+call unite#custom#source('file_rec', 'ignore_pattern', 'vendor/bundle')
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_file_mru_limit = 10000
 nnoremap <silent> <leader>uy :<C-u>Unite history/yank<CR>
