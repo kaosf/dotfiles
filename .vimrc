@@ -1,65 +1,60 @@
-"--- NeoBundle configurations --------------------------------------------------
-"--- ref. https://github.com/Shougo/neobundle.vim#if-you-want-to-install-manually-or-you-are-using-windows
+" Run the following command at first of all:
+"
+" curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh | sh -s ~/.vim/dein
+"
+" Next run the following command to install all plugins on Vim:
+"
+" :call dein#install()
 
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible " Be iMproved
-  endif
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath^=$HOME/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin(expand($HOME . '/.vim/dein'))
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-"------- My Bundles ------------------------------------------------------------
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
 
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'rhysd/neco-ruby-keyword-args'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'vim-scripts/groovy.vim'
-NeoBundle 'wavded/vim-stylus'
-NeoBundle 'jnwhiteh/vim-golang'
-NeoBundle 'dag/vim2hs'
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
+"" My plugins START
+call dein#add('Shougo/neocomplete')
+call dein#add('tpope/vim-rails')
+call dein#add('rhysd/neco-ruby-keyword-args')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('digitaltoad/vim-jade')
+call dein#add('leafgarland/typescript-vim')
+call dein#add('vim-scripts/groovy.vim')
+call dein#add('wavded/vim-stylus')
+call dein#add('jnwhiteh/vim-golang')
+call dein#add('dag/vim2hs')
 " ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
-NeoBundle 'thinca/vim-quickrun'
-
+call dein#add('thinca/vim-quickrun')
 " For gist
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
-
+call dein#add('mattn/webapi-vim')
+call dein#add('mattn/gist-vim')
 " ref. http://qiita.com/PSP_T/items/3a1af1301ee197b32a8a
-NeoBundle 'osyo-manga/vim-over'
-
+call dein#add('osyo-manga/vim-over')
 " ref. https://github.com/heavenshell
-NeoBundle 'kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}
-
+call dein#add('kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'})
 " ref.
 "   https://github.com/tpope/vim-surround
 "   http://blog.nico0927.net/20110115/vim/152
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
-NeoBundle 'tpope/vim-surround'
-
+call dein#add('tpope/vim-surround')
 " ref. https://github.com/Shougo/vimproc.vim#neobundle
-NeoBundle 'Shougo/vimproc.vim', {
+call dein#add('Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
 \     'cygwin' : 'make -f make_cygwin.mak',
@@ -67,89 +62,72 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'linux' : 'make',
 \     'unix' : 'gmake',
 \    },
-\ }
-
-NeoBundle 'Shougo/unite.vim'
-
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimfiler'
-
-NeoBundle 'scrooloose/nerdtree'
-
+\ })
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimshell')
+call dein#add('Shougo/vimfiler')
+call dein#add('scrooloose/nerdtree')
 " ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
-NeoBundle 'thinca/vim-ft-clojure'
-"NeoBundle 'tpope/vim-fireplace'
-
-NeoBundle 'nathanaelkane/vim-indent-guides'
-
-NeoBundle 'kana/vim-altercmd'
-NeoBundle 'qpkorr/vim-bufkill'
-
-NeoBundle 'tpope/vim-fugitive'
-
+call dein#add('thinca/vim-ft-clojure')
+"call dein#add('tpope/vim-fireplace')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('kana/vim-altercmd')
+call dein#add('qpkorr/vim-bufkill')
+call dein#add('tpope/vim-fugitive')
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
-"NeoBundle 'vim-scripts/mru.vim'
-"NeoBundle 'kaosf/mru.vim' " Forked for my own remappings
+"call dein#add('vim-scripts/mru.vim')
+"call dein#add('kaosf/mru.vim') " Forked for my own remappings
 " ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
-NeoBundle 'Shougo/neomru.vim'
-
+call dein#add('Shougo/neomru.vim')
 " Disable this plugin now because it takes too long time.
-"NeoBundle 'joker1007/vim-markdown-quote-syntax'
-
-NeoBundle 'rhysd/committia.vim'
-
-NeoBundle 'Kocha/vim-unite-tig'
-
-NeoBundle 'thinca/vim-ref'
-
-NeoBundle 'suan/vim-instant-markdown'
-
+"call dein#add('joker1007/vim-markdown-quote-syntax')
+call dein#add('rhysd/committia.vim')
+call dein#add('Kocha/vim-unite-tig')
+call dein#add('thinca/vim-ref')
+call dein#add('suan/vim-instant-markdown')
 " ref. https://github.com/haya14busa/vim-undoreplay
-NeoBundle 'haya14busa/vim-undoreplay'
-
+call dein#add('haya14busa/vim-undoreplay')
 " Disable this plugin now because of an error below.
 "
 " Error detected while processing
 " /home/username/.vim/bundle/ruby_hl_lvar.vim/autoload/ruby_hl_lvar.vim:
 " line    3:
 " LoadError: no such file to load -- ripper
-"NeoBundle 'todesking/ruby_hl_lvar.vim'
-
-NeoBundle 'elixir-lang/vim-elixir'
-
+"call dein#add('todesking/ruby_hl_lvar.vim')
+call dein#add('elixir-lang/vim-elixir')
 " ref.
 "   http://d.hatena.ne.jp/chikatoike/20120918/1347923597
 "   https://github.com/chikatoike/concealedyank.vim
-NeoBundle 'chikatoike/concealedyank.vim'
-
+call dein#add('chikatoike/concealedyank.vim')
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
-NeoBundle 'tyru/caw.vim'
+call dein#add('tyru/caw.vim')
+" Disable JSON conceal
+" ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
+call dein#add('elzr/vim-json')
 
 let result=system('which w3m')
 if !v:shell_error
-  NeoBundle 'yuratomo/w3m.vim'
+  call dein#add('yuratomo/w3m.vim')
 endif
 
-" Disable JSON conceal
-" ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
-NeoBundle 'elzr/vim-json'
-
-if filereadable($HOME . "/.vimrc-neobundle-local")
-  source ~/.vimrc-neobundle-local
+if filereadable($HOME . "/.vimrc-dein-local")
+  source ~/.vimrc-dein-local
 endif
-"------- My Bundles END --------------------------------------------------------
+"" My plugins END
 
-call neobundle#end()
+" Required:
+call dein#end()
 
 " Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
-"--- NeoBundle configurations END ----------------------------------------------
+"End dein Scripts-------------------------
 
 "--- My configurations (until the tail) ----------------------------------------
 
