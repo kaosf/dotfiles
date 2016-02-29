@@ -127,6 +127,10 @@ filetype plugin indent on
 "  call dein#install()
 "endif
 
+"" My commands
+command DeinInstall call dein#install()<CR>
+command DeinUpdate call dein#update()<CR>
+
 "End dein Scripts-------------------------
 
 "--- My configurations (until the tail) ----------------------------------------
