@@ -16,3 +16,5 @@ bind diff A ?git rebase --committer-date-is-author-date %(commit)
 bind main V ?git revert %(commit)
 bind main M ?git reset --hard %(commit)
 bind diff M ?git reset --hard %(commit)
+bind main Y @echo %(commit) | xsel -i -b
+bind diff Y @echo %(commit) | xsel -i -b
