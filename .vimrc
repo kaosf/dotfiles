@@ -130,6 +130,7 @@ filetype plugin indent on
 "" My commands
 command DeinInstall call dein#install()<CR>
 command DeinUpdate call dein#update()<CR>
+command DeinRecache call dein#recache_runtimepath()<CR>
 
 "End dein Scripts-------------------------
 
