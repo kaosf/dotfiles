@@ -26,7 +26,7 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 
 " You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+"call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 "" My plugins START
 call dein#add('Shougo/neocomplete')
