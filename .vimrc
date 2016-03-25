@@ -105,6 +105,7 @@ call dein#add('tyru/caw.vim')
 " Disable JSON conceal
 " ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
 call dein#add('elzr/vim-json')
+call dein#add('slim-template/vim-slim')
 
 let result=system('which w3m')
 if !v:shell_error
