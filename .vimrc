@@ -431,9 +431,11 @@ endtry
 let g:BufKillCreateMappings = 0
 
 " Enable to move between `do` and `end`, `def` and `end` or etc by `%`.
-" ref. http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
+" ref.
+"   http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
+"   https://twitter.com/thinca/status/713407356978114561
 if !exists('loaded_matchit')
-  runtime macros/matchit.vim
+  packadd matchit
 endif
 
 "let g:ruby_hl_lvar_show_warnings = 1
