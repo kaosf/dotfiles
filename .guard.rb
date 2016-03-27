@@ -1,4 +1,4 @@
-if ENV['SSH_CLIENT']
+if ENV['SSH_CLIENT'] || ENV['FORCE_TMUX_NOTIFICATION']
   if ENV['TMUX']
     notification :tmux,
       display_message: true,
