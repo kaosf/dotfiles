@@ -550,8 +550,8 @@ xmap Y <Plug>(operator-concealedyank)
 
 """" caw.vim
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
-nmap <C-K> <Plug>(caw:tildepos:toggle)
-vmap <C-K> <Plug>(caw:tildepos:toggle)
+nmap <C-K> <Plug>(caw:hatpos:toggle)
+vmap <C-K> <Plug>(caw:hatpos:toggle)
 
 """" Change directory to the current file's directory
 " ref. http://qiita.com/shiena/items/1e98fd14d0ef0084b17f
