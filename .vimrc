@@ -432,7 +432,14 @@ let g:BufKillCreateMappings = 0
 "   http://qiita.com/alpaca_taichou/items/ab2ad83ddbaf2f6ce7fb
 "   https://twitter.com/thinca/status/713407356978114561
 if !exists('loaded_matchit')
-  packadd matchit
+  "" An error occurs on gvim
+  "packadd matchit
+  "" Use an old code of `runtime macros/matchit.vim` for gvim
+  try
+    packadd matchit
+  catch
+    runtime macros/matchit.vim
+  endtry
 endif
 
 "let g:ruby_hl_lvar_show_warnings = 1
