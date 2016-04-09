@@ -449,7 +449,7 @@ endif
 "   http://stackoverflow.com/questions/5983906/vim-conditionally-use-fugitivestatusline-function-in-vimrc
 "   http://qiita.com/etmnk/items/7d17a045c66ef120db07
 "if exists('g:loaded_fugitive')
-if isdirectory(expand($HOME.'/.vim/bundle/vim-fugitive'))
+if isdirectory(expand($HOME.'/.vim/dein/repos/github.com/tpope/vim-fugitive'))
   set statusline=%t%=%{fugitive#statusline()}%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
 endif
 " ref.
