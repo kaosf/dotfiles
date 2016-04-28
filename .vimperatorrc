@@ -35,6 +35,7 @@ set hintchars=afjghdkslo
 "   https://code.google.com/p/vimperator-labs/source/browse/common/content/util.js#79 (on 2014-05-07)
 :command! yanktitle :js util.copyToClipboard(content.document.title,true)
 :command! yankmdlink :js util.copyToClipboard('['+content.document.title+']('+content.location+')',true)
+:command! yankmdimg :js util.copyToClipboard('!['+content.document.title+']('+content.location+')',true)
 :command! yanktwitterlink :js util.copyToClipboard(content.document.title+' '+content.location+' ',true)
 :command! yankhtml :js util.copyToClipboard('<a href="'+content.location+'">'+content.document.title+'</a>',true)
 :command! yankhtmltargetblank :js util.copyToClipboard('<a href="'+content.location+'" target="_blank">'+content.document.title+'</a>',true)
