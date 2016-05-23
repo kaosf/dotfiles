@@ -286,6 +286,16 @@ inoremap jj <Esc>
 " Don't have to press Ctrl
 inoremap jw <C-w>
 inoremap jq <C-h>
+" Press F10 in insert mode to prevent autoindent, unexpected imap or etc...
+" ref.
+"   :help pastetoggle
+"   :help i_CTRL-O
+"   http://twilog.org/ka_/date-160523
+"   http://twilog.org/ka_/date-160524
+"   https://twitter.com/koturn/status/734743215002255360
+"   https://twitter.com/h_east/status/734760376504455168
+inoremap <F10> <C-O>:set paste<CR>
+set pastetoggle=<F10>
 
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
