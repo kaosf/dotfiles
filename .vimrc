@@ -276,7 +276,6 @@ set sidescroll=1
 set sidescrolloff=0   " but now set it to 0 for vimshell buffer.
 
 " ref. https://github.com/rhysd/dotfiles/blob/7faa1e5b83788bdc8b67462e23479cc285b8ab6b/vimrc#L204-205
-nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 nnoremap <silent>ff :<C-u>nohlsearch<CR>
 
 " Exit insert mode by "kk" or "jj"
