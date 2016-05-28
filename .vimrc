@@ -53,16 +53,8 @@ call dein#add('kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'})
 "   http://blog.nico0927.net/20110115/vim/152
 "   http://rcmdnk.github.io/blog/2014/05/03/computer-vim-octopress/
 call dein#add('tpope/vim-surround')
-" ref. https://github.com/Shougo/vimproc.vim#neobundle
-call dein#add('Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ })
+" ref. https://github.com/Shougo/vimproc.vim#deinvim
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimshell')
 call dein#add('Shougo/vimfiler')
