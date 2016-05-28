@@ -26,3 +26,7 @@
 ;; M-x eval-buffer
 ;; M-x package-refresh-contents
 ;; M-x package-install [RET] clojure-mode [RET]
+
+;; Run the following command to install "cider" on 2016-05-28
+;; ref. https://github.com/clojure-emacs/cider#quickstart
+;; M-x package-install [RET] cider [RET]
