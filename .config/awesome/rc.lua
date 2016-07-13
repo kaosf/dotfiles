@@ -48,8 +48,7 @@ end
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
--- terminal = "gnome-terminal"
-terminal = "sakura"
+terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -535,8 +534,7 @@ if this_is_debian_or_ubuntu then
     awful.util.spawn_with_shell("pgrep nm-applet > /dev/null || nm-applet &")
     awful.util.spawn_with_shell("pgrep xfce4-power-manager > /dev/null || xfce4-power-manager &")
 end
--- awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
-awful.util.spawn_with_shell("pgrep sakura > /dev/null || sakura &")
+awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
 awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
 if this_is_arch then
     awful.util.spawn_with_shell("pgrep devilspie > /dev/null || devilspie &")
