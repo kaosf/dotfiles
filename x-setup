@@ -9,6 +9,16 @@ do
   cp $PWD/$i $HOME/$i
 done
 
+#if [ ! -f /etc/lsb-release ]; then
+if [ -f /etc/arch-release ]; then
+  cat <<EOS >> $HOME/.xmodmap
+! Caps Lock -> Ctrl
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
+EOS
+fi
+
 for i in \
   .gvimrc \
   .vimperatorrc \
