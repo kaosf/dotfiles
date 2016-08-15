@@ -16,8 +16,8 @@ set guioptions-=e
 
 " Set font.
 " ref. https://forums.ubuntulinux.jp/viewtopic.php?id=15177
-set guifont=Monospace\ 18
-set guifontwide=Monospace\ 18
+set guifont=Monospace\ 15
+set guifontwide=Monospace\ 15
 
 " Adjust font size.
 " ref. http://vim.wikia.com/wiki/Change_font_size_quickly
