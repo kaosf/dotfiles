@@ -32,11 +32,11 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/neocomplete')
 call dein#add('tpope/vim-rails')
 call dein#add('rhysd/neco-ruby-keyword-args')
-call dein#add('kchmck/vim-coffee-script')
+"call dein#add('kchmck/vim-coffee-script')
 call dein#add('digitaltoad/vim-jade')
-call dein#add('leafgarland/typescript-vim')
-call dein#add('vim-scripts/groovy.vim')
-call dein#add('wavded/vim-stylus')
+"call dein#add('leafgarland/typescript-vim')
+"call dein#add('vim-scripts/groovy.vim')
+"call dein#add('wavded/vim-stylus')
 call dein#add('jnwhiteh/vim-golang')
 call dein#add('dag/vim2hs')
 " ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
@@ -90,7 +90,7 @@ call dein#add('haya14busa/vim-undoreplay')
 " line    3:
 " LoadError: no such file to load -- ripper
 "call dein#add('todesking/ruby_hl_lvar.vim')
-call dein#add('elixir-lang/vim-elixir')
+"call dein#add('elixir-lang/vim-elixir')
 " ref.
 "   http://d.hatena.ne.jp/chikatoike/20120918/1347923597
 "   https://github.com/chikatoike/concealedyank.vim
