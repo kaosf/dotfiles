@@ -11,6 +11,8 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
+" ref. http://stackoverflow.com/questions/11215767/how-to-make-vim-gui-tab-menu-to-look-like-console-tab-menu
+set guioptions-=e
 
 " Set font.
 " ref. https://forums.ubuntulinux.jp/viewtopic.php?id=15177
