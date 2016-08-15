@@ -61,6 +61,8 @@ call dein#add('Shougo/vimfiler')
 call dein#add('scrooloose/nerdtree', { 'rev': 'ee4d42cfed64deb249988cbada025011032a3ff4' })
 " ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
 call dein#add('thinca/vim-ft-clojure')
+" ref. https://github.com/kien/rainbow_parentheses.vim
+call dein#add('kien/rainbow_parentheses.vim')
 " ref. https://github.com/tpope/vim-fireplace
 call dein#add('tpope/vim-fireplace')
 call dein#add('nathanaelkane/vim-indent-guides')
