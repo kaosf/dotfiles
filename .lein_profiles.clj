@@ -30,6 +30,11 @@
       [venantius/ultra "0.4.0"]
 
       [clj-time "0.11.0"]
+
+      ; ref.
+      ;   https://github.com/tpope/vim-fireplace
+      ;   https://github.com/clojure-emacs/cider-nrepl
+      [cider/cider-nrepl "0.12.0"]
     ]
     ;:android {:sdk-path "/path/to/android-sdk/"}
 
