@@ -215,6 +215,9 @@ set encoding=utf-8
 " Make not to have to press "Shift+;" to switch to command mode
 nnoremap ; :
 nnoremap : ;
+" Save or save and quit without Enter or Ctrl-j
+nnoremap ss :w<CR>
+nnoremap sq :wq<CR>
 
 " Switch buffers easily
 nnoremap gp :bp<CR>
