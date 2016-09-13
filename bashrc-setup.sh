@@ -12,6 +12,6 @@ function __prompt_command() {
   local EXIT="\$?"
   PS1='[\\u@\\h \\W'
   if [ \$EXIT != 0 ]; then PS1+=" \$EXIT"; fi
-  PS1+='] \\\$ '
+  PS1+=']\\\$ '
 }
 EOS
