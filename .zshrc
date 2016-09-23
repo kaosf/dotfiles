@@ -76,8 +76,8 @@ alias ismac='which sw_vers > /dev/null 2>&1'
 ! ismac && [ -f ~/.zshrc-warnings ] && . ~/.zshrc-warnings
 
 # alias vimzshhistory="vim -c 'e ++enc=sjis' ~/.zsh_history"
-if ismac; then
-  alias vizshhistory="vi -u /dev/null ~/.zsh_history"
-else
+if which busybox > /dev/null 2>&1; then
   alias vizshhistory="busybox vi ~/.zsh_history"
+else
+  alias vizshhistory="vi -u /dev/null ~/.zsh_history"
 fi
