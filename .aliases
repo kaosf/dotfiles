@@ -13,9 +13,6 @@ alias view='vim -R'
 alias busyboxvi='busybox vi'
 alias e='emacs -nw'
 
-# alias vimzshhistory="vim -c 'e ++enc=sjis' ~/.zsh_history"
-alias vizshhistory="busybox vi ~/.zsh_history"
-
 alias suvi='sudo -H vim'
 alias suv=suvi
 
