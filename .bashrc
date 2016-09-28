@@ -24,3 +24,5 @@ fi
 if [ -f $HOME/.bashrc-prompt-debian ]; then
   . $HOME/.bashrc-prompt-debian
 fi
+
+bind '"\C-u":"cd ..\n"'
