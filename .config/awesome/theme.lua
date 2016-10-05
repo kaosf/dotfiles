@@ -73,7 +73,19 @@ theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/def
 theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = os.getenv("HOME") .. "/.config/awesome/wallpaper"
+-- ref. https://awesome.naquadah.org/wiki/Awesome_3_configuration#Executing_commands_and_scripts
+local wallpaper_path = os.getenv("HOME") .. "/.config/awesome/wallpaper"
+local fh = io.popen("if [ -f " .. wallpaper_path .. " ]; then echo ok; fi")
+local str = ""
+for i in fh:lines() do
+    str = str .. i
+end
+io.close(fh)
+if str == 'ok' then
+    theme.wallpaper = wallpaper_path
+else
+    theme.wallpaper = "/usr/share/awesome/themes/default/background.png"
+end
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
