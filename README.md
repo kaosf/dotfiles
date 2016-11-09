@@ -54,6 +54,18 @@ curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bash_profile-setup.
 . ~/.bash_profile
 ```
 
+### Simple `.tmux.conf` setup
+
+```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+```
+
+or
+
+```sh
+curl https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf > ~/.tmux.conf
+```
+
 ## License
 
 [![Public Domain](http://i.creativecommons.org/p/mark/1.0/88x31.png)](http://creativecommons.org/publicdomain/mark/1.0/ "license")
