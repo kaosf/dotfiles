@@ -1,12 +1,8 @@
-if [ -L $HOME/.bashrc ]; then
+if [ -L $HOME/.bash_profile ]; then
   exit 0
 fi
-
-if grep -q '__prompt_command' $HOME/.bashrc 2> /dev/null; then
-  exit 0
-fi
-
-cat <<'EOS' >> $HOME/.bashrc
+if grep -q __prompt_command $HOME/.bash_profile 2> /dev/null; then
+  cat <<'EOS' >> $HOME/.bash_profile
 export PROMPT_COMMAND=__prompt_command
 function __prompt_command() {
   local EXIT="$?"
@@ -15,3 +11,4 @@ function __prompt_command() {
   PS1+=']\$ '
 }
 EOS
+fi
