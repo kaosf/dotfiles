@@ -47,6 +47,13 @@ curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh | b
 . ~/.bashrc
 ```
 
+If you want to setup `.bash_profile`,
+
+```sh
+curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bash_profile-setup.sh | bash
+. ~/.bash_profile
+```
+
 ## License
 
 [![Public Domain](http://i.creativecommons.org/p/mark/1.0/88x31.png)](http://creativecommons.org/publicdomain/mark/1.0/ "license")
