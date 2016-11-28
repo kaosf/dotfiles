@@ -59,3 +59,5 @@ function! AdjustFontSizeDefault()
 endfunction
 
 command! DefaultFont call AdjustFontSizeDefault()
+
+inoremap <S-C-v> <Esc>pa
