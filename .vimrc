@@ -280,9 +280,11 @@ nnoremap <silent>ff :<C-u>nohlsearch<CR>
 " ref. https://twitter.com/anekos/status/485416150541402112
 inoremap kk <Esc>
 inoremap jj <Esc>
-" Don't have to press Ctrl
-inoremap jw <C-w>
-inoremap jq <C-h>
+
+"" Don't have to press Ctrl
+"inoremap jw <C-w>
+"inoremap jq <C-h>
+
 " Press F10 in insert mode to prevent autoindent, unexpected imap or etc...
 " ref.
 "   :help pastetoggle
