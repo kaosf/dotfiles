@@ -1,6 +1,11 @@
 " Disable visual bell (blinking).
 set visualbell t_vb=
 
+" Set lines and columns default values explicitly.
+" ...cause GVim is launched with weird window size sometimes...
+set lines=24
+set columns=80
+
 " Change colorscheme to light-on-dark type.
 " ref. http://superuser.com/questions/141685/setting-background-color-in-gvim
 colorscheme desert256
