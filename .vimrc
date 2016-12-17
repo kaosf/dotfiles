@@ -494,6 +494,7 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gac :Gac<CR>
+nnoremap <leader>gn :Gnow<CR>
 
 " vimdiff color
 " ref.
