@@ -355,6 +355,10 @@ endif
 "   http://qiita.com/karur4n/items/a26007236c59c5fb8735
 let g:vim_json_syntax_conceal = 0
 
+" Disable Markdown conceal
+" ref. https://github.com/plasticboy/vim-markdown#syntax-concealing
+let g:vim_markdown_conceal = 0
+
 " don't expand tabs when editing
 "   Go
 "   Python
