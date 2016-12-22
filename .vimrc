@@ -80,7 +80,6 @@ call dein#add('Shougo/neomru.vim')
 call dein#add('rhysd/committia.vim')
 call dein#add('Kocha/vim-unite-tig')
 call dein#add('thinca/vim-ref')
-call dein#add('plasticboy/vim-markdown')
 call dein#add('suan/vim-instant-markdown')
 " ref. https://github.com/haya14busa/vim-undoreplay
 call dein#add('haya14busa/vim-undoreplay')
