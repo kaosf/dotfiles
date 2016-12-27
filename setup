@@ -35,6 +35,9 @@ fi
 if [ ! -s $HOME/.emacs.d/init.el ]; then
   ln -sf $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
 fi
+if [ ! -s $HOME/.emacs.d/packages.el ]; then
+  ln -sf $PWD/.emacs.d_packages.el $HOME/.emacs.d/packages.el
+fi
 
 if [ ! -d $HOME/.lein ]; then
   mkdir $HOME/.lein
