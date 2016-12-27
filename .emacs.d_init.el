@@ -30,3 +30,20 @@
 ;; Run the following command to install "cider" on 2016-05-28
 ;; ref. https://github.com/clojure-emacs/cider#quickstart
 ;; M-x package-install [RET] cider [RET]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; !!!! Following lines are inserted by package.el automatically !!!!
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (git-gutter magit helm jedi go-mode flymake-jslint flycheck buffer-move yascroll elscreen popwin pos-tip fuzzy auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
