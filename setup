@@ -88,7 +88,9 @@ if [ ! -s $HOME/.lesskey ]; then
   lesskey
 fi
 
-[ -f $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
+if [ -f $HOME/.tmux.conf ]; then
+  rm $HOME/.tmux.conf
+fi
 cp $PWD/.tmux.conf $HOME/.tmux.conf
 # used-mem
 if [ ! -f $HOME/local/bin/used-mem ]; then
