@@ -44,7 +44,9 @@ if [[ $1 == menukey ]]; then
 fi
 
 mkdir -p $HOME/.config/awesome
-[ -f $HOME/.config/awesome/rc.lua ] || \
+if [ ! -f $HOME/.config/awesome/rc.lua ]; then
   ln -sf $PWD/.config/awesome/rc.lua $HOME/.config/awesome/rc.lua
-[ -f $HOME/.config/awesome/theme.lua ] || \
+fi
+if [ ! -f $HOME/.config/awesome/theme.lua ]; then
   ln -sf $PWD/.config/awesome/theme.lua $HOME/.config/awesome/theme.lua
+fi
