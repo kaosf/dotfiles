@@ -63,8 +63,7 @@ cdup() { echo; cd ..; zle reset-prompt; }
 zle -N cdup
 bindkey "^u" cdup
 
-if [ -f $HOME/.cdd-source ]
-then
+if [ -f $HOME/.cdd-source ]; then
   source $HOME/.cdd-source
   chpwd() { _cdd_chpwd }
 fi
