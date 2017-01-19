@@ -542,5 +542,6 @@ awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal 
 awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
 if this_is_arch then
     awful.util.spawn_with_shell("pgrep devilspie > /dev/null || devilspie &")
+    awful.util.spawn_with_shell("pgrep xfce4-power-manager > /dev/null || xfce4-power-manager &")
 end
 -- }}}
