@@ -38,10 +38,10 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(awful.util.get_themes_dir() .. "default/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
+terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -54,11 +54,12 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
+    -- awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
+    awful.layout.suit.floating,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
@@ -329,6 +330,50 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
+
+    -- My configurations
+    ,
+    awful.key({ modkey }, ",",
+              function ()
+                  local prev_index = awful.tag.getidx() - 1
+                  if prev_index < 1 then prev_index = prev_index + 9 end
+                  local tag = awful.tag.gettags(mouse.screen)[prev_index]
+                  if tag then awful.tag.viewonly(tag) end
+              end),
+    awful.key({ modkey }, ".",
+              function ()
+                  local next_index = awful.tag.getidx() + 1
+                  if next_index > 9 then next_index = next_index - 9 end
+                  local tag = awful.tag.gettags(mouse.screen)[next_index]
+                  if tag then awful.tag.viewonly(tag) end
+              end),
+    awful.key({ modkey, "Shift" }, ",",
+              function ()
+                  local prev_index = awful.tag.getidx() - 1
+                  if prev_index < 1 then prev_index = prev_index + 9 end
+                  local tag = awful.tag.gettags(mouse.screen)[prev_index]
+                  if tag then
+                      awful.client.movetotag(tag)
+                      awful.tag.viewonly(tag)
+                  end
+              end),
+    awful.key({ modkey, "Shift" }, ".",
+              function ()
+                  local next_index = awful.tag.getidx() + 1
+                  if next_index > 9 then next_index = next_index - 9 end
+                  local tag = awful.tag.gettags(mouse.screen)[next_index]
+                  if tag then
+                      awful.client.movetotag(tag)
+                      awful.tag.viewonly(tag)
+                  end
+              end)
+    ,
+    awful.key({}, "Hiragana_Katakana", function () awful.screen.focused().mypromptbox:run() end,
+              {description = "run prompt", group = "launcher"})
+    ,
+    awful.key({}, "F4", function () awful.util.spawn("awesome-my-command f4", false) end),
+    awful.key({}, "F7", function () awful.util.spawn("awesome-my-command f7", false) end),
+    awful.key({}, "F8", function () awful.util.spawn("awesome-my-command f8", false) end)
 )
 
 clientkeys = awful.util.table.join(
@@ -361,6 +406,10 @@ clientkeys = awful.util.table.join(
             c:raise()
         end ,
         {description = "maximize", group = "client"})
+
+    -- My configurations
+    ,
+    awful.key({ modkey }, "q", function (c) c:kill() end)
 )
 
 -- Bind all key numbers to tags.
@@ -543,3 +592,10 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- My configurations (autostart)
+awful.util.spawn_with_shell("pgrep ibus-daemon || ibus-daemon -d")
+awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
+awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
+awful.util.spawn_with_shell("pgrep devilspie > /dev/null || devilspie &")
+awful.util.spawn_with_shell("pgrep xfce4-power-manager > /dev/null || xfce4-power-manager &")
