@@ -494,6 +494,14 @@ awful.rules.rules = {
           "copyq",  -- Includes session name in class.
         },
         class = {
+
+          -- My configurations (floating classes)
+          "MPlayer",
+          "Pavucontrol",
+          "Pcmanfm",
+          "Gnome-mplayer",
+          "Gvim",
+
           "Arandr",
           "Gpick",
           "Kruler",
