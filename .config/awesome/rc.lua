@@ -368,6 +368,7 @@ globalkeys = awful.util.table.join(
                   end
               end)
     ,
+    awful.key({ modkey }, "i", function () awful.screen.focus_relative(1) end),
     awful.key({}, "Hiragana_Katakana", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"})
     ,
