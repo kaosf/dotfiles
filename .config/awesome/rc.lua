@@ -233,7 +233,7 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey, "Shift"   }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -411,6 +411,8 @@ clientkeys = awful.util.table.join(
     -- My configurations
     ,
     awful.key({ modkey }, "q", function (c) c:kill() end)
+    ,
+    awful.key({ modkey }, "s", function (c) c.sticky = not c.sticky  end)
 )
 
 -- Bind all key numbers to tags.
