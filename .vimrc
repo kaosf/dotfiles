@@ -336,6 +336,11 @@ nnoremap <Up>    <C-w>-
 nnoremap <C-]>  g<C-]>
 nnoremap g<C-]> <C-]>
 
+" Disable K to run man command
+" ref. http://vim.wikia.com/wiki/Disable_built-in_command
+nnoremap K <Nop>
+vnoremap K <Nop>
+
 " Enable to move cursor in command mode
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
