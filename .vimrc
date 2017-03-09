@@ -362,7 +362,8 @@ let g:vim_json_syntax_conceal = 0
 
 " Disable Markdown conceal
 " ref. https://github.com/plasticboy/vim-markdown#syntax-concealing
-let g:vim_markdown_conceal = 0
+" let g:vim_markdown_conceal = 0 " This doesn't work today...
+autocmd Filetype markdown setl conceallevel=0
 
 " don't expand tabs when editing
 "   Go
