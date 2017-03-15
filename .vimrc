@@ -353,8 +353,13 @@ cnoremap <C-d> <Delete>
 set spelllang=en,cjk
 function! ToggleSpell()
   if &spell == 0
+    syntax off
     set spell
   else
+    syntax on
+    " Reset ctermbg
+    " ref. "show a vertical line ..." (search "colorcolumn" in this file)
+    hi ColorColumn ctermbg=0
     set nospell
   endif
 endfunction
