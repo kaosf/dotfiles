@@ -348,6 +348,18 @@ cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <C-d> <Delete>
 
+" Spell check
+" ref. http://qiita.com/crispy/items/9a49d7dc792740f062ab
+set spelllang=en,cjk
+function! ToggleSpell()
+  if &spell == 0
+    set spell
+  else
+    set nospell
+  endif
+endfunction
+nnoremap sp :call ToggleSpell()<CR>
+
 if !has('mac')
   " collaboration with clipboard
   " ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
