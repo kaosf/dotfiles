@@ -69,6 +69,7 @@ call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('kana/vim-altercmd')
 call dein#add('qpkorr/vim-bufkill')
 call dein#add('tpope/vim-fugitive')
+call dein#add('cohama/agit.vim')
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
 "call dein#add('vim-scripts/mru.vim')
