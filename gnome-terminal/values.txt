@@ -23,7 +23,7 @@ true
 '#ffffff'
 true
 '#ffffff'
-'Monospace 12'
+'Monospace 18'
 'delete-sequence'
 false
 @ms nothing
