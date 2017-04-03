@@ -1,0 +1,7 @@
+#!/bin/bash
+
+UUID=$(gsettings get org.gnome.Terminal.ProfilesList default | sed "s/'//g")
+gsettings list-keys org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/ > keys.txt
+for i in $(gsettings list-keys org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/); do
+  gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/ ${i}
+done > values.txt

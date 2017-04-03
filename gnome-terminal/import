@@ -1,0 +1,9 @@
+#!/bin/bash
+
+INDEX=1
+for i in `cat keys.txt`; do
+  KEY=${i}
+  VALUE=$(head -${INDEX} values.txt | tail -1)
+  INDEX=$((INDEX + 1))
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/ ${KEY} "${VALUE}"
+done
