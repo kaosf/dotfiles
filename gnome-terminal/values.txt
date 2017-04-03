@@ -5,21 +5,21 @@ false
 'narrow'
 24
 'UTF-8'
-true
+false
 ''
 'Unnamed'
 false
 'close'
-true
+false
 true
 'ascii-delete'
-'#00FF00'
+'rgb(136,138,133)'
 true
 'system'
 true
 80
 '#000000'
-['#2E2E34343636', '#CCCC00000000', '#4E4E9A9A0606', '#C4C4A0A00000', '#34346565A4A4', '#757550507B7B', '#060698209A9A', '#D3D3D7D7CFCF', '#555557575353', '#EFEF29292929', '#8A8AE2E23434', '#FCFCE9E94F4F', '#72729F9FCFCF', '#ADAD7F7FA8A8', '#3434E2E2E2E2', '#EEEEEEEEECEC']
+['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(70,137,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(102,170,35)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
 '#ffffff'
 true
 '#ffffff'
@@ -30,7 +30,7 @@ false
 '#000000'
 '#000000'
 false
-'always'
+'never'
 false
 '#000000'
 false
