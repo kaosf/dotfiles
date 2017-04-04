@@ -102,14 +102,6 @@ call dein#add('tyru/caw.vim')
 " ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
 call dein#add('elzr/vim-json')
 call dein#add('slim-template/vim-slim')
-" For Rust
-" Run
-"   cargo install racer
-"   cargo install rustfmt
-"   export PATH=$HOME/.cargo/bin:$PATH
-" ref. http://tydk27.hatenadiary.com/entry/20160713/1468416790
-call dein#add('rust-lang/rust.vim')
-call dein#add('racer-rust/vim-racer')
 
 let result=system('which w3m')
 if !v:shell_error
@@ -633,14 +625,6 @@ if !v:shell_error
   command! W3mGoogle W3m https://www.google.co.jp
   command! W3mgoogle W3m https://www.google.co.jp
 endif
-
-"""" Rust
-" ref. http://tydk27.hatenadiary.com/entry/20160713/1468416790
-let g:rustfmt_autosave = 1
-let g:rustfmt_command = $HOME . '/.cargo/bin/rustfmt'
-set hidden
-let g:racer_cmd = $HOME . '/.cargo/bin/racer'
-"let $RUST_SRC_PATH=$HOME . '/local/src/rustc-1.10.0/src'
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
