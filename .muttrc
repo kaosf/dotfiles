@@ -1,0 +1,78 @@
+# Change the following six lines to match your Gmail account details
+set imap_user = "YOUR.EMAIL@gmail.com"
+set imap_pass = "YOUR-PASSWORD"
+set smtp_url = "smtp://ka.kaosf@smtp.gmail.com:587/"
+set smtp_pass = "YOUR-SMTP-PASSWORD"
+set from = "YOUR.EMAIL@gmail.com"
+set realname = "YOUR NAME"
+
+# Change the following line to a different editor you prefer.
+set editor = "vim"
+
+# Basic config, you can leave this as is ---------------
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set postponed = "+[GMail]/Drafts"
+set record = "+[GMail]/Sent Mail"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set signature =~/.mutt/signature
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop 
+
+# ref. http://unix.stackexchange.com/a/49986/140544
+bind index G imap-fetch-mail
+
+# ref. http://qiita.com/iorionda/items/c48355770ae689ca1896
+bind pager j next-line
+bind pager k previous-line
+set pager_stop
+
+#### Color configurations
+# ref. http://iyukki.blog56.fc2.com/blog-entry-100.html
+# ref. http://www.mutt.org/doc/manual/manual-3.html
+# ref. https://gist.github.com/wridgers/975027
+# COLORFGBG="default;default"
+#
+# ref. https://bugs.launchpad.net/ubuntu/+source/mutt/+bug/702089
+# copy from /etc/Muttrc.d/colors.rc
+# -- default --
+#color normal	white black
+#color attachment brightyellow black
+#color hdrdefault cyan black
+#color indicator black cyan
+#color markers	brightred black
+#color quoted	green black
+#color signature cyan black
+#color status	brightgreen blue
+#color tilde	blue black
+#color tree	red black
+# -- modified --
+color normal     default default
+color attachment brightyellow default
+color hdrdefault cyan default
+color indicator  black cyan
+color markers    brightred default
+color quoted     green default
+color signature  cyan default
+color status     brightgreen blue
+color tilde      blue default
+color tree       red default

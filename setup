@@ -109,6 +109,10 @@ else
   cat $PWD/.tmux.conf-for-linux >> $HOME/.tmux.conf
 fi
 
+if [ ! -f $HOME/.muttrc ]; then
+  cp $PWD/.muttrc $HOME/.muttrc
+fi
+
 [ -f $HOME/.vimshrc ] && rm $HOME/.vimshrc
 cp $PWD/.aliases $HOME/.vimshrc
 
