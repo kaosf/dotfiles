@@ -38,13 +38,14 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
 
-# ref. http://unix.stackexchange.com/a/49986/140544
 bind index G imap-fetch-mail
-
-# ref. http://qiita.com/iorionda/items/c48355770ae689ca1896
+bind index t noop
 bind pager j next-line
 bind pager k previous-line
 set pager_stop
+# ref.
+#   http://qiita.com/iorionda/items/c48355770ae689ca1896
+#   http://unix.stackexchange.com/a/49986/140544
 
 #### Color configurations
 # ref. http://iyukki.blog56.fc2.com/blog-entry-100.html
