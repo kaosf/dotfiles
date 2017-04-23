@@ -626,6 +626,11 @@ if !v:shell_error
   command! W3mgoogle W3m https://www.google.co.jp
 endif
 
+"""" Formatting XML
+" ref. http://qiita.com/shiena/items/8907c4b42d7958c53ce4
+command! Formatxml :%s/></>\r</g | filetype indent on | setf xml | normal gg=G
+"command! Formatxml :%s/></>^M</g | filetype indent on | setf xml | normal gg=G
+
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
 endif
