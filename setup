@@ -111,6 +111,7 @@ fi
 
 if [ ! -f $HOME/.muttrc ]; then
   cp $PWD/.muttrc $HOME/.muttrc
+  chmod 600 $HOME/.muttrc
 fi
 
 [ -f $HOME/.vimshrc ] && rm $HOME/.vimshrc
