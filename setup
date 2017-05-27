@@ -113,6 +113,9 @@ if [ ! -f $HOME/.muttrc ]; then
   cp $PWD/.muttrc $HOME/.muttrc
   chmod 600 $HOME/.muttrc
 fi
+if [ ! -s $HOME/.mailcap ]; then
+  ln -sf $PWD/.mailcap $HOME/.mailcap
+fi
 
 [ -f $HOME/.vimshrc ] && rm $HOME/.vimshrc
 cp $PWD/.aliases $HOME/.vimshrc
