@@ -96,6 +96,7 @@ call dein#add('haya14busa/vim-undoreplay')
 "   http://d.hatena.ne.jp/chikatoike/20120918/1347923597
 "   https://github.com/chikatoike/concealedyank.vim
 call dein#add('chikatoike/concealedyank.vim')
+" Toggle comment out by C-k
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
 call dein#add('tyru/caw.vim')
 " Disable JSON conceal
