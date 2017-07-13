@@ -436,7 +436,7 @@ hi IndentGuidesEven ctermbg=236 guibg=blue
 "   http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
   set colorcolumn=81
-  hi ColorColumn ctermbg=0
+  hi ColorColumn ctermbg=234
 endif
 
 """" vim-quickrun
