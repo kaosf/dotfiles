@@ -79,4 +79,5 @@ alias ht=htop
 
 alias unzipsjis='unzip -O cp932'
 
-alias shs='python -m http.server'
+alias shs='echo Use "pyhs"; python3 -m http.server'
+alias pyhs='python3 -m http.server'
