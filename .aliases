@@ -77,6 +77,8 @@ alias tmux='tmux -2'
 
 alias ht=htop
 
+alias mt=mutt
+
 alias unzipsjis='unzip -O cp932'
 
 alias shs='echo Use "pyhs"; python3 -m http.server'
