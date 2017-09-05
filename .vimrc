@@ -103,11 +103,12 @@ call dein#add('tyru/caw.vim')
 " ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
 call dein#add('elzr/vim-json')
 call dein#add('slim-template/vim-slim')
+
 " Rust
 " ref. https://skoji.jp/blog/2017/05/rust-env.html
-call dein#add('rust-lang/rust.vim')
-call dein#add('racer-rust/vim-racer')
-call dein#add('rhysd/rust-doc.vim')
+" call dein#add('rust-lang/rust.vim')
+" call dein#add('racer-rust/vim-racer')
+" call dein#add('rhysd/rust-doc.vim')
 
 let result=system('which w3m')
 if !v:shell_error
@@ -636,21 +637,6 @@ endif
 " ref. http://qiita.com/shiena/items/8907c4b42d7958c53ce4
 command! Formatxml :%s/></>\r</g | filetype indent on | setf xml | normal gg=G
 "command! Formatxml :%s/></>^M</g | filetype indent on | setf xml | normal gg=G
-
-"""' Rust
-" ref. https://skoji.jp/blog/2017/05/rust-env.html
-" ref. https://www.rustup.rs/
-" Run following commands:
-"   curl https://sh.rustup.rs -sSf | sh
-"   source $HOME/.cargo/env
-"   cargo install racer
-"   cargo install rustfmt
-"   rustup component add rust-src
-set hidden
-let g:racer_cmd = '$HOME/.cargo/bin/racer'
-let g:rustfmt_autosave = 1
-let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
-let g:rust_doc#downloaded_rust_doc_dir = '$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/'
 
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
