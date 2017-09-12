@@ -21,16 +21,12 @@ do
   fi
 done
 
-if [ ! -d $HOME/.config/nvim ]; then
-  mkdir -p $HOME/.config/nvim
-fi
+mkdir -p $HOME/.config/nvim
 if [ ! -s $HOME/.config/nvim/init.vim ]; then
   ln -sf $PWD/.vimrc $HOME/.config/nvim/init.vim
 fi
 
-if [ ! -d $HOME/.emacs.d ]; then
-  mkdir $HOME/.emacs.d
-fi
+mkdir -p $HOME/.emacs.d
 if [ ! -s $HOME/.emacs.d/init.el ]; then
   ln -sf $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
 fi
@@ -38,16 +34,12 @@ if [ ! -s $HOME/.emacs.d/packages.el ]; then
   ln -sf $PWD/.emacs.d_packages.el $HOME/.emacs.d/packages.el
 fi
 
-if [ ! -d $HOME/.lein ]; then
-  mkdir $HOME/.lein
-fi
+mkdir -p $HOME/.lein
 if [ ! -f $HOME/.lein/profiles.clj ]; then
   cp $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
 fi
 
-if [ ! -d $HOME/.w3m ]; then
-  mkdir $HOME/.w3m
-fi
+mkdir -p $HOME/.w3m
 if [ ! -s $HOME/.w3m/keymap ]; then
   ln -sf $PWD/.w3m/keymap $HOME/.w3m/keymap
 fi
