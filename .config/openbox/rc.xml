@@ -367,15 +367,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-l">
-      <action name="Execute">
-        <command>dm-tool lock</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>lock</name>
-        </startupnotify>
-      </action>
-    </keybind>
+    <!-- Disable key="W-l" -->
     <keybind key="W-x">
       <action name="Execute">
         <command>oblogout</command>
