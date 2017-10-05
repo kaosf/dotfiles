@@ -456,6 +456,36 @@
         <command>sudo systemctl suspend</command>
       </action>
     </keybind>
+
+    <!-- My additional configurations -->
+    <keybind key="Hiragana_Katakana">
+      <action name="Execute">
+        <command>gmrun</command>
+      </action>
+    </keybind>
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-j">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="W-k">
+      <action name="PreviousWindow"/>
+    </keybind>
+    <keybind key="W-period">
+      <action name="DesktopNext"/>
+    </keybind>
+    <keybind key="W-comma">
+      <action name="DesktopPrevious"/>
+    </keybind>
+    <keybind key="F4">
+      <action name="Execute">
+        <command>openbox-my-command f4</command>
+      </action>
+    </keybind>
+    <!-- My additional configurations END -->
+    <!-- ref. https://gist.github.com/kaosf/4097ed881151efdfca18d9771633eb13 -->
+
   </keyboard>
   <mouse>
     <dragThreshold>8</dragThreshold>
