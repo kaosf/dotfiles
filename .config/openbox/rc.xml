@@ -345,15 +345,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-q">
-      <action name="Execute">
-        <command>xkill</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Kill an application</name>
-        </startupnotify>
-      </action>
-    </keybind>
+    <!-- Disable key="W-q" -->
     <keybind key="W-v">
       <action name="ToggleMaximizeVert"/>
     </keybind>
