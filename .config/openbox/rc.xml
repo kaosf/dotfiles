@@ -470,6 +470,30 @@
     <keybind key="W-comma">
       <action name="DesktopPrevious"/>
     </keybind>
+    <keybind key="W-Right">
+      <action name="DesktopNext"/>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="DesktopPrevious"/>
+    </keybind>
+    <keybind key="W-1">
+      <action name="Desktop"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="Desktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="Desktop">
+        <desktop>3</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="Desktop">
+        <desktop>4</desktop>
+      </action>
+    </keybind>
     <keybind key="F4">
       <action name="Execute">
         <command>openbox-my-command f4</command>
