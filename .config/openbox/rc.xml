@@ -475,6 +475,16 @@
         <command>openbox-my-command f4</command>
       </action>
     </keybind>
+    <keybind key="F7">
+      <action name="Execute">
+        <command>openbox-my-command f7</command>
+      </action>
+    </keybind>
+    <keybind key="F8">
+      <action name="Execute">
+        <command>openbox-my-command f8</command>
+      </action>
+    </keybind>
     <!-- My additional configurations END -->
     <!-- ref. https://gist.github.com/kaosf/4097ed881151efdfca18d9771633eb13 -->
 
