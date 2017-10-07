@@ -467,6 +467,16 @@
     <keybind key="W-comma">
       <action name="DesktopPrevious"/>
     </keybind>
+    <keybind key="W-S-period">
+      <action name="SendToDesktop">
+        <to>next</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-comma">
+      <action name="SendToDesktop">
+        <to>previous</to>
+      </action>
+    </keybind>
     <keybind key="W-Right">
       <action name="DesktopNext"/>
     </keybind>
@@ -508,6 +518,8 @@
     </keybind>
     <!-- My additional configurations END -->
     <!-- ref. https://gist.github.com/kaosf/4097ed881151efdfca18d9771633eb13 -->
+    <!-- ref. http://openbox.org/wiki/Help:Bindings -->
+    <!-- ref. http://openbox.org/wiki/Help:Actions -->
 
   </keyboard>
   <mouse>
