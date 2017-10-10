@@ -442,6 +442,11 @@
     </keybind>
 
     <!-- My additional configurations -->
+    <keybind key="Print">
+      <action name="Execute">
+        <command>scrot</command>
+      </action>
+    </keybind>
     <keybind key="Hiragana_Katakana">
       <action name="Execute">
         <command>gmrun</command>
