@@ -872,6 +872,15 @@
         <action name="DesktopNext"/>
       </mousebind>
     </context>
+
+    <!-- My additional configurations -->
+    <context name="Frame">
+      <mousebind action="Drag" button="W-Left">
+        <action name="Move"/>
+      </mousebind>
+    </context>
+    <!-- My additional configurations END -->
+
   </mouse>
   <menu><!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless --><!-- default menu file (or custom one in $HOME/.config/openbox/) --><file>menu.xml</file><hideDelay>200</hideDelay><!-- if a press-release lasts longer than this setting (in milliseconds), the
