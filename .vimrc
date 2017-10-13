@@ -399,6 +399,9 @@ autocmd FileType go set noexpandtab
 autocmd FileType python set noexpandtab
 autocmd FileType make set noexpandtab
 
+" Groovy indent
+autocmd FileType groovy set shiftwidth=4
+
 " autocomplete end tags of HTML and XML
 " ref. https://github.com/sue445/dotfiles/blob/d1251d6fe2effe72d385bb90d4409fe19f4ee006/_vimrc#L90-L95
 augroup MyXML
