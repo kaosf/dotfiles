@@ -50,3 +50,9 @@ fi
 if [ ! -f $HOME/.config/awesome/theme.lua ]; then
   ln -sf $PWD/.config/awesome/theme.lua $HOME/.config/awesome/theme.lua
 fi
+
+mkdir -p $HOME/.config/openbox
+if [ ! -f $HOME/.config/openbox/rc.xml.orig ]; then
+  cp $HOME/.config/openbox/rc.xml $HOME/.config/openbox/rc.xml.orig
+fi
+ln -sf $PWD/.config/openbox/rc.xml $HOME/.config/openbox/rc.xml
