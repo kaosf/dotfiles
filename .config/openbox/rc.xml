@@ -364,15 +364,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <command>xnoise</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Media Player</name>
-        </startupnotify>
-      </action>
-    </keybind>
+    <!-- Disable key="W-m" -->
     <!-- Disable key="W-l" -->
     <keybind key="W-x">
       <action name="Execute">
