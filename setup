@@ -26,6 +26,11 @@ if [ ! -s $HOME/.config/nvim/init.vim ]; then
   ln -sf $PWD/.vimrc $HOME/.config/nvim/init.vim
 fi
 
+mkdir -p $HOME/.docker
+if [ ! -s $HOME/.docker/config.json ]; then
+  ln -sf $PWD/.docker/config.json $HOME/.docker/config.json
+fi
+
 mkdir -p $HOME/.emacs.d
 if [ ! -s $HOME/.emacs.d/init.el ]; then
   ln -sf $PWD/.emacs.d_init.el $HOME/.emacs.d/init.el
