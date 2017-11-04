@@ -29,11 +29,7 @@ call dein#add('Shougo/neosnippet-snippets')
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 "" My plugins START
-call dein#add('Shougo/deoplete.nvim')
-if !has('nvim')
-  call dein#add('roxma/nvim-yarp')
-  call dein#add('roxma/vim-hug-neovim-rpc')
-endif
+call dein#add('Shougo/neocomplete')
 call dein#add('tpope/vim-rails')
 call dein#add('rhysd/neco-ruby-keyword-args')
 "call dein#add('kchmck/vim-coffee-script')
@@ -151,8 +147,9 @@ set showcmd
 
 let g:mapleader = ","
 
-let g:deoplete#enable_at_startup = 1
-
+if filereadable($HOME . "/.vimrc-neocomplete")
+  source ~/.vimrc-neocomplete
+endif
 if filereadable($HOME . "/.vimrc-neosnippet")
   source ~/.vimrc-neosnippet
 endif
