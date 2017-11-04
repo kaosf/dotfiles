@@ -69,7 +69,6 @@ call dein#add('tpope/vim-fireplace')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('kana/vim-altercmd')
 call dein#add('qpkorr/vim-bufkill')
-call dein#add('tpope/vim-fugitive')
 call dein#add('cohama/agit.vim')
 " MRU (Most Recently Used)
 " ref. http://nanasi.jp/articles/vim/mru_vim.html
@@ -104,6 +103,10 @@ call dein#add('tyru/caw.vim')
 " ref. http://qiita.com/karur4n/items/a26007236c59c5fb8735
 call dein#add('elzr/vim-json')
 call dein#add('slim-template/vim-slim')
+
+" Git
+call dein#add('tpope/vim-fugitive')
+call dein#add('lambdalisue/gina.vim')
 
 " Rust
 " ref. https://skoji.jp/blog/2017/05/rust-env.html
