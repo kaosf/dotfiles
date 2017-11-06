@@ -9,7 +9,6 @@ for i in \
   .zshrc-prompt \
   .zshrc-warnings \
   .vimrc \
-  .vimrc-neocomplete \
   .vimrc-neosnippet \
   .tigrc \
   .gemrc \
