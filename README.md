@@ -60,6 +60,10 @@ curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bash_profile-setup.
 wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-before2.4 -O ~/.tmux.conf
 ```
 
+```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-1.8 -O ~/.tmux.conf
+```
+
 or
 
 ```sh
