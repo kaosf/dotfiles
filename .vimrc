@@ -154,7 +154,12 @@ set showcmd
 
 let g:mapleader = ","
 
-let g:deoplete#enable_at_startup = 1
+if has('gui_running')
+  let g:deoplete#enable_at_startup = 0
+else
+  let g:deoplete#enable_at_startup = 1
+endif
+" ref. has('gui_running') http://vector.hateblo.jp/entry/20110918/1316363220
 
 if filereadable($HOME . "/.vimrc-neosnippet")
   source ~/.vimrc-neosnippet
