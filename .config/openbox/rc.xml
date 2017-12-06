@@ -324,15 +324,7 @@
         <desktop>yes</desktop>
       </action>
     </keybind>
-    <keybind key="W-f">
-      <action name="Execute">
-        <command>thunar</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>File Manager</name>
-        </startupnotify>
-      </action>
-    </keybind>
+    <!-- Disable key="W-f" -->
     <keybind key="W-w">
       <action name="Execute">
         <command>chromium</command>
@@ -469,6 +461,9 @@
         <interactive>no</interactive>
         <linear>yes</linear>
       </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="ToggleFullscreen"/>
     </keybind>
     <keybind key="W-period">
       <action name="DesktopNext"/>
