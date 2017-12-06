@@ -459,10 +459,16 @@
       <action name="Close"/>
     </keybind>
     <keybind key="W-j">
-      <action name="NextWindow"/>
+      <action name="NextWindow">
+        <interactive>no</interactive>
+        <linear>yes</linear>
+      </action>
     </keybind>
     <keybind key="W-k">
-      <action name="PreviousWindow"/>
+      <action name="PreviousWindow">
+        <interactive>no</interactive>
+        <linear>yes</linear>
+      </action>
     </keybind>
     <keybind key="W-period">
       <action name="DesktopNext"/>
