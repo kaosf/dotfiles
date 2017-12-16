@@ -118,6 +118,8 @@ call dein#add('lambdalisue/gina.vim')
 " call dein#add('racer-rust/vim-racer')
 " call dein#add('rhysd/rust-doc.vim')
 
+call dein#add('udalov/kotlin-vim')
+
 let result=system('which w3m')
 if !v:shell_error
   call dein#add('yuratomo/w3m.vim')
