@@ -60,7 +60,7 @@ call dein#add('kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'})
 call dein#add('tpope/vim-surround')
 " ref. https://github.com/Shougo/vimproc.vim#deinvim
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/vimshell')
 call dein#add('Shougo/vimfiler')
 call dein#add('scrooloose/nerdtree')
@@ -627,21 +627,19 @@ vmap <C-K> <Plug>(caw:hatpos:toggle)
 command Cdf cd %:h
 
 """" Unite
-" ref. http://qiita.com/hide/items/77b9c1b0f29577d60397
-call unite#custom#profile('default', 'context', {'start_insert': 1})
-" ref. https://github.com/Shougo/unite.vim/issues/523
-call unite#custom#source('file_rec', 'ignore_pattern', 'vendor/bundle\|node_modules')
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_file_mru_limit = 10000
-nnoremap <silent> <leader>uy :<C-u>Unite history/yank<CR>
-nnoremap <silent> <leader>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <leader>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> <leader>ug :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> <leader>uu :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent> <leader>um :<C-u>Unite file_mru<CR>
-nnoremap <silent> <leader>ur :<C-u>Unite file_rec<CR>
-nnoremap <silent> <leader>b :<C-u>Unite buffer<CR>
-nnoremap <silent> <leader>m :<C-u>Unite file_mru<CR>
+call denite#custom#var('default', 'context', {'start_insert': 1})
+call denite#custom#var('file_rec', 'ignore_pattern', 'vendor/bundle\|node_modules')
+let g:denite_source_history_yank_enable = 1
+let g:denite_source_file_mru_limit = 10000
+nnoremap <silent> <leader>uy :<C-u>Denite history/yank<CR>
+nnoremap <silent> <leader>ub :<C-u>Denite buffer<CR>
+nnoremap <silent> <leader>uf :<C-u>DeniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <leader>ug :<C-u>Denite -buffer-name=register register<CR>
+nnoremap <silent> <leader>uu :<C-u>Denite file_mru buffer<CR>
+nnoremap <silent> <leader>um :<C-u>Denite file_mru<CR>
+nnoremap <silent> <leader>ur :<C-u>Denite file_rec<CR>
+nnoremap <silent> <leader>b :<C-u>Denite buffer<CR>
+nnoremap <silent> <leader>m :<C-u>Denite file_mru<CR>
 
 """" w3m
 let result=system('which w3m')
