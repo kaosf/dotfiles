@@ -1,7 +1,7 @@
 # Change the following six lines to match your Gmail account details
 set imap_user = "YOUR.EMAIL@gmail.com"
 set imap_pass = "YOUR-PASSWORD"
-set smtp_url = "smtp://ka.kaosf@smtp.gmail.com:587/"
+set smtp_url = "smtp://YOUR.EMAIL@smtp.gmail.com:587/"
 set smtp_pass = "YOUR-SMTP-PASSWORD"
 set from = "YOUR.EMAIL@gmail.com"
 set realname = "YOUR NAME"
