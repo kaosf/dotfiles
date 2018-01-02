@@ -40,6 +40,7 @@ bind editor <space> noop
 
 bind index G imap-fetch-mail
 bind index t noop
+bind index N search-opposite
 bind pager j next-line
 bind pager k previous-line
 set pager_stop
