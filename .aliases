@@ -28,6 +28,7 @@ alias bi-pvb='bundle install --path vendor/bundle'
 alias bi-bbb='bundle install --binstubs .bundle/bin'
 alias bi-pvb-bbb='bundle install --path vendor/bundle --binstubs .bundle/bin'
 alias bi-bbb-pvb='bundle install --binstubs .bundle/bin --path vendor/bundle'
+alias bi-pvb-j4='bundle install --path vendor/bundle -j4'
 
 # Git
 alias g=git
