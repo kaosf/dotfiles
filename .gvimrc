@@ -9,6 +9,9 @@ set columns=80
 " Change colorscheme to light-on-dark type.
 " ref. http://superuser.com/questions/141685/setting-background-color-in-gvim
 colorscheme desert256
+" Reset some bg colors.
+hi NonText guibg=#333333
+hi Normal guibg=#333333
 
 " Remove all GUI parts.
 " ref. http://vim.wikia.com/wiki/Hide_toolbar_or_menus_to_see_more_text
