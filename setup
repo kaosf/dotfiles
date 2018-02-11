@@ -26,8 +26,8 @@ if [ ! -s $HOME/.config/nvim/init.vim ]; then
 fi
 
 mkdir -p $HOME/.docker
-if [ ! -s $HOME/.docker/config.json ]; then
-  ln -sf $PWD/.docker/config.json $HOME/.docker/config.json
+if [ ! -f $HOME/.docker/config.json ]; then
+  cp $PWD/.docker/config.json $HOME/.docker/config.json
 fi
 
 mkdir -p $HOME/.emacs.d
