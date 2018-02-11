@@ -10,6 +10,7 @@ alias l='ls -CF'
 alias v=vim
 alias vi=vim
 alias view='vim -R'
+alias viewhex="view -b -c '%!xxd'"
 alias busyboxvi='busybox vi'
 alias e='emacs -nw'
 
