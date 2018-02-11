@@ -444,7 +444,8 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>gnome-terminal</command>
+        <!-- <command>gnome-terminal</command> -->
+        <command>lxterminal</command>
       </action>
     </keybind>
     <keybind key="W-q">
