@@ -68,8 +68,6 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('thinca/vim-ft-clojure')
 " ref. https://github.com/kien/rainbow_parentheses.vim
 call dein#add('kien/rainbow_parentheses.vim')
-" ref. https://github.com/tpope/vim-fireplace
-call dein#add('tpope/vim-fireplace')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('kana/vim-altercmd')
 call dein#add('qpkorr/vim-bufkill')
