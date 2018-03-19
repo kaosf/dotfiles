@@ -488,6 +488,11 @@
     <keybind key="W-Left">
       <action name="DesktopPrevious"/>
     </keybind>
+    <keybind key="W-i">
+      <action name="MoveResizeTo">
+        <monitor>next</monitor>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="Desktop"/>
     </keybind>
@@ -555,6 +560,9 @@
     <!-- ref. https://gist.github.com/kaosf/4097ed881151efdfca18d9771633eb13 -->
     <!-- ref. http://openbox.org/wiki/Help:Bindings -->
     <!-- ref. http://openbox.org/wiki/Help:Actions -->
+    <!-- ref. MoveResizeTo next
+           https://superuser.com/questions/990454/how-can-i-instantly-move-the-active-window-to-a-secondary-monitor-in-openbox
+           https://ubuntuforums.org/showthread.php?t=1383784 -->
 
   </keyboard>
   <mouse>
