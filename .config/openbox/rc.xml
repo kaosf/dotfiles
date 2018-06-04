@@ -176,11 +176,13 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <!--
     <keybind key="C-A-Left">
       <action name="DesktopLeft">
         <wrap>no</wrap>
       </action>
     </keybind>
+    -->
     <!--
     <keybind key="XF86AudioNext">
       <action name="Execute">
@@ -214,11 +216,13 @@
       </action>
     </keybind>
     -->
+    <!--
     <keybind key="C-A-Right">
       <action name="DesktopRight">
         <wrap>no</wrap>
       </action>
     </keybind>
+    -->
     <keybind key="C-A-Up">
       <action name="DesktopUp">
         <wrap>no</wrap>
