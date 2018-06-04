@@ -498,7 +498,9 @@
       </action>
     </keybind>
     <keybind key="W-1">
-      <action name="Desktop"/>
+      <action name="Desktop">
+        <desktop>1</desktop>
+      </action>
     </keybind>
     <keybind key="W-2">
       <action name="Desktop">
