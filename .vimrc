@@ -404,12 +404,17 @@ autocmd Filetype markdown setl conceallevel=0
 
 " don't expand tabs when editing
 "   Go
-"   Python
 "   Makefile
 " source files
 autocmd FileType go set noexpandtab
-autocmd FileType python set noexpandtab
 autocmd FileType make set noexpandtab
+
+" Python indent
+" Pattern 1: 4 spaces (recommended in pep8)
+autocmd FileType python set shiftwidth=4
+" " Pattern 2: tab
+" autocmd FileType python set shiftwidth=8
+" autocmd FileType python set noexpandtab
 
 " Groovy indent
 autocmd FileType groovy set shiftwidth=4
