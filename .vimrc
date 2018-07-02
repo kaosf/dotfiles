@@ -223,7 +223,7 @@ set nobk
 set noswf
 
 " ref. http://itcweb.cc.affrc.go.jp/affrit/faq/tips/vim-enc
-set fileencodings=utf-8,utf-16le,sjis,euc-jp,iso-2022-jp
+set fileencodings=utf-8,sjis,utf-16le,euc-jp,iso-2022-jp
 set fileformats=unix,mac,dos
 
 " ref. https://github.com/alwei/dotfiles/blob/master/.gvimrc#L14
