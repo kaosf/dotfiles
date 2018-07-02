@@ -264,6 +264,11 @@ endfunction
 nnoremap <silent> gl :call <SID>movewinright()<CR>
 " Create a new tab easily
 nnoremap <silent> tc :tabnew<CR>
+nnoremap <silent> tC :-tabnew<CR>
+nnoremap <silent> t> :+tabmove<CR>
+nnoremap <silent> t< :-tabmove<CR>
+nnoremap <silent> t. :+tabmove<CR>
+nnoremap <silent> t, :-tabmove<CR>
 
 " forgot where I did copy&paste from
 set list
