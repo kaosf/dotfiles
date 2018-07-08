@@ -110,6 +110,10 @@ call dein#add('slim-template/vim-slim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('lambdalisue/gina.vim')
 
+" GitHub
+call dein#add('tyru/open-browser.vim')
+call dein#add('tyru/open-browser-github.vim')
+
 " Rust
 " ref. https://skoji.jp/blog/2017/05/rust-env.html
 " call dein#add('rust-lang/rust.vim')
