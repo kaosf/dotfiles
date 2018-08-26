@@ -42,7 +42,7 @@ call dein#add('digitaltoad/vim-jade')
 call dein#add('vim-scripts/groovyindent-unix')
 " ref. https://twitter.com/h_east/status/920305971045343234
 "call dein#add('wavded/vim-stylus')
-call dein#add('jnwhiteh/vim-golang')
+call dein#add('fatih/vim-go')
 call dein#add('dag/vim2hs')
 " ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
 call dein#add('thinca/vim-quickrun')
@@ -427,6 +427,9 @@ autocmd FileType python set shiftwidth=4
 
 " Groovy indent
 autocmd FileType groovy set shiftwidth=4
+
+" golang
+let g:go_fmt_command = "goimports"
 
 " autocomplete end tags of HTML and XML
 " ref. https://github.com/sue445/dotfiles/blob/d1251d6fe2effe72d385bb90d4409fe19f4ee006/_vimrc#L90-L95
