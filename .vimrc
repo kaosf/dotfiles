@@ -43,6 +43,8 @@ call dein#add('vim-scripts/groovyindent-unix')
 " ref. https://twitter.com/h_east/status/920305971045343234
 "call dein#add('wavded/vim-stylus')
 call dein#add('fatih/vim-go')
+" ref. :help go-install
+call dein#add('zchee/deoplete-go')
 call dein#add('dag/vim2hs')
 " ref. http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
 call dein#add('thinca/vim-quickrun')
