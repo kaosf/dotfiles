@@ -57,6 +57,10 @@ curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bash_profile-setup.
 ### Simple `.tmux.conf` setup
 
 ```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-for-2.4 -O ~/.tmux.conf
+```
+
+```sh
 wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-before2.4 -O ~/.tmux.conf
 ```
 
