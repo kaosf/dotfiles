@@ -326,6 +326,8 @@ inoremap jj <Esc>
 "   https://twitter.com/h_east/status/734760376504455168
 inoremap <F10> <C-O>:set paste<CR>
 set pastetoggle=<F10>
+" Paste clipboard by C-v
+inoremap <C-v> <C-r>+
 
 " pair close checker.
 " from othree vimrc ( http://github.com/othree/rc/blob/master/osx/.vimrc )
