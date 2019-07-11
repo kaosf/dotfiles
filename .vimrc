@@ -663,7 +663,7 @@ function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <Space>
   \ denite#do_map('toggle_select').'j'
 endfunction
-" call denite#custom#var('default', 'context', {'start_insert': 1}) " Not affected?
+call denite#custom#option('default', {'start_filter': 1})
 call denite#custom#var('file_rec', 'ignore_pattern', 'vendor/bundle\|node_modules')
 let g:denite_source_history_yank_enable = 1
 let g:denite_source_file_mru_limit = 10000
