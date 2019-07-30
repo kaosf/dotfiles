@@ -476,6 +476,12 @@
     <keybind key="W-comma">
       <action name="DesktopPrevious"/>
     </keybind>
+    <keybind key="C-A-period">
+      <action name="DesktopNext"/>
+    </keybind>
+    <keybind key="C-A-comma">
+      <action name="DesktopPrevious"/>
+    </keybind>
     <keybind key="W-S-period">
       <action name="SendToDesktop">
         <to>next</to>
