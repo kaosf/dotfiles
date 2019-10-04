@@ -247,6 +247,8 @@ nnoremap : ;
 nnoremap ss :w<CR>
 nnoremap sq :wq<CR>
 
+nnoremap sbd :bd<CR>
+
 " Switch buffers easily
 nnoremap gp :bp<CR>
 nnoremap gn :bn<CR>
