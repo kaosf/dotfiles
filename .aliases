@@ -65,6 +65,7 @@ alias grh1h='git reset HEAD^ --hard'
 alias gs='git status -sb'
 alias gst='git status'
 alias gshow='git show'
+alias gsw='git switch'
 alias gphm='git push heroku master'
 alias gacarbh1cdiad='git add -A :/ && git commit --amend && git rebase HEAD^ --committer-date-is-author-date'
 
