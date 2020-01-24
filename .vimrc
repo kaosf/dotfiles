@@ -64,7 +64,6 @@ call dein#add('tpope/vim-surround')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/vimshell')
-call dein#add('Shougo/vimfiler')
 call dein#add('scrooloose/nerdtree')
 " ref. http://d.hatena.ne.jp/thinca/20120915/1347696749
 call dein#add('thinca/vim-ft-clojure')
@@ -186,15 +185,6 @@ command Vsc VimShellCreate
 " Open Leiningen REPL or Rails console by "iexe lein repl" or "iexe rails c".
 " Select lines in visual mode and then press ,s to run the selected code.
 vmap <silent> <leader>s :VimShellSendString<cr>
-
-"" vimfiler
-" ref. https://github.com/mizoki/dotfiles/blob/42c377ed5e003ac921f1874c5a62d04f8cf5301e/.vimrc#L675-L686
-" Set vimfiler to default explorer
-let g:vimfiler_as_default_explorer = 1
-" Enable file operation commands
-let g:vimfiler_safe_mode_by_default = 0
-" Show cursor line only in vimfiler buffer
-autocmd filetype vimfiler setlocal cursorline
 
 "" NERDTree
 " ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
