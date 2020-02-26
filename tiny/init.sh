@@ -16,3 +16,5 @@ function __prompt_command() {
   if [ $EXIT != 0 ]; then PS1+="[$EXIT] "; fi
 }
 EOS
+
+ln -sf $PWD/tiny/.vimrc $HOME/.vimrc
