@@ -684,6 +684,10 @@ endif
 command! Formatxml :%s/></>\r</g | filetype indent on | setf xml | normal gg=G
 "command! Formatxml :%s/></>^M</g | filetype indent on | setf xml | normal gg=G
 
+" ref. https://stackoverflow.com/questions/29635150/how-do-i-fix-this-annoying-syntastic-rails-error
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of .* in void context'}
+
 if filereadable($HOME . "/.vimrc-local")
   source ~/.vimrc-local
 endif
