@@ -34,11 +34,12 @@ if !has('nvim')
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
+call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-rails')
 call dein#add('rhysd/neco-ruby-keyword-args')
 "call dein#add('kchmck/vim-coffee-script')
 call dein#add('digitaltoad/vim-jade')
-"call dein#add('leafgarland/typescript-vim')
+call dein#add('leafgarland/typescript-vim')
 call dein#add('vim-scripts/groovyindent-unix')
 " ref. https://twitter.com/h_east/status/920305971045343234
 "call dein#add('wavded/vim-stylus')
