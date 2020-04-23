@@ -40,6 +40,8 @@ call dein#add('rhysd/neco-ruby-keyword-args')
 "call dein#add('kchmck/vim-coffee-script')
 call dein#add('digitaltoad/vim-jade')
 call dein#add('leafgarland/typescript-vim')
+call dein#add('peitalin/vim-jsx-typescript')
+" ref. https://github.com/peitalin/vim-jsx-typescript
 call dein#add('vim-scripts/groovyindent-unix')
 " ref. https://twitter.com/h_east/status/920305971045343234
 "call dein#add('wavded/vim-stylus')
