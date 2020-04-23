@@ -438,7 +438,7 @@
     <!-- My additional configurations -->
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot</command>
+        <command>scrot -z</command>
       </action>
     </keybind>
     <keybind key="Hiragana_Katakana">
