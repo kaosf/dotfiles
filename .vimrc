@@ -119,10 +119,8 @@ call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/open-browser-github.vim')
 
 " Rust
-" ref. https://skoji.jp/blog/2017/05/rust-env.html
-" call dein#add('rust-lang/rust.vim')
-" call dein#add('racer-rust/vim-racer')
-" call dein#add('rhysd/rust-doc.vim')
+" ref. https://www.rust-lang.org/ja/learn/get-started
+call dein#add('rust-lang/rust.vim')
 
 call dein#add('udalov/kotlin-vim')
 
