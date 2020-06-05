@@ -35,6 +35,10 @@ if !has('nvim')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
 call dein#add('scrooloose/syntastic')
+
+" ref. https://prettier.io/
+call dein#add('prettier/vim-prettier')
+
 call dein#add('tpope/vim-rails')
 call dein#add('rhysd/neco-ruby-keyword-args')
 "call dein#add('kchmck/vim-coffee-script')
@@ -409,6 +413,10 @@ let g:vim_json_syntax_conceal = 0
 " ref. https://github.com/plasticboy/vim-markdown#syntax-concealing
 " let g:vim_markdown_conceal = 0 " This doesn't work today...
 autocmd Filetype markdown setl conceallevel=0
+
+" Prettier
+" ref. https://github.com/prettier/vim-prettier
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Rails
 " Command :A to flip
