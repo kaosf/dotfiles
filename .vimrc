@@ -467,7 +467,7 @@ hi IndentGuidesEven ctermbg=236 ctermfg=59 guibg=blue
 "   http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
 "   http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
-  set colorcolumn=81,101,121
+  set colorcolumn=121,141,161
   hi ColorColumn ctermbg=234
 endif
 
