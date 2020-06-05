@@ -39,11 +39,6 @@ call dein#add('scrooloose/syntastic')
 " ref. https://prettier.io/
 call dein#add('prettier/vim-prettier')
 
-" Install neoformat for prettier?
-" ref. https://prettier.io/docs/en/vim.html
-call dein#add('sbdchd/neoformat')
-
-
 call dein#add('tpope/vim-rails')
 call dein#add('rhysd/neco-ruby-keyword-args')
 "call dein#add('kchmck/vim-coffee-script')
@@ -426,13 +421,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 let g:prettier#config#arrow_parens = 'always'
 let g:prettier#config#trailing_comma = 'es5'
 " ref. https://gist.github.com/kaosf/8480d59f8e760ac2f7f4c5c9f3154a75
-
-" Prettier Neoformat
-" ref. https://prettier.io/docs/en/vim.html
-autocmd BufWritePre *.js Neoformat
-autocmd BufWritePre *.jsx Neoformat
-autocmd BufWritePre *.ts Neoformat
-autocmd BufWritePre *.tsx Neoformat
 
 " Rails
 " Command :A to flip
