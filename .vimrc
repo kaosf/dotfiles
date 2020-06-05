@@ -410,6 +410,32 @@ let g:vim_json_syntax_conceal = 0
 " let g:vim_markdown_conceal = 0 " This doesn't work today...
 autocmd Filetype markdown setl conceallevel=0
 
+" Rails
+" Command :A to flip
+"   app/controllers/*_controller.rb <-> spec/controllers/*_spec.rb
+"   app/controllers/*_controller.rb <-> spec/requests/*_request_spec.rb
+" ref. https://github.com/tpope/vim-rails/issues/368#issuecomment-265086019
+let g:rails_projections = {
+      \   "app/controllers/*_controller.rb": {
+      \     "test": [
+      \       "spec/requests/{}_spec.rb",
+      \       "spec/controllers/{}_controller_spec.rb",
+      \       "test/controllers/{}_controller_test.rb"
+      \     ],
+      \     "alternate": [
+      \       "spec/requests/{}_request_spec.rb",
+      \       "spec/controllers/{}_controller_spec.rb",
+      \       "test/controllers/{}_controller_test.rb"
+      \     ],
+      \   },
+      \   "spec/requests/*_request_spec.rb": {
+      \     "command": "request",
+      \     "alternate": "app/controllers/{}_controller.rb",
+      \     "template": "require 'rails_helper'\n\n" .
+      \       "RSpec.describe '{}' do\nend",
+      \   },
+      \ }
+
 " don't expand tabs when editing
 "   Go
 "   Makefile
