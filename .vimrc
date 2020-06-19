@@ -404,6 +404,10 @@ function! ToggleSpell()
     " Reset ctermbg
     " ref. "show a vertical line ..." (search "colorcolumn" in this file)
     hi ColorColumn ctermbg=0
+    " Reset vim-indent-guides ctermbg
+    " ref. "vim-indent-guides configurations" (search "vim-indent-guides configurations" in this file)
+    hi IndentGuidesOdd  ctermbg=237 ctermfg=60 guibg=cyan
+    hi IndentGuidesEven ctermbg=236 ctermfg=59 guibg=blue
     set nospell
   endif
 endfunction
