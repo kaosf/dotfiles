@@ -389,7 +389,15 @@ function! ToggleSpell()
     hi SpellBad cterm=underline
     hi SpellBad ctermbg=red
     hi SpellBad ctermfg=white
+    hi SpellCap cterm=underline
+    hi SpellCap ctermbg=blue
+    hi SpellCap ctermfg=white
+    hi SpellRare ctermbg=white
+    hi SpellRare ctermfg=black
+    hi SpellLocal ctermbg=green
+    hi SpellLocal ctermfg=white
     " ref. https://stackoverflow.com/questions/6008921/how-do-i-change-the-highlight-style-in-vim-spellcheck
+    " ref. vim :help spell.txt
     set spell
   else
     syntax on
