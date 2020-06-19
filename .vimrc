@@ -386,6 +386,10 @@ set spelllang=en,cjk
 function! ToggleSpell()
   if &spell == 0
     syntax off
+    hi SpellBad cterm=underline
+    hi SpellBad ctermbg=red
+    hi SpellBad ctermfg=white
+    " ref. https://stackoverflow.com/questions/6008921/how-do-i-change-the-highlight-style-in-vim-spellcheck
     set spell
   else
     syntax on
