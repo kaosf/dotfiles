@@ -79,3 +79,9 @@ if which busybox > /dev/null 2>&1; then
 else
   alias vizshhistory="vi -u /dev/null ~/.zsh_history"
 fi
+
+if which code > /dev/null 2>&1; then
+  alias codezshhistory="code ~/.zsh_history"
+else
+  alias codezshhistory="echo No VSCode"
+fi
