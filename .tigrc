@@ -3,7 +3,7 @@ set vertical-split = horizontal
 # Copied default configuration from "etc/tigrc" and modified
 set main-view = line-number:no,interval=5 id:no date:no author:width=7 commit-title:yes,graph,refs,overflow=no
 
-bind generic H view-help
+bind main H view-help
 bind generic h scroll-left
 bind generic L view-log
 bind generic l scroll-right
