@@ -128,9 +128,19 @@ call dein#add('tpope/vim-rhubarb')
 call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/open-browser-github.vim')
 
+" LSP
+call dein#add('prabirshrestha/async.vim')
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('mattn/vim-lsp-settings')
+call dein#add('prabirshrestha/asyncomplete.vim')
+call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+" ref. https://higashi.dev/2020/03/22/vim-setting-rust/
+
 " Rust
 " ref. https://www.rust-lang.org/ja/learn/get-started
 call dein#add('rust-lang/rust.vim')
+" ref. https://github.com/wagnerf42/vim-clippy
+call dein#add('wagnerf42/vim-clippy')
 
 call dein#add('udalov/kotlin-vim')
 
@@ -579,6 +589,16 @@ if !exists('loaded_matchit')
 endif
 
 "let g:ruby_hl_lvar_show_warnings = 1
+
+"""" Rust
+" ref. https://github.com/rust-lang/rust.vim
+let g:rustfmt_autosave = 1
+nnoremap <leader>t :RustTest<CR>
+" Clippy
+" ref. https://github.com/wagnerf42/vim-clippy
+" Run `rustup component add clippy --toolchain stable-x86_64-unknown-linux-gnu` before.
+" Enable to run `cargo clippy`.
+let g:syntastic_rust_checkers = ['clippy']
 
 """" vim-fugivie configurations
 " ref.
