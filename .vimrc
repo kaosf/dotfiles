@@ -139,8 +139,8 @@ call dein#add('prabirshrestha/asyncomplete-lsp.vim')
 " Rust
 " ref. https://www.rust-lang.org/ja/learn/get-started
 call dein#add('rust-lang/rust.vim')
-" ref. https://github.com/wagnerf42/vim-clippy
 call dein#add('wagnerf42/vim-clippy')
+call dein#add('sebastianmarkow/deoplete-rust')
 
 call dein#add('udalov/kotlin-vim')
 
