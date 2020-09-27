@@ -117,6 +117,12 @@ call dein#add('slim-template/vim-slim')
 " Git
 call dein#add('tpope/vim-fugitive')
 call dein#add('lambdalisue/gina.vim')
+" For Gbrowse
+" ref. https://qiita.com/zaki-yama/items/ec1f5a148de00911bb3d
+call dein#add('tpope/vim-rhubarb')
+" Fix the following error of fugitive
+" > fugitive: No Gbrowse handler installed for...
+" ref. https://kannokanno.hatenablog.com/entry/2018/12/02/225614
 
 " GitHub
 call dein#add('tyru/open-browser.vim')
