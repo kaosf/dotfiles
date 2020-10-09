@@ -39,6 +39,8 @@ zstyle ':chpwd:*' recent-dirs-max 2000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
+setopt share_history
+
 [ -f ~/.envvars ] && . ~/.envvars
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.zshrc-functions ] && . ~/.zshrc-functions
