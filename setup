@@ -11,6 +11,7 @@ for i in \
   .vimrc \
   .vimrc-neosnippet \
   .tigrc \
+  .tmux.conf \
   .gemrc \
   .pryrc \
 
@@ -84,25 +85,11 @@ if [ ! -s $HOME/.lesskey ]; then
   lesskey
 fi
 
-if [ -f $HOME/.tmux.conf ]; then
-  rm $HOME/.tmux.conf
-fi
-cp $PWD/.tmux.conf $HOME/.tmux.conf
-# used-mem
-if [ ! -f $HOME/local/bin/used-mem ]; then
-  mkdir -p $HOME/local/bin
-  if which curl > /dev/null 2>&1; then
-    curl https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem > $HOME/local/bin/used-mem
-  else
-    wget https://gist.githubusercontent.com/kaosf/6058eab04613bc263d77/raw/a95510680cfd59a2f25b6964c123426a6ff3254a/used-mem -O $HOME/local/bin/used-mem
-  fi
-  chmod +x $HOME/local/bin/used-mem
-fi
 # Switch Mac or others
 if which sw_vers > /dev/null 2>&1; then
-  cat $PWD/.tmux.conf-for-mac >> $HOME/.tmux.conf
+  ln -sf $PWD/.tmux-mac.conf $HOME/.tmux-mac.conf
 else
-  cat $PWD/.tmux.conf-for-linux >> $HOME/.tmux.conf
+  :
 fi
 
 if [ ! -f $HOME/.muttrc ]; then
