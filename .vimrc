@@ -106,7 +106,7 @@ call dein#add('haya14busa/vim-undoreplay')
 "   http://d.hatena.ne.jp/chikatoike/20120918/1347923597
 "   https://github.com/chikatoike/concealedyank.vim
 call dein#add('chikatoike/concealedyank.vim')
-" Toggle comment out by C-k
+" Toggle comment/uncomment out by C-/
 " ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
 call dein#add('tyru/caw.vim')
 " Disable JSON conceal
@@ -722,9 +722,8 @@ let g:instant_markdown_autostart = 0
 xmap Y <Plug>(operator-concealedyank)
 
 """" caw.vim
-" ref. http://qiita.com/shirochan/items/61fe9da15269062bbad5
-nmap <C-K> <Plug>(caw:hatpos:toggle)
-vmap <C-K> <Plug>(caw:hatpos:toggle)
+nmap <C-_> <Plug>(caw:hatpos:toggle)
+vmap <C-_> <Plug>(caw:hatpos:toggle)
 
 """" Change directory to the current file's directory
 " ref. http://qiita.com/shiena/items/1e98fd14d0ef0084b17f
