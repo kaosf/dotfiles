@@ -70,3 +70,11 @@ _bb () {
   return 1;
 }
 compdef _bb bb
+
+gpom() {
+  if git branch | grep '[ \*] master$' > /dev/null; then
+    git push origin master $@
+  else
+    git push origin main $@
+  fi
+}
