@@ -1,7 +1,7 @@
 syntax on
 
 set t_Co=256
-set number
+set relativenumber
 set showcmd
 set virtualedit=all
 set nowrap
