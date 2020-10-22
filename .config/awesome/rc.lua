@@ -607,6 +607,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- My configurations (autostart)
+awful.util.spawn_with_shell("pgrep nm-applet || nm-applet")
 awful.util.spawn_with_shell("pgrep ibus-daemon || ibus-daemon -d")
 awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
 awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
