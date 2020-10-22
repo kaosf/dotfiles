@@ -146,11 +146,6 @@ call dein#add('udalov/kotlin-vim')
 
 call dein#add('editorconfig/editorconfig-vim')
 
-let result=system('which w3m')
-if !v:shell_error
-  call dein#add('yuratomo/w3m.vim')
-endif
-
 if filereadable($HOME . "/.vimrc-dein-local")
   source ~/.vimrc-dein-local
 endif
