@@ -624,7 +624,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- My configurations (autostart)
 awful.util.spawn_with_shell("pgrep nm-applet || nm-applet")
 awful.util.spawn_with_shell("pgrep ibus-daemon || ibus-daemon -drx")
-awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
+--awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
 --awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
 --awful.util.spawn_with_shell("pgrep devilspie > /dev/null || devilspie &")
 awful.util.spawn_with_shell("pgrep xfce4-power-manager > /dev/null || xfce4-power-manager &")
