@@ -515,6 +515,7 @@ awful.rules.rules = {
         class = {
 
           -- My configurations (floating classes)
+          "KeePassXC",
           "MPlayer",
           "Pavucontrol",
           "Pcmanfm",
