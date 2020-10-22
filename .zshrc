@@ -87,3 +87,13 @@ if which code > /dev/null 2>&1; then
 else
   alias codezshhistory="echo No VSCode"
 fi
+
+# For profile
+#if (which zprof > /dev/null 2>&1) ;then
+#  zprof
+#fi
+#
+# Add the following line to the beggining of .zshenv.
+#zmodload zsh/zprof && zprof
+#
+# ref. https://qiita.com/vintersnow/items/7343b9bf60ea468a4180
