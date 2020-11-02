@@ -85,6 +85,11 @@ if [ ! -s $HOME/.lesskey ]; then
   lesskey
 fi
 
+mkdir $HOME/.peco
+if [ ! -s $HOME/.peco/config.json ]; then
+  ln -sf $PWD/.peco-config.json $HOME/.peco/config.json
+fi
+
 # Switch Mac or others
 if which sw_vers > /dev/null 2>&1; then
   ln -sf $PWD/.tmux-mac.conf $HOME/.tmux-mac.conf
