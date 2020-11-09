@@ -35,6 +35,7 @@ if !has('nvim')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
 call dein#add('scrooloose/syntastic')
+" call dein#add('dense-analysis/ale')
 
 " ref. https://prettier.io/
 call dein#add('prettier/vim-prettier')
