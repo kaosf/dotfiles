@@ -424,6 +424,12 @@ function! ToggleSpell()
 endfunction
 nnoremap sp :call ToggleSpell()<CR>
 
+hi SpellBad ctermfg=black
+hi SpellRare ctermfg=black
+" ref. https://qiita.com/shuhei/items/5ff5e9792746c70ab8ad
+" check command
+" :so $VIMRUNTIME/syntax/hitest.vim
+
 if !has('mac')
   " collaboration with clipboard
   " ref. http://mba-hack.blogspot.jp/2013/02/clipboard.html
