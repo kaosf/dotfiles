@@ -65,6 +65,7 @@ if [ `which git` ]; then
   git config --global alias.ci commit
   git config --global alias.co checkout
   git config --global alias.st status
+  git config --global init.defaultBranch main
   if [ ! -f $HOME/local/bin/diff-highlight ]; then
     mkdir -p $HOME/local/bin
     if which curl > /dev/null 2>&1; then
