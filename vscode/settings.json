@@ -1,0 +1,29 @@
+{
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "editor.formatOnSave": false,
+    "files.insertFinalNewline": true,
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "editor.renderWhitespace": "trailing",
+    "deno.enable": true,
+}
