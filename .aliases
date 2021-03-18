@@ -67,6 +67,9 @@ gacm() {
   git add -A :/
   git commit -m "$(echo $@)"
 }
+gcim() {
+  git commit -m "$(echo $@)"
+}
 
 alias ta='tig --all'
 
