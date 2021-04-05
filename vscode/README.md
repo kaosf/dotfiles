@@ -15,7 +15,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - Prettier - Code formatter
 - indent-rainbow
 - Bracket Lens
-- Rust
+- rust-analyzer
 - vscode-proto3
 - Ruby
 - endwise
