@@ -1,0 +1,11 @@
+AllCops:
+  TargetRubyVersion: 3.0
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
