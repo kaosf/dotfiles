@@ -16,7 +16,9 @@ cp settings.json ~/.config/Code/User/settings.json
 - Prettier - Code formatter
 - indent-rainbow
 - Bracket Lens
-- Open in GitHub, Bitbucket ... (ziyasal.vscode-open-in-github)
+- Open in GitHub, Bitbucket ... (ziyasal.vscode-open-in-github) (`xclip` package is needed.)
+- CodeTour
+- Docker
 - rust-analyzer
 - vscode-proto3
 - Ruby
