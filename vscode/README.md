@@ -15,9 +15,11 @@ cp settings.json ~/.config/Code/User/settings.json
 - Prettier - Code formatter
 - indent-rainbow
 - Bracket Lens
+- Open in GitHub, Bitbucket ... (ziyasal.vscode-open-in-github)
 - rust-analyzer
 - vscode-proto3
 - Ruby
+- rufo vscode
 - Ruby Solargraph
 - endwise
 - Rainbow End
