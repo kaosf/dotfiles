@@ -12,6 +12,7 @@ cp settings.json ~/.config/Code/User/settings.json
 
 # Plugins
 
+- Code Runner
 - Prettier - Code formatter
 - indent-rainbow
 - Bracket Lens
