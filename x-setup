@@ -56,3 +56,5 @@ if [ ! -f $HOME/.config/openbox/rc.xml.orig ]; then
   cp $HOME/.config/openbox/rc.xml $HOME/.config/openbox/rc.xml.orig
 fi
 ln -sf $PWD/.config/openbox/rc.xml $HOME/.config/openbox/rc.xml
+
+ln -sf $PWD/vscode/.vscode-vimrc $HOME/.vscode-vimrc
