@@ -1,0 +1,11 @@
+nnoremap ; :
+nnoremap : ;
+nnoremap ss :w<CR>
+nnoremap sq :wq<CR>
+inoremap kk <Esc>
+inoremap jj <Esc>
+nnoremap gy %
+vnoremap gy %
+vnoremap ff <Esc>
+nnoremap gh :tabprevious<CR>
+nnoremap gl :tabnext<CR>
