@@ -11,6 +11,16 @@
     "when": "textInputFocus"
   },
   {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "extension.vim_ctrl+r",
+    "when": "textInputFocus"
+  },
+  {
     "key": "ctrl+[",
     "command": "-editor.action.outdentLines",
     "when": "editorTextFocus && !editorReadonly"
