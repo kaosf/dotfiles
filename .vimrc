@@ -768,13 +768,6 @@ nnoremap <silent> <leader>ur :<C-u>Denite file_rec<CR>
 nnoremap <silent> <leader>b :<C-u>Denite buffer<CR>
 nnoremap <silent> <leader>m :<C-u>Denite file_mru<CR>
 
-"""" w3m
-let result=system('which w3m')
-if !v:shell_error
-  command! W3mGoogle W3m https://www.google.co.jp
-  command! W3mgoogle W3m https://www.google.co.jp
-endif
-
 """" Formatting XML
 " ref. http://qiita.com/shiena/items/8907c4b42d7958c53ce4
 command! Formatxml :%s/></>\r</g | filetype indent on | setf xml | normal gg=G
