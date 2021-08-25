@@ -86,7 +86,7 @@ if [ ! -s $HOME/.lesskey ]; then
   lesskey
 fi
 
-mkdir $HOME/.peco
+mkdir -p $HOME/.peco
 if [ ! -s $HOME/.peco/config.json ]; then
   ln -sf $PWD/.peco-config.json $HOME/.peco/config.json
 fi
