@@ -33,6 +33,7 @@ alias bi-bbb='bundle install --binstubs .bundle/bin'
 alias g=git
 alias gac='git add -A :/ && git commit'
 alias gaca='git add -A :/ && git commit --amend'
+alias gacane='git add -A :/ && git commit --amend --no-edit'
 alias gad='git add'
 alias gadd='git add'
 alias gbr='git branch'
