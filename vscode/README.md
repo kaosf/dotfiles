@@ -29,6 +29,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - vscode-gemfile
 - Rails
 - Rails Go to Spec
+- vscode-proto3
 
 # Gems for Ruby
 
