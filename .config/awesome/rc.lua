@@ -430,6 +430,10 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey }, "q", function (c) c:kill() end)
     ,
     awful.key({ modkey }, "s", function (c) c.sticky = not c.sticky  end)
+    ,
+    -- Another keybinding for "Mod4 + Ctrl + Return".
+    awful.key({ modkey }, ";", function (c) c:swap(awful.client.getmaster()) end,
+              {description = "move to master", group = "client"})
 )
 
 -- Bind all key numbers to tags.
