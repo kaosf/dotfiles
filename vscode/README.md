@@ -25,7 +25,6 @@ cp settings.json ~/.config/Code/User/settings.json
 - rufo vscode
 - Ruby Solargraph
 - endwise
-- Rainbow End
 - vscode-gemfile
 - Rails
 - Rails Go to Spec
