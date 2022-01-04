@@ -36,42 +36,42 @@ Input your name on GitHub.
 ### Simple `.bashrc` setup
 
 ```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh -O - | bash
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/bashrc-setup.sh -O - | bash
 . ~/.bashrc
 ```
 
 or
 
 ```sh
-curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bashrc-setup.sh | bash
+curl https://raw.githubusercontent.com/kaosf/dotfiles/main/bashrc-setup.sh | bash
 . ~/.bashrc
 ```
 
 If you want to setup `.bash_profile`,
 
 ```sh
-curl https://raw.githubusercontent.com/kaosf/dotfiles/master/bash_profile-setup.sh | bash
+curl https://raw.githubusercontent.com/kaosf/dotfiles/main/bash_profile-setup.sh | bash
 . ~/.bash_profile
 ```
 
 ### Simple `.tmux.conf` setup
 
 ```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-for-2.4 -O ~/.tmux.conf
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-for-2.4 -O ~/.tmux.conf
 ```
 
 ```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-before2.4 -O ~/.tmux.conf
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-before2.4 -O ~/.tmux.conf
 ```
 
 ```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-1.8 -O ~/.tmux.conf
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-1.8 -O ~/.tmux.conf
 ```
 
 or
 
 ```sh
-curl https://raw.githubusercontent.com/kaosf/dotfiles/master/.tmux.conf-before2.4 > ~/.tmux.conf
+curl https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-before2.4 > ~/.tmux.conf
 ```
 
 ## License
