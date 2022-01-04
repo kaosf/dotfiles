@@ -1,4 +1,6 @@
 cat <<'EOS' >> ~/.bashrc
+export HISTCONTROL=ignorespace
+alias nohist='export HISTFILE=/dev/null'
 export PROMPT_COMMAND=__prompt_command
 function __prompt_command() {
   local EXIT="$?"
@@ -9,6 +11,8 @@ function __prompt_command() {
 EOS
 
 cat <<'EOS' >> ~/.bashrc
+export HISTCONTROL=ignorespace
+alias nohist='export HISTFILE=/dev/null'
 export PROMPT_COMMAND=__prompt_command
 function __prompt_command() {
   local EXIT="$?"
