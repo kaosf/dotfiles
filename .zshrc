@@ -39,6 +39,16 @@ zstyle ':chpwd:*' recent-dirs-max 2000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
+#setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+#setopt HIST_NO_STORE
+# ref. man zshoptions
+
+alias nohist="export HISTFILE=/dev/null"
+
 setopt share_history
 
 [ -f ~/.envvars ] && . ~/.envvars
