@@ -6,6 +6,9 @@ fi
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
+# history control
+export HISTCONTROL=ignorespace
+alias nohist='export HISTFILE=/dev/null'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
