@@ -1,5 +1,6 @@
 {
   "Keymap": {
+    "C-j": "peco.Finish",
     "C-k": "peco.KillEndOfLine"
   }
 }
