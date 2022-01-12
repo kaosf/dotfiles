@@ -8,7 +8,7 @@ set columns=80
 
 " Change colorscheme to light-on-dark type.
 " ref. http://superuser.com/questions/141685/setting-background-color-in-gvim
-colorscheme desert256
+colorscheme desert
 " Reset some bg colors.
 hi NonText guibg=#444444
 hi Normal guibg=#444444
