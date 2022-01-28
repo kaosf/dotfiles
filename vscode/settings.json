@@ -1,93 +1,90 @@
 {
-    "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer",
-        "editor.formatOnSave": true
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[ruby]": {
+    "editor.formatOnSave": false
+  },
+  "ruby.useBundler": true, //run non-lint commands with bundle exec
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // enable rubocop via bundler
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[ruby]": {
-        "editor.formatOnSave": false
-    },
-
-    "ruby.useBundler": true, //run non-lint commands with bundle exec
-    "ruby.useLanguageServer": true, // use the internal language server (see below)
-    "ruby.lint": {
-        "rubocop": {
-            "useBundler": true // enable rubocop via bundler
-        },
-        "reek": {
-            "useBundler": true // enable reek via bundler
-        }
-    },
-    "ruby.format": "rubocop", // use rubocop for formatting
-
-    "window.zoomLevel": 1,
-    "workbench.startupEditor": "none",
-    "editor.formatOnSave": false,
-    "files.insertFinalNewline": true,
-    "editor.fontSize": 14,
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "trailing",
-    "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/home/ka/.vscode-vimrc",
-    "vim.useCtrlKeys": false,
-    "vim.useSystemClipboard": true,
-    "deno.enable": true,
-
-    "cSpell.enabledLanguageIds": [
-        "asciidoc",
-        "c",
-        "cpp",
-        "csharp",
-        "css",
-        "git-commit",
-        "go",
-        "graphql",
-        "handlebars",
-        "haskell",
-        "html",
-        "jade",
-        "java",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "jsonc",
-        "jupyter",
-        "latex",
-        "less",
-        "markdown",
-        "php",
-        "plaintext",
-        "python",
-        "pug",
-        "restructuredtext",
-        "ruby",
-        "rust",
-        "scala",
-        "scss",
-        "swift",
-        "text",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "yaml",
-        "yml"
-    ],
-    "cSpell.ignoreRegExpList": [
-        "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+",
-    ]
+    "reek": {
+      "useBundler": true // enable reek via bundler
+    }
+  },
+  "ruby.format": "rubocop", // use rubocop for formatting
+  "window.zoomLevel": 1,
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": false,
+  "files.insertFinalNewline": true,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "trailing",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/home/ka/.vscode-vimrc",
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "deno.enable": true,
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "graphql",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "jupyter",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "ruby",
+    "rust",
+    "scala",
+    "scss",
+    "swift",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "yaml",
+    "yml"
+  ],
+  "cSpell.ignoreRegExpList": [
+    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+",
+  ]
 }
