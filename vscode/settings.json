@@ -41,7 +41,7 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "trailing",
   "vim.vimrc.enable": true,
-  "vim.vimrc.path": "/home/ka/.vscode-vimrc",
+  "vim.vimrc.path": "~/.vscode-vimrc",
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
   "deno.enable": true,
