@@ -115,16 +115,6 @@ call dein#add('tyru/caw.vim')
 call dein#add('elzr/vim-json')
 call dein#add('slim-template/vim-slim')
 
-" Git
-call dein#add('tpope/vim-fugitive')
-call dein#add('lambdalisue/gina.vim')
-" For Gbrowse
-" ref. https://qiita.com/zaki-yama/items/ec1f5a148de00911bb3d
-call dein#add('tpope/vim-rhubarb')
-" Fix the following error of fugitive
-" > fugitive: No Gbrowse handler installed for...
-" ref. https://kannokanno.hatenablog.com/entry/2018/12/02/225614
-
 " GitHub
 call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/open-browser-github.vim')
@@ -617,49 +607,6 @@ let g:syntastic_rust_checkers = ['clippy']
 " ref. https://github.com/racer-rust/racer#configuration
 let g:deoplete#sources#rust#racer_binary = $HOME.'/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path = $HOME.'/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
-
-"""" vim-fugivie configurations
-" ref.
-"   http://stackoverflow.com/questions/5983906/vim-conditionally-use-fugitivestatusline-function-in-vimrc
-"   http://qiita.com/etmnk/items/7d17a045c66ef120db07
-"if exists('g:loaded_fugitive')
-if isdirectory(expand($HOME.'/.vim/dein/repos/github.com/tpope/vim-fugitive'))
-  set statusline=%t%=%{fugitive#statusline()}%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
-endif
-" ref.
-"   multiple commands
-"     http://vim.wikia.com/wiki/Multiple_commands_at_once
-"   silent and redraw!
-"     http://stackoverflow.com/questions/890802/how-do-i-disable-the-press-enter-or-type-command-to-continue-prompt-in-vim
-"   args, f-args and q-args
-"     http://stackoverflow.com/questions/3878692/aliasing-a-command-in-vim
-"     http://vimdoc.sourceforge.net/htmldoc/map.html#%3Cf-args%3E
-"     http://stackoverflow.com/questions/25057287/passing-and-using-arguments-to-command-in-vim-script
-"     http://stackoverflow.com/questions/5642341/is-it-possible-to-use-multiple-arguments-in-vim-command
-command -nargs=* Gshow Git show <args> | redraw!
-command Gad w | silent exe "Git add " . @% | redraw!
-command -nargs=* Gci Gcommit <args>
-command Gac wa | silent Git add -A :/ | Gcommit
-command Gaca wa | silent Git add -A :/ | Gcommit --amend
-"command Gacarbh1cdiad wa | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
-command Gacarbh1cdiad wa | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
-"command Gacarbh1id wa | silent Git add -A :/ | silent Gcommit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
-command Gacarbh1id wa | silent Git add -A :/ | silent Git commit --amend | silent Git rebase HEAD^ --ignore-date | redraw!
-command Gca wa | Gcommit --amend
-command -nargs=* Gcob silent Git branch <args> | silent Git checkout <args> | redraw!
-command Gnow wa | silent Git add -A :/ | Gcommit -m "[WIP]"
-command Grbh1id silent Git rebase HEAD^ --ignore-date | redraw!
-command Grbh1cdiad silent Git rebase HEAD^ --committer-date-is-author-date | redraw!
-command Gdf Gvdiff
-command -nargs=* Gco silent Git checkout <args> | redraw! | e!
-command -nargs=* Gbr Git branch <args> | redraw!
-command Grhh silent Git reset HEAD --hard | redraw! | e!
-command Grh1h silent Git reset HEAD^ --hard | redraw! | e!
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gd :Gvdiff<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gac :Gac<CR>
-nnoremap <leader>gn :Gnow<CR>
 
 " vimdiff color
 " ref.
