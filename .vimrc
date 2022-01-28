@@ -40,6 +40,7 @@ call dein#add('scrooloose/syntastic')
 " ref. https://prettier.io/
 call dein#add('prettier/vim-prettier')
 
+call dein#add('ruby-formatter/rufo-vim')
 call dein#add('tpope/vim-rails')
 call dein#add('rhysd/neco-ruby-keyword-args')
 "call dein#add('kchmck/vim-coffee-script')
