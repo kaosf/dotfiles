@@ -9,17 +9,33 @@ bind generic L view-log
 bind generic l scroll-right
 bind generic <C-F> move-page-down
 bind generic <C-B> move-page-up
-bind main B ?git rebase -i %(commit)
-bind diff B ?git rebase -i %(commit)
+
+bind generic ac !bash -c "git add -A :/ && git commit"
 bind main A ?git rebase --committer-date-is-author-date %(commit)
 bind diff A ?git rebase --committer-date-is-author-date %(commit)
-bind main V ?git revert %(commit)
+bind main B ?git rebase -i %(commit)
+bind diff B ?git rebase -i %(commit)
 bind main M ?git reset --hard %(commit)
 bind diff M ?git reset --hard %(commit)
+bind main O @hub browse -- commit/%(commit)
+bind diff O @hub browse -- commit/%(commit)
+bind main p none
+bind main pp view-pager
+bind main pu ?bash -c "set -x; git push origin HEAD -u"
+bind main pf ?bash -c "set -x; git push origin HEAD -uf"
+bind main pd !bash -c "[ %(branch) = main ] && exit 0; echo Delete %(branch). OK? [y/n]; read ans; [ $ans = \"y\" ] || exit 0; set -x; git switch main; git push origin :%(branch); git branch -D %(branch)"
+bind main s none
+bind main st view-status
+bind main sw !bash -c "git switch $(git branch -a | sed \"s/*\? \+//\" | peco)"
+bind main U ?bash -c "set -x; git fetch origin --prune && git branch -f main origin/main"
+bind diff v @code -g %(file):%(lineno)
+bind stage v @code -g %(file):%(lineno)
+bind main V ?git revert %(commit)
+bind diff V show-version
+bind stage V show-version
+bind generic W :!git reflog
 # ref. https://github.com/jonas/tig/issues/239
 bind main Y @bash -c "echo -n %(commit) | xsel -i -b"
 bind diff Y @bash -c "echo -n %(commit) | xsel -i -b"
-bind main O @hub browse -- commit/%(commit)
-bind diff O @hub browse -- commit/%(commit)
 
 source -q ~/.tigrc-local
