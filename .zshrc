@@ -107,3 +107,7 @@ fi
 #zmodload zsh/zprof && zprof
 #
 # ref. https://qiita.com/vintersnow/items/7343b9bf60ea468a4180
+
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
