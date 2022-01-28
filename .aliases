@@ -48,7 +48,7 @@ alias gic='git init && git add -A :/ && git commit'
 alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
 %Creset%s'"
 alias glggo='git log --graph --oneline'
-alias gnow='git add -A :/ && git commit -m "[WIP]"'
+alias gnow='git add -A :/ && git commit -m "[ci skip][WIP]"'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpl='git pull'
