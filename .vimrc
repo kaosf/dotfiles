@@ -622,6 +622,7 @@ highlight DiffText   cterm=bold ctermfg=black ctermbg=yellow
 command Utig Unite tig
 "command Tig !tig
 command Tig execute 'silent !tig' | redraw!
+command Tigthis execute 'silent !tig' @% | redraw!
 command Tigall execute 'silent !tig --all' | redraw!
 " ref. http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
 
