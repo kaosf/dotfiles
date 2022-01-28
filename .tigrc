@@ -21,3 +21,5 @@ bind main Y @bash -c "echo -n %(commit) | xsel -i -b"
 bind diff Y @bash -c "echo -n %(commit) | xsel -i -b"
 bind main O @hub browse -- commit/%(commit)
 bind diff O @hub browse -- commit/%(commit)
+
+source -q ~/.tigrc-local
