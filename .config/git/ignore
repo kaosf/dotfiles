@@ -3,6 +3,10 @@
 /,*
 ,*
 
+### Jenkins private configurations ###
+.jenkins.conf
+.jenkins.conf.d/
+
 ### asdf ###
 .tool-versions
 
