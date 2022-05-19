@@ -21,6 +21,11 @@ do
   fi
 done
 
+mkdir -p $HOME/.config/git
+if [ ! -s $HOME/.config/git/ignore ]; then
+  ln -sf $PWD/.config/git/ignore $HOME/.config/git/ignore
+fi
+
 mkdir -p $HOME/.config/nvim
 if [ ! -s $HOME/.config/nvim/init.vim ]; then
   ln -sf $PWD/.vimrc $HOME/.config/nvim/init.vim
@@ -57,7 +62,6 @@ if [ `which git` ]; then
   git config --global user.email ka.kaosf@gmail.com
   git config --global github.user kaosf
   git config --global core.editor vim
-  git config --global core.excludesfile $HOME/.gitignore
   git config --global color.ui true
   git config --global merge.ff false
   git config --global pull.rebase true
