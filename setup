@@ -55,9 +55,6 @@ if [ ! -s $HOME/.w3m/keymap ]; then
 fi
 
 if [ `which git` ]; then
-  if [ ! -f $HOME/.gitignore ]; then
-    ln -sf $PWD/.gitignore-global $HOME/.gitignore
-  fi
   git config --global user.name ka
   git config --global user.email ka.kaosf@gmail.com
   git config --global github.user kaosf
