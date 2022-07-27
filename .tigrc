@@ -27,7 +27,7 @@ bind main pd !bash -c "[ %(branch) = main ] && exit 0; echo Delete %(branch). OK
 bind main s none
 bind main st view-status
 bind main sw !bash -c "git switch $(git branch -a | sed \"s/*\? \+//\" | peco)"
-bind main U ?bash -c "set -x; git fetch origin --prune && git branch -f main origin/main"
+bind main U ?bash -c "set -x; git fetch origin --prune || exit 0; if [ $(git branch --show-current) = main ]; then git merge origin/main --ff-only; else git branch -f main origin/main; fi"
 bind diff v @code -g %(file):%(lineno)
 bind stage v @code -g %(file):%(lineno)
 bind main V ?git revert %(commit)
