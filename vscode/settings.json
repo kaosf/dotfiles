@@ -33,6 +33,10 @@
     }
   },
   "ruby.format": "rubocop", // use rubocop for formatting
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
+  }, // ref. https://stackoverflow.com/a/56060185/1006253
   "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
   "editor.formatOnSave": false,
