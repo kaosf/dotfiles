@@ -1,7 +1,7 @@
 # vim: filetype=zsh
 
-export SVN_EDITOR=vim
-export EDITOR=vim
+export SVN_EDITOR=nvim
+export EDITOR=nvim
 
 export CDIAD=--committer-date-is-author-date
 export cdiad=$CDIAD
