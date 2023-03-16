@@ -49,6 +49,8 @@ call dein#add('tyru/caw.vim') " Toggle comment out by C-/
 call dein#add('Shougo/neomru.vim') " MRU (Most Recently Used)
 call dein#add('prettier/vim-prettier') " Prettier ref. https://prettier.io/
 call dein#add('rhysd/committia.vim') " Git
+call dein#add('qpkorr/vim-bufkill') " BD command
+call dein#add('kana/vim-altercmd') " Swap bd <-> BD
 
 call dein#add('Shougo/ddu-ui-ff')
 call dein#add('Shougo/ddu-source-file')
@@ -95,3 +97,14 @@ nnoremap <silent> <leader>f :NERDTreeFocus<CR>
 "" caw.vim
 nmap <C-_> <Plug>(caw:hatpos:toggle)
 vmap <C-_> <Plug>(caw:hatpos:toggle)
+
+" Swap BD (kill buffer but don't close the window) and bd (default)
+" ref.
+"   https://github.com/kana/vim-altercmd/
+"   https://github.com/vim-scripts/bufkill.vim
+"   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
+"   https://gist.github.com/LeafCage/4085361
+call altercmd#load()
+AlterCommand bd BD
+AlterCommand BD bd
+let g:BufKillCreateMappings = 0
