@@ -6,13 +6,44 @@
 ./setup
 
 ./x-setup # for X (e.g. Desktop Edition, VNC Server)
-
-./x-setup menukey # for HP Stream 11 d012tu (This laptop has no menu key)
 ```
 
 `~/.lein/profiles.clj` is created as a copy. Modify it after `./setup` command.
 
 `~/.xmodmap` and `/.xmodmap-revert` are not created as a symlink.
+
+### Simple `.bashrc` or `.bash_profile` and `.tmux.conf` setup
+
+```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/bashrc-setup.sh -O - | bash
+# or
+curl https://raw.githubusercontent.com/kaosf/dotfiles/main/bashrc-setup.sh | bash
+
+. ~/.bashrc
+```
+
+If you want to setup `.bash_profile`,
+
+```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/bash_profile-setup.sh -O - | bash
+. ~/.bash_profile
+```
+
+Tmux
+
+```sh
+wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf -O ~/.tmux.conf
+```
+
+### Portable Neovim
+
+To be supposed that `~/.bin` is included in `$PATH`.
+
+```sh
+cd && mkdir -p ~/.bin && wget -qO- https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz | tar zxf - && ln -sf $PWD/nvim-linux64/bin/nvim ~/.bin/nvim
+
+mkdir -p ~/.config/nvim && wget -qO ~/.config/nvim/init.vim https://raw.githubusercontent.com/kaosf/dotfiles/main/.config/nvim/init.vim
+```
 
 ### For other users
 
@@ -31,47 +62,6 @@ Input again for confirmation.
 > git-author-email
 Input your name on GitHub.
 > github-account-name
-```
-
-### Simple `.bashrc` setup
-
-```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/main/bashrc-setup.sh -O - | bash
-. ~/.bashrc
-```
-
-or
-
-```sh
-curl https://raw.githubusercontent.com/kaosf/dotfiles/main/bashrc-setup.sh | bash
-. ~/.bashrc
-```
-
-If you want to setup `.bash_profile`,
-
-```sh
-curl https://raw.githubusercontent.com/kaosf/dotfiles/main/bash_profile-setup.sh | bash
-. ~/.bash_profile
-```
-
-### Simple `.tmux.conf` setup
-
-```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-for-2.4 -O ~/.tmux.conf
-```
-
-```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-before2.4 -O ~/.tmux.conf
-```
-
-```sh
-wget https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-1.8 -O ~/.tmux.conf
-```
-
-or
-
-```sh
-curl https://raw.githubusercontent.com/kaosf/dotfiles/main/.tmux.conf-before2.4 > ~/.tmux.conf
 ```
 
 ## License
