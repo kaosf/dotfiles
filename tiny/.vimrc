@@ -21,6 +21,7 @@ set hlsearch
 set scrolloff=4
 set sidescroll=1
 set sidescrolloff=0
+set shiftwidth=2
 
 if !has('mac')
   " collaboration with clipboard
