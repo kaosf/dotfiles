@@ -7,9 +7,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias v=vim
-alias vi=vim
-alias view='vim -R'
+alias v=nvim
+alias vi=nvim
+alias vim=nvim
+alias view='nvim -R'
 alias viewhex="view -b -c '%!xxd'"
 alias busyboxvi='busybox vi'
 alias e='emacs -nw'

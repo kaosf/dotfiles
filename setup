@@ -27,9 +27,16 @@ if [ ! -s $HOME/.config/git/ignore ]; then
 fi
 
 mkdir -p $HOME/.config/nvim
-if [ ! -s $HOME/.config/nvim/init.vim ]; then
-  ln -sf $PWD/.vimrc $HOME/.config/nvim/init.vim
-fi
+for i in \
+  .config/nvim/init.vim \
+  .config/nvim/dein.vim \
+  .config/nvim/ddu.vim \
+
+do
+  if [ ! -s $HOME/$i ]; then
+    ln -sf $PWD/$i $HOME/$i
+  fi
+done
 
 mkdir -p $HOME/.docker
 if [ ! -f $HOME/.docker/config.json ]; then
