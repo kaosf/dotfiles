@@ -30,6 +30,8 @@ cp settings.json ~/.config/Code/User/settings.json
 - Rails Go to Spec
 - vscode-proto3
 - Better TOML
+- bung87.rails
+- hridoy.rails-snippets
 
 # Gems for Ruby
 
