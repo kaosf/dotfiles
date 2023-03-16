@@ -10,5 +10,9 @@ function __prompt_command() {
   if [ $EXIT != 0 ]; then PS1+=" $EXIT"; fi
   PS1+=']\$ '
 }
+export HISTCONTROL=ignorespace
+alias nohist='export HISTFILE=/dev/null'
+export PATH=$HOME/.bin:$PATH
+mkdir -p $HOME/.bin
 EOS
 fi
