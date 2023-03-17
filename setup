@@ -30,6 +30,7 @@ mkdir -p $HOME/.config/nvim
 for i in \
   .config/nvim/init.vim \
   .config/nvim/dein.vim \
+  .config/nvim/neosnippet.vim \
   .config/nvim/ddu.vim \
 
 do

@@ -52,6 +52,9 @@ call dein#add('rhysd/committia.vim') " Git
 call dein#add('qpkorr/vim-bufkill') " BD command
 call dein#add('kana/vim-altercmd') " Swap bd <-> BD
 call dein#add('tpope/vim-surround') " **Surrounding** ref. https://rcmdnk.com/blog/2014/05/03/computer-vim-octopress/
+call dein#add('Shougo/neosnippet.vim') " neosnippet
+call dein#add('Shougo/deoplete.nvim') " For neosnippet
+call dein#add('Shougo/neosnippet-snippets') " some default snippets
 
 call dein#add('Shougo/ddu-ui-ff')
 call dein#add('Shougo/ddu-source-file')
@@ -109,3 +112,8 @@ call altercmd#load()
 AlterCommand bd BD
 AlterCommand BD bd
 let g:BufKillCreateMappings = 0
+
+"" neosnippet
+if filereadable($HOME . "/.config/nvim/neosnippet.vim")
+  source ~/.config/nvim/neosnippet.vim
+endif
