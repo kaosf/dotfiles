@@ -128,6 +128,9 @@ if has('syntax')
   call ZenkakuSpace()
 endif
 
+"""" Reload command
+command Reload :source ~/.config/nvim/init.vim
+
 """" Plugin Manager **Dein**
 if filereadable($HOME . "/.config/nvim/dein.vim")
   source ~/.config/nvim/dein.vim
@@ -143,6 +146,3 @@ endif
 if filereadable($HOME . "/.config/nvim/init-local.vim")
   source ~/.config/nvim/init-local.vim
 endif
-
-"""" Reload command
-command Reload :source ~/.config/nvim/init.vim
