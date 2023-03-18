@@ -41,8 +41,6 @@ call dein#add(s:dein_src)
 "call dein#add('Shougo/neosnippet-snippets')
 
 """" Added by ka
-call dein#add('vim-denops/denops.vim') " Need for ddu.vim
-call dein#add('Shougo/ddu.vim') " ref. https://github.com/Shougo/ddu.vim
 call dein#add('scrooloose/nerdtree') " File manager
 call dein#add('kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}) " Totsuzen no shi!!!!
 call dein#add('tyru/caw.vim') " Toggle comment out by C-/
@@ -56,15 +54,21 @@ call dein#add('Shougo/neosnippet.vim') " neosnippet
 call dein#add('Shougo/deoplete.nvim') " For neosnippet
 call dein#add('Shougo/neosnippet-snippets') " some default snippets
 
+" ddu plugins
+" ref. https://github.com/Shougo/ddu.vim
+" ref. https://zenn.dev/shougo/articles/ddu-vim-beta
+call dein#add('vim-denops/denops.vim') " Need for ddu.vim
+call dein#add('Shougo/ddu.vim')
 call dein#add('Shougo/ddu-ui-ff')
 call dein#add('Shougo/ddu-source-file')
+call dein#add('Shougo/ddu-source-file_rec')
 call dein#add('Shougo/ddu-source-register')
-call dein#add('kuuote/ddu-source-mr')
-call dein#add('lambdalisue/mr.vim')
-call dein#add('shun/ddu-source-buffer')
 call dein#add('Shougo/ddu-filter-matcher_substring')
 call dein#add('Shougo/ddu-commands.vim')
 call dein#add('Shougo/ddu-kind-file')
+call dein#add('lambdalisue/mr.vim') " For mr feature (data is stored in ~/.cache/mr)
+call dein#add('kuuote/ddu-source-mr') " For `Ddu mr`
+call dein#add('shun/ddu-source-buffer') " For `Ddu buffer`
 
 """" Added by ka END
 
@@ -115,6 +119,11 @@ try
 catch
 endtry
 let g:BufKillCreateMappings = 0
+
+"" ddu
+if filereadable($HOME . "/.config/nvim/ddu.vim")
+  source ~/.config/nvim/ddu.vim
+endif
 
 "" neosnippet
 if filereadable($HOME . "/.config/nvim/neosnippet.vim")

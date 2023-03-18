@@ -136,12 +136,6 @@ if filereadable($HOME . "/.config/nvim/dein.vim")
   source ~/.config/nvim/dein.vim
 endif
 
-"""" ddu.vim
-if filereadable($HOME . "/.config/nvim/ddu.vim")
-  source ~/.config/nvim/ddu.vim
-endif
-" TODO: Add ddu.vim later
-
 """" Local configuration
 if filereadable($HOME . "/.config/nvim/init-local.vim")
   source ~/.config/nvim/init-local.vim
