@@ -108,9 +108,12 @@ vmap <C-_> <Plug>(caw:hatpos:toggle)
 "   https://github.com/vim-scripts/bufkill.vim
 "   http://qiita.com/kentaro/items/c3f7fc1d1be0e106735b
 "   https://gist.github.com/LeafCage/4085361
-call altercmd#load()
-AlterCommand bd BD
-AlterCommand BD bd
+try
+  call altercmd#load()
+  AlterCommand bd BD
+  AlterCommand BD bd
+catch
+endtry
 let g:BufKillCreateMappings = 0
 
 "" neosnippet
