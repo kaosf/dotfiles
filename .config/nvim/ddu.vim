@@ -19,6 +19,14 @@ call ddu#custom#patch_global(#{
   \     _: #{
   \       matchers: ['matcher_substring'],
   \     },
+  \     file_rec: #{
+  \       matchers: ['matcher_substring', 'matcher_ignore_files'],
+  \     },
+  \   },
+  \   filterParams: #{
+  \     matcher_ignore_files: #{
+  \       ignorePatterns: ['vendor/bundle'],
+  \     },
   \   },
   \   kindOptions: #{
   \     file: #{
@@ -58,7 +66,7 @@ endfunction
 " ddu keymappings
 nnoremap <silent> <leader>uf :<C-u>Ddu file<CR>
 " nnoremap <silent> <leader>ur :<C-u>Ddu file_rec<CR>
-nnoremap <silent> <leader>ur :<C-u>call ddu#start(#{ sources: [#{ name: 'file_rec', params: #{ ignoredDirectories: ['.git', 'vendor', 'node_modules'] } }] })<CR>
+nnoremap <silent> <leader>ur :<C-u>call ddu#start(#{ sources: [#{ name: 'file_rec', params: #{ ignoredDirectories: ['.git', 'node_modules'] } }] })<CR>
 nnoremap <silent> <leader>b :<C-u>Ddu buffer<CR>
 nnoremap <silent> <leader>ug :<C-u>Ddu register<CR>
 nnoremap <silent> <leader>m :<C-u>Ddu mr<CR>
