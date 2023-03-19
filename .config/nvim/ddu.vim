@@ -56,7 +56,7 @@ function! s:ddu_filter_my_settings() abort
   nnoremap <buffer><silent> q
     \ <Cmd>call ddu#ui#ff#do_action('quit')<CR>
   inoremap <buffer><silent> <CR>
-    \ <Esc><Cmd>:call ddu#ui#ff#do_action('closeFilterWindow')<CR>
+    \ <Esc><Cmd>:call ddu#ui#ff#do_action('leaveFilterWindow')<CR>
   inoremap <buffer> <C-j>
     \ <Cmd>call ddu#ui#ff#execute("call cursor(line('.')+1,0)")<CR>
   inoremap <buffer> <C-k>
