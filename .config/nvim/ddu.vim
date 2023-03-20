@@ -20,7 +20,7 @@ call ddu#custom#patch_global(#{
   \       matchers: ['matcher_substring'],
   \     },
   \     file_rec: #{
-  \       matchers: ['matcher_substring', 'matcher_ignore_files'],
+  \       matchers: ['matcher_ignore_files', 'matcher_substring'],
   \     },
   \   },
   \   filterParams: #{
