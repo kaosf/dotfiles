@@ -59,8 +59,7 @@ call dein#add('Shougo/neosnippet-snippets') " some default snippets
 " ref. https://zenn.dev/shougo/articles/ddu-vim-beta
 call dein#add('vim-denops/denops.vim') " Need for ddu.vim
 call dein#add('Shougo/ddu.vim')
-" call dein#add('Shougo/ddu-ui-ff')
-call dein#add('kaosf/ddu-ui-ff', #{rev: 'add-action-leave-filter-window'})
+call dein#add('Shougo/ddu-ui-ff')
 call dein#add('Shougo/ddu-source-file')
 call dein#add('Shougo/ddu-source-file_rec')
 call dein#add('Shougo/ddu-source-register')
