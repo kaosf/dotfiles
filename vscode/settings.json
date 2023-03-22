@@ -22,6 +22,7 @@
   "[ruby]": {
     "editor.formatOnSave": false
   },
+  "ruby.intellisense": "rubyLocate",
   "ruby.useBundler": false, //run non-lint commands with bundle exec
   "ruby.useLanguageServer": true, // use the internal language server (see below)
   "ruby.lint": {
