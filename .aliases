@@ -10,6 +10,7 @@ alias l='ls -CF'
 alias v=nvim
 alias vi=nvim
 alias vim=nvim
+alias vimdiff='nvim -d'
 alias view='nvim -R'
 alias viewhex="view -b -c '%!xxd'"
 alias busyboxvi='busybox vi'
