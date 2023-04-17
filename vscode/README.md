@@ -32,6 +32,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - Better TOML
 - bung87.rails
 - hridoy.rails-snippets
+- yusukehirao.vscode-markuplint
 
 # Gems for Ruby
 
