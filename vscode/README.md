@@ -33,6 +33,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - bung87.rails
 - hridoy.rails-snippets
 - yusukehirao.vscode-markuplint
+- yoavbls.pretty-ts-errors
 - rust-lang.rust-analyzer
 
 # Gems for Ruby
