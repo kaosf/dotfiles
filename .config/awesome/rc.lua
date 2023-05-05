@@ -654,6 +654,18 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 for _, preset in pairs(naughty.config.presets) do
     preset.position = "bottom_right"
 end
+-- Newer way
+-- ruled.notification.connect_signal('request::rules', function()
+--     -- All notifications will match this rule.
+--     ruled.notification.append_rule {
+--         rule       = { },
+--         properties = {
+--             screen           = awful.screen.preferred,
+--             implicit_timeout = 5,
+--             position         = "bottom_right", -- <<<<< ADD THIS
+--         }
+--     }
+-- end)
 
 -- My configurations (autostart)
 awful.util.spawn_with_shell("pgrep nm-applet || nm-applet")
