@@ -649,6 +649,12 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+-- ref. https://stackoverflow.com/questions/69469389/awesome-wm-notifications-to-bottom-right
+-- OLD WAY, DEPRECATED in git-master/v4.4+
+for _, preset in pairs(naughty.config.presets) do
+    preset.position = "bottom_right"
+end
+
 -- My configurations (autostart)
 awful.util.spawn_with_shell("pgrep nm-applet || nm-applet")
 awful.util.spawn_with_shell("pgrep ibus-daemon || ibus-daemon -drx")
