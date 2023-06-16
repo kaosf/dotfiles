@@ -23,7 +23,7 @@ bind main p none
 bind main pp view-pager
 bind main pu ?bash -c "set -x; git push origin HEAD -u"
 bind main pf ?bash -c "set -x; git push origin HEAD -uf"
-bind main pd !bash -c "[ %(branch) = main ] && exit 0; echo Delete %(branch). OK? [y/n]; read ans; [ $ans = \"y\" ] || exit 0; set -x; git switch main; git push origin :%(branch); git branch -D %(branch)"
+bind main pd !bash -c "[ %(branch) = main -o %(branch) = master ] && exit 0; echo Delete %(branch). OK? [y/n]; read ans; [ $ans = \"y\" ] || exit 0; set -x; git switch main; git push origin :%(branch); git branch -D %(branch)"
 bind main s none
 bind main st view-status
 bind main sw !bash -c "git switch $(git branch -a | sed \"s/*\? \+//\" | peco)"
