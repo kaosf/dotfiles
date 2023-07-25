@@ -35,6 +35,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - yusukehirao.vscode-markuplint
 - yoavbls.pretty-ts-errors
 - rust-lang.rust-analyzer
+- gracefulpotato.rbs-syntax
 
 # Gems for Ruby
 
