@@ -1,9 +1,5 @@
 # Setup
 
-## Windows
-
-TODO write.
-
 ## Linux
 
 ```
@@ -12,34 +8,22 @@ cp settings.json ~/.config/Code/User/settings.json
 
 # Plugins
 
-- Code Runner
-- Prettier - Code formatter
-- indent-rainbow
-- Bracket Lens
-- Open in GitHub, Bitbucket ... (ziyasal.vscode-open-in-github) (`xclip` package is needed.)
-- CodeTour
-- Docker
-- rust-analyzer
-- vscode-proto3
-- Ruby
-- rufo vscode
-- Ruby Solargraph
-- endwise
-- vscode-gemfile
-- Rails
-- Rails Go to Spec
-- vscode-proto3
-- tamasfe.even-better-toml
+- esbenp.prettier-vscode
+- oderwat.indent-rainbow
+- wraith13.bracket-lens
+- ziyasal.vscode-open-in-github
+- ms-azuretools.vscode-docker
+- zxh404.vscode-proto3
+- rebornix.ruby
+- kaiwood.endwise
+- bung87.vscode-gemfile
 - bung87.rails
+- sporto.rails-go-to-spec
 - hridoy.rails-snippets
+- tamasfe.even-better-toml
 - yusukehirao.vscode-markuplint
 - yoavbls.pretty-ts-errors
 - rust-lang.rust-analyzer
 - gracefulpotato.rbs-syntax
 
-# Gems for Ruby
-
-```
-gem install rufo
-gem install solargraph
-```
+`xclip` package is needed for `vscode-open-in-github`.
