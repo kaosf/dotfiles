@@ -29,7 +29,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - Rails
 - Rails Go to Spec
 - vscode-proto3
-- Better TOML
+- tamasfe.even-better-toml
 - bung87.rails
 - hridoy.rails-snippets
 - yusukehirao.vscode-markuplint
