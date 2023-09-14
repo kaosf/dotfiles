@@ -111,5 +111,6 @@ fi
 if [ -f $HOME/.asdf/asdf.sh ]; then
   . $HOME/.asdf/asdf.sh
   fpath=(${ASDF_DIR}/completions $fpath)
-  autoload -Uz compinit && compinit
+  #autoload -Uz compinit && compinit
+  # Too much time to run this. Run `compinit` manually on using asdf.
 fi
