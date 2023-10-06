@@ -22,6 +22,7 @@ set scrolloff=4
 set sidescroll=1
 set sidescrolloff=0
 set shiftwidth=2
+set statusline=%t%=%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
 
 if !has('mac')
   " collaboration with clipboard
