@@ -22,7 +22,9 @@ set scrolloff=4
 set sidescroll=1
 set sidescrolloff=0
 set shiftwidth=2
-set statusline=%t%=%y\[%{(&fenc!=''?&fenc:&enc)}/%{&ff}]\[%03l,%03v][%2p%%]%m
+" %t: filename, %{&fenc}: file-encoding, %{&ff}: file-format, %y: filetype, %m: [+] if modified, %=: separator, %l: row, %v: col, %p: pos
+" ref. https://qiita.com/Cj-bc/items/dbe62075474c0e29a777
+set statusline=%t\ [%{&fenc}/%{&ff}]%y\ %m%=%l\ %v\ %3p%%
 
 if !has('mac')
   " collaboration with clipboard
