@@ -99,6 +99,7 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {pattern = {"*.gradle"} ,
 
 -- *last-position-jump*
 -- ref. http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
+-- Fix to enable to jump to the maximum line. ref. https://github.com/kaosf/dotfiles/commit/54a9967af77b65d0babf1f3bf05e0358f45a3c32
 vim.api.nvim_create_autocmd({"BufReadPost"}, {pattern = {"*"} , callback = function ()
   local l = vim.fn.line "'\""
   local l_max = vim.fn.line "$"
