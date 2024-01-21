@@ -27,7 +27,7 @@ fi
 
 mkdir -p $HOME/.config/nvim
 for i in \
-  .config/nvim/init.vim \
+  .config/nvim/init.lua \
   .config/nvim/dein.vim \
   .config/nvim/neosnippet.vim \
   .config/nvim/ddu.vim \
@@ -36,6 +36,7 @@ for i in \
     ln -sf $PWD/$i $HOME/$i
   fi
 done
+mkdir -p $HOME/.config/nvim/lua
 
 mkdir -p $HOME/.docker
 if [ ! -f $HOME/.docker/config.json ]; then
