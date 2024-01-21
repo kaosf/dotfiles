@@ -3,8 +3,7 @@
 for i in \
   .xmodmap \
   .xmodmap-revert \
-
-do
+; do
   rm $HOME/$i
   cp $PWD/$i $HOME/$i
 done
@@ -22,8 +21,7 @@ fi
 for i in \
   .gvimrc \
   .vimperatorrc \
-
-do
+; do
   if [ ! -s $HOME/$i ]; then
     ln -sf $PWD/$i $HOME/$i
   fi

@@ -14,8 +14,7 @@ for i in \
   .tmux.conf \
   .gemrc \
   .pryrc \
-
-do
+; do
   if [ ! -s $HOME/$i ]; then
     ln -sf $PWD/$i $HOME/$i
   fi
@@ -32,8 +31,7 @@ for i in \
   .config/nvim/dein.vim \
   .config/nvim/neosnippet.vim \
   .config/nvim/ddu.vim \
-
-do
+; do
   if [ ! -s $HOME/$i ]; then
     ln -sf $PWD/$i $HOME/$i
   fi
