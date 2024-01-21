@@ -100,9 +100,11 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {pattern = {"*.gradle"} ,
 -- *last-position-jump*
 -- ref. http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
 vim.api.nvim_create_autocmd({"BufReadPost"}, {pattern = {"*"} , callback = function ()
-  if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
-    vim.cmd "normal! g`\""
-  end
+  local l = vim.fn.line "'\""
+  local l_max = vim.fn.line "$"
+  if l < 1 then l = 1 end
+  if l > l_max then l = l_max end
+  vim.cmd("normal! " .. l .. "G")
 end })
 
 -- Command for "Where is This file?"
