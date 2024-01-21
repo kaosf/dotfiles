@@ -1,6 +1,8 @@
-if vim.fn.has("syntax") then vim.cmd("syntax on") end
+if vim.fn.has("syntax") then
+	vim.cmd("syntax on")
+end
 
-vim.cmd "set t_Co=256"
+vim.cmd("set t_Co=256")
 vim.opt.relativenumber = true
 vim.opt.showcmd = true
 vim.opt.virtualedit = "all"
@@ -10,7 +12,7 @@ vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.fileencodings = "utf-8,sjis,utf-16le,euc-jp,iso-2022-jp"
 vim.opt.fileformats = "unix,mac,dos"
-vim.cmd "set visualbell t_vb="
+vim.cmd("set visualbell t_vb=")
 vim.opt.encoding = "utf-8"
 vim.opt.list = true
 vim.opt.listchars = "tab:>.,trail:_,extends:\\"
@@ -26,12 +28,14 @@ vim.opt.shiftwidth = 2
 -- ref. https://qiita.com/Cj-bc/items/dbe62075474c0e29a777
 vim.opt.statusline = "%t [%{&fenc}/%{&ff}]%y %m%=%l %v %3p%%"
 
-if vim.fn.has("mac") == 0 then vim.opt.clipboard = "unnamedplus" end
+if vim.fn.has("mac") == 0 then
+	vim.opt.clipboard = "unnamedplus"
+end
 -- TODO: Research: has("mac") is still needed?
 
 vim.g.mapleader = ","
 
-vim.cmd "filetype indent on"
+vim.cmd("filetype indent on")
 
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
@@ -52,10 +56,10 @@ vim.keymap.set("n", "gy", "%", {})
 vim.keymap.set("v", "j", "gj", {})
 vim.keymap.set("v", "k", "gk", {})
 vim.keymap.set("v", "ff", "<Esc>", {})
-vim.keymap.set("n", "<Left>" , "<C-w><", {})
+vim.keymap.set("n", "<Left>", "<C-w><", {})
 vim.keymap.set("n", "<Right>", "<C-w>>", {})
-vim.keymap.set("n", "<Down>",  "<C-w>+", {})
-vim.keymap.set("n", "<Up>",    "<C-w>-", {})
+vim.keymap.set("n", "<Down>", "<C-w>+", {})
+vim.keymap.set("n", "<Up>", "<C-w>-", {})
 vim.keymap.set("n", "K", "<Nop>", {})
 vim.keymap.set("v", "K", "<Nop>", {})
 -- Enable to move cursor in command mode
@@ -70,7 +74,7 @@ vim.keymap.set("n", "gp", ":bp<CR>", {})
 vim.keymap.set("n", "gn", ":bn<CR>", {})
 vim.keymap.set("n", "gj", "<C-w>j", {})
 vim.keymap.set("n", "gk", "<C-w>k", {})
-vim.cmd [[
+vim.cmd([[
 function s:movewinleft()
   let before = winnr()
   wincmd h
@@ -87,26 +91,68 @@ function s:movewinright()
   endif
 endfunction
 nnoremap <silent> gl :call <SID>movewinright()<CR>
-]]
+]])
 
-vim.api.nvim_create_autocmd({"FileType"}, {pattern = {"json"} ,callback = function () vim.opt_local.conceallevel = 0 end })
-vim.api.nvim_create_autocmd({"FileType"}, {pattern = {"markdown"} ,callback = function () vim.opt_local.conceallevel = 0 end })
-vim.api.nvim_create_autocmd({"FileType"}, {pattern = {"go"} ,callback = function () vim.opt.expandtab = false end })
-vim.api.nvim_create_autocmd({"FileType"}, {pattern = {"make"} ,callback = function () vim.opt.expandtab = false end })
-vim.api.nvim_create_autocmd({"FileType"}, {pattern = {"python"} ,callback = function () vim.opt.shiftwidth = 4 end })
-vim.api.nvim_create_autocmd({"FileType"}, {pattern = {"groovy"} ,callback = function () vim.opt.shiftwidth = 4 end })
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {pattern = {"*.gradle"} ,callback = function () vim.opt.filetype = "groovy" end })
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "json" },
+	callback = function()
+		vim.opt_local.conceallevel = 0
+	end,
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "markdown" },
+	callback = function()
+		vim.opt_local.conceallevel = 0
+	end,
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "go" },
+	callback = function()
+		vim.opt.expandtab = false
+	end,
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "make" },
+	callback = function()
+		vim.opt.expandtab = false
+	end,
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "python" },
+	callback = function()
+		vim.opt.shiftwidth = 4
+	end,
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "groovy" },
+	callback = function()
+		vim.opt.shiftwidth = 4
+	end,
+})
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+	pattern = { "*.gradle" },
+	callback = function()
+		vim.opt.filetype = "groovy"
+	end,
+})
 
 -- *last-position-jump*
 -- ref. http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
 -- Fix to enable to jump to the maximum line. ref. https://github.com/kaosf/dotfiles/commit/54a9967af77b65d0babf1f3bf05e0358f45a3c32
-vim.api.nvim_create_autocmd({"BufReadPost"}, {pattern = {"*"} , callback = function ()
-  local l = vim.fn.line "'\""
-  local l_max = vim.fn.line "$"
-  if l < 1 then l = 1 end
-  if l > l_max then l = l_max end
-  vim.cmd("normal! " .. l .. "G")
-end })
+vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+	pattern = { "*" },
+	callback = function()
+		local l = vim.fn.line("'\"")
+		local l_max = vim.fn.line("$")
+		if l < 1 then
+			l = 1
+		end
+		if l > l_max then
+			l = l_max
+		end
+		vim.cmd("normal! " .. l .. "G")
+	end,
+})
 
 -- Command for "Where is This file?"
 vim.api.nvim_create_user_command("WT", "echo @%", {})
@@ -125,7 +171,7 @@ vim.keymap.set("n", "<Leader>m", ":<C-u>/ oldfiles<Home>browse filter /", {})
 
 -- Highlight zenkaku spaces
 -- ref. http://inari.hatenablog.com/entry/2014/05/05/231307
-vim.cmd [[
+vim.cmd([[
 function! ZenkakuSpace()
   highlight ZenkakuSpace cterm=reverse ctermfg=238 gui=reverse guifg=cyan
 endfunction
@@ -137,17 +183,17 @@ if has('syntax')
   augroup END
   call ZenkakuSpace()
 endif
-]]
+]])
 
 -- Reload command
 vim.api.nvim_create_user_command("Reload", ":source ~/.config/nvim/init.lua", {})
 
 -- Plugin Manager **Dein**
 if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/dein.vim") ~= 0 then
-  vim.cmd "source ~/.config/nvim/dein.vim"
+	vim.cmd("source ~/.config/nvim/dein.vim")
 end
 
 -- Local configuration
 if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/init-local.vim") ~= 0 then
-  vim.cmd "source ~/.config/nvim/init-local.vim"
+	vim.cmd("source ~/.config/nvim/init-local.vim")
 end
