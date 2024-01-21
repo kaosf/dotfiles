@@ -3,6 +3,13 @@ set vertical-split = horizontal
 # Copied default configuration from "etc/tigrc" and modified
 set main-view = line-number:no,interval=5 id:no date:no author:width=7 commit-title:yes,graph,refs,overflow=no
 
+# Why am I using
+# `bind main XX !bash -c "command | command2"`
+# instead of
+# `bind main XX !command | command2`
+# ?
+# Answer: I can't use a pipe here directly. ref. https://github.com/jonas/tig/issues/239
+
 bind main H view-help
 bind generic h scroll-left
 bind generic L view-log
@@ -34,7 +41,6 @@ bind main V ?git revert %(commit)
 bind diff V show-version
 bind stage V show-version
 bind generic W :!git reflog
-# ref. https://github.com/jonas/tig/issues/239
 bind main Y @bash -c "echo -n %(commit) | xsel -i -b"
 bind diff Y @bash -c "echo -n %(commit) | xsel -i -b"
 
