@@ -24,8 +24,8 @@ bind main B ?git rebase -i %(commit)
 bind diff B ?git rebase -i %(commit)
 bind main M ?git reset --hard %(commit)
 bind diff M ?git reset --hard %(commit)
-bind main O @hub browse -- commit/%(commit)
-bind diff O @hub browse -- commit/%(commit)
+bind main O @gh browse %(commit)
+bind diff O @gh browse %(commit)
 bind main p none
 bind main pp view-pager
 bind main pu ?bash -c "set -x; git push origin HEAD -u"
