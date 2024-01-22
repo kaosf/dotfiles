@@ -94,6 +94,14 @@ nnoremap <silent> gl :call <SID>movewinright()<CR>
 ]])
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "lua" },
+	callback = function()
+		vim.opt.expandtab = false
+		vim.opt.tabstop = 4
+		vim.opt.shiftwidth = 4
+	end,
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "json" },
 	callback = function()
 		vim.opt_local.conceallevel = 0
