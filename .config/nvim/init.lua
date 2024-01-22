@@ -197,3 +197,6 @@ end
 if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/init-local.vim") ~= 0 then
 	vim.cmd("source ~/.config/nvim/init-local.vim")
 end
+if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/lua/init-local.lua") ~= 0 then
+	require("init-local")
+end
