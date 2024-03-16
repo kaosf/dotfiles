@@ -42,7 +42,7 @@ To be supposed that `~/.bin` is included in `$PATH`.
 ```sh
 cd && mkdir -p ~/.bin && wget -qO- https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz | tar zxf - && ln -sf $PWD/nvim-linux64/bin/nvim ~/.bin/nvim
 
-mkdir -p ~/.config/nvim && wget -qO ~/.config/nvim/init.vim https://raw.githubusercontent.com/kaosf/dotfiles/main/.config/nvim/init.vim
+mkdir -p ~/.config/nvim && wget -qO ~/.config/nvim/init.lua https://raw.githubusercontent.com/kaosf/dotfiles/main/.config/nvim/init.lua
 ```
 
 ### For other users
