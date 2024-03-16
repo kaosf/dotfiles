@@ -45,6 +45,15 @@ cd && mkdir -p ~/.bin && wget -qO- https://github.com/neovim/neovim/releases/lat
 mkdir -p ~/.config/nvim && wget -qO ~/.config/nvim/init.lua https://raw.githubusercontent.com/kaosf/dotfiles/main/.config/nvim/init.lua
 ```
 
+Optional
+
+```sh
+cat <<'EOF' >> ~/.bashrc
+export PATH=$HOME/.bin/:$PATH
+alias v=nvim
+EOF
+```
+
 ### For other users
 
 ```sh
