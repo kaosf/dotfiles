@@ -55,4 +55,12 @@
     "command": "acceptSelectedSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
+  {"key": "ctrl+f", "command": "cursorRight",
+                       "when": "terminalFocus"},
+  {"key": "ctrl+e", "command": "workbench.action.quickOpen",
+                       "when": "!terminalFocus"},
+  {"key": "ctrl+e", "command": "-workbench.action.quickOpen"},
+  {"key": "ctrl+p", "command": "workbench.action.quickOpen",
+                       "when": "!terminalFocus"},
+  {"key": "ctrl+p", "command": "-workbench.action.quickOpen"},
 ]
