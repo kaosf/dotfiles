@@ -63,4 +63,8 @@
   {"key": "ctrl+p", "command": "workbench.action.quickOpen",
                        "when": "!terminalFocus"},
   {"key": "ctrl+p", "command": "-workbench.action.quickOpen"},
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  },
 ]
