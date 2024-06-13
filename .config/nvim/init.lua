@@ -3,6 +3,7 @@ if vim.fn.has("syntax") then
 end
 
 vim.cmd("set t_Co=256")
+vim.cmd("colorscheme vim")
 vim.opt.relativenumber = true
 vim.opt.showcmd = true
 vim.opt.virtualedit = "all"
