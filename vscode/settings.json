@@ -45,8 +45,8 @@
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "trailing",
-  "scrolloff.alwaysCenter": false, // ref. https://marketplace.visualstudio.com/items?itemName=tickleforce.scrolloff
-  "scrolloff.scrolloff": 9,
+  // "scrolloff.alwaysCenter": false, // ref. https://marketplace.visualstudio.com/items?itemName=tickleforce.scrolloff
+  // "scrolloff.scrolloff": 9,
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.vscode-vimrc",
   "vim.useCtrlKeys": false,
