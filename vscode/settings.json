@@ -107,4 +107,5 @@
   "markdown.marp.themes": [
     "https://raw.githubusercontent.com/rnd195/my-marp-themes/main/beamer.css"
   ],
+  "workbench.colorTheme": "Spinel",
 }
