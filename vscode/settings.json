@@ -97,7 +97,7 @@
   ],
   "cSpell.ignoreRegExpList": [
     "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+",
-    "nostr", "npub", "nsec",
+    "esbenp", "marp", "nostr", "rubocop", "vimrc",
   ],
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
