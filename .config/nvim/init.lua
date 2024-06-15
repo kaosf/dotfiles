@@ -4,7 +4,6 @@ end
 
 vim.cmd("set t_Co=256")
 vim.cmd("colorscheme vim")
-vim.opt.relativenumber = true
 vim.opt.showcmd = true
 vim.opt.virtualedit = "all"
 vim.opt.wrap = false
