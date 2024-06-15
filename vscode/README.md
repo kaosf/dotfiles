@@ -25,5 +25,7 @@ cp settings.json ~/.config/Code/User/settings.json
 - yoavbls.pretty-ts-errors
 - rust-lang.rust-analyzer
 - gracefulpotato.rbs-syntax
+- marp-team.marp-vscode
+- tickleforce.scrolloff
 
 `xclip` package is needed for `vscode-open-in-github`.

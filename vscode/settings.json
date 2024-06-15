@@ -45,6 +45,8 @@
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "trailing",
+  "scrolloff.alwaysCenter": false, // ref. https://marketplace.visualstudio.com/items?itemName=tickleforce.scrolloff
+  "scrolloff.scrolloff": 9,
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.vscode-vimrc",
   "vim.useCtrlKeys": false,
@@ -96,5 +98,13 @@
   "cSpell.ignoreRegExpList": [
     "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+",
     "nostr", "npub", "nsec",
-  ]
+  ],
+  "redhat.telemetry.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "markdown.marp.themes": [
+    "https://raw.githubusercontent.com/rnd195/my-marp-themes/main/beamer.css"
+  ],
 }
