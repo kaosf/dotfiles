@@ -55,7 +55,7 @@
     "<C-S-l>": true, // ref. https://gist.github.com/SiddharthaSarma/221f76c873fa44a3038396c5fd7a4ecd
     "<C-v>": true
   },
-  "deno.enable": true,
+  // "deno.enable": true,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
