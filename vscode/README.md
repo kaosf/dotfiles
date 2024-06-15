@@ -14,7 +14,6 @@ cp settings.json ~/.config/Code/User/settings.json
 - ziyasal.vscode-open-in-github
 - ms-azuretools.vscode-docker
 - zxh404.vscode-proto3
-- rebornix.ruby
 - kaiwood.endwise
 - bung87.vscode-gemfile
 - bung87.rails
@@ -27,5 +26,6 @@ cp settings.json ~/.config/Code/User/settings.json
 - gracefulpotato.rbs-syntax
 - marp-team.marp-vscode
 - tickleforce.scrolloff
+- shopify.ruby-extensions-pack
 
 `xclip` package is needed for `vscode-open-in-github`.

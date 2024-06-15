@@ -20,20 +20,19 @@
     "editor.formatOnSave": true
   },
   "[ruby]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnType": true, // default true
+    "editor.insertSpaces": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.semanticHighlighting.enabled": true,
+    "editor.tabSize": 2
   },
-  "ruby.intellisense": "rubyLocate",
-  "ruby.useBundler": false, //run non-lint commands with bundle exec
-  "ruby.useLanguageServer": true, // use the internal language server (see below)
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": false // enable rubocop via bundler
-    },
-    "reek": {
-      "useBundler": false // enable reek via bundler
-    }
-  },
-  "ruby.format": "rubocop", // use rubocop for formatting
   "[makefile]": {
     "editor.insertSpaces": false,
     "editor.detectIndentation": false
