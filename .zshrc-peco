@@ -28,3 +28,10 @@ peco-select-history () {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+pecokill () {
+  print -z "kill $(ps aux | peco --query "$LBUFFER" | awk '{ print $2 }' | paste -s -d " ")"
+}
+pecokill9 () {
+  print -z "kill -9 $(ps aux | peco --query "$LBUFFER" | awk '{ print $2 }' | paste -s -d " ")"
+}
