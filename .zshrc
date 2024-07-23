@@ -102,6 +102,25 @@ else
   alias codezshhistory="echo No VSCode"
 fi
 
+if [ -f $HOME/.asdf/asdf.sh ]; then
+  . $HOME/.asdf/asdf.sh
+  fpath=(${ASDF_DIR}/completions $fpath)
+  #autoload -Uz compinit && compinit
+  # Too much time to run this. Run `compinit` manually on using asdf.
+fi
+
+# Antigen
+# Install by
+# curl -L git.io/antigen > ~/.antigen.zsh
+# ref. https://antigen.sharats.me/
+# 3fc9472388232ecb7cf2c6d28f06109d857afa1c1897ce1bbeed40aced6e6518  ~/.antigen.zsh
+if [ -f $HOME/.antigen.zsh ]; then
+  source $HOME/.antigen.zsh
+  # ref. https://github.com/zsh-users/zsh-autosuggestions
+  antigen bundle zsh-users/zsh-autosuggestions
+  antigen apply
+fi
+
 # For profile
 #if (which zprof > /dev/null 2>&1) ;then
 #  zprof
@@ -111,10 +130,3 @@ fi
 #zmodload zsh/zprof && zprof
 #
 # ref. https://qiita.com/vintersnow/items/7343b9bf60ea468a4180
-
-if [ -f $HOME/.asdf/asdf.sh ]; then
-  . $HOME/.asdf/asdf.sh
-  fpath=(${ASDF_DIR}/completions $fpath)
-  #autoload -Uz compinit && compinit
-  # Too much time to run this. Run `compinit` manually on using asdf.
-fi
