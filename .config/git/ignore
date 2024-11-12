@@ -1,8 +1,5 @@
-/.solargraph.yml
-
-### Temporary files ###
+### Temporary files/directories ###
 # ref. http://qiita.com/uasi/items/cedae627b7596a837c57
-/,*
 ,*
 
 ### Jenkins private configurations ###
@@ -14,13 +11,11 @@
 
 ### Bundler ###
 # ref. http://bundler.io/v1.7/bundle_install.html
+/.bundle
 /vendor/bundle
 
 ### rbenv ###
 .ruby-version
-
-### rbenv-binstubs ###
-/.bundle
 
 ### nodenv ###
 .node-version
