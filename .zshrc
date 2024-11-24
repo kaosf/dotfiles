@@ -70,7 +70,10 @@ if type ccat > /dev/null 2>&1; then alias cat=ccat; fi
 
 # 'cd ..' with C-u
 # ref. https://github.com/takeshik/configurations/commit/5a0b93462266c696a43cd4e32da5008987afb5cf#zsh/zshrc
-cdup() { echo; cd ..; zle reset-prompt; }
+# Silent style `cdup`
+# cdup() { echo; cd ..; zle reset-prompt; }
+# Explicit style `cdup`
+cdup() { BUFFER="cd .."; zle accept-line; }
 zle -N cdup
 bindkey "^u" cdup
 
