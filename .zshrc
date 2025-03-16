@@ -112,15 +112,17 @@ if [ -f $HOME/.asdf/asdf.sh ]; then
   # Too much time to run this. Run `compinit` manually on using asdf.
 fi
 
-# Antigen
-# Install by
-# curl -L git.io/antigen > ~/.antigen.zsh
-# ref. https://antigen.sharats.me/
-if [ -f $HOME/.antigen.zsh ] && sha256sum --quiet -c <(echo '3fc9472388232ecb7cf2c6d28f06109d857afa1c1897ce1bbeed40aced6e6518  '$HOME'/.antigen.zsh'); then
-  source $HOME/.antigen.zsh
-  # ref. https://github.com/zsh-users/zsh-autosuggestions
-  antigen bundle zsh-users/zsh-autosuggestions
-  antigen apply
+if [ -z $ANTIGEN_DISABLE ]; then
+  # Antigen
+  # Install by
+  # curl -L git.io/antigen > ~/.antigen.zsh
+  # ref. https://antigen.sharats.me/
+  if [ -f $HOME/.antigen.zsh ] && sha256sum --quiet -c <(echo '3fc9472388232ecb7cf2c6d28f06109d857afa1c1897ce1bbeed40aced6e6518  '$HOME'/.antigen.zsh'); then
+    source $HOME/.antigen.zsh
+    # ref. https://github.com/zsh-users/zsh-autosuggestions
+    antigen bundle zsh-users/zsh-autosuggestions
+    antigen apply
+  fi
 fi
 
 # For profile
