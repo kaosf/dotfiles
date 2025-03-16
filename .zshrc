@@ -82,9 +82,6 @@ if [ -f $HOME/.cdd-source ]; then
   chpwd() { _cdd_chpwd }
 fi
 
-[ -f ~/.zshrc-local ] && . ~/.zshrc-local
-[ -f ~/.aliases-local ] && . ~/.aliases-local
-
 alias ismac='which sw_vers > /dev/null 2>&1'
 ! ismac && [ -f ~/.zshrc-warnings ] && . ~/.zshrc-warnings
 
@@ -124,6 +121,9 @@ if [ -z $ANTIGEN_DISABLE ]; then
     antigen apply
   fi
 fi
+
+[ -f ~/.zshrc-local ] && . ~/.zshrc-local
+[ -f ~/.aliases-local ] && . ~/.aliases-local
 
 # For profile
 #if (which zprof > /dev/null 2>&1) ;then
