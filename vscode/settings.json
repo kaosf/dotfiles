@@ -1,3 +1,5 @@
+// vim: filetype=jsonc
+// NOTE: trailing comma doesn't satisfy the JSONC specification.
 {
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
