@@ -116,8 +116,7 @@ fi
 # Install by
 # curl -L git.io/antigen > ~/.antigen.zsh
 # ref. https://antigen.sharats.me/
-# 3fc9472388232ecb7cf2c6d28f06109d857afa1c1897ce1bbeed40aced6e6518  ~/.antigen.zsh
-if [ -f $HOME/.antigen.zsh ]; then
+if [ -f $HOME/.antigen.zsh ] && sha256sum --quiet -c <(echo '3fc9472388232ecb7cf2c6d28f06109d857afa1c1897ce1bbeed40aced6e6518  '$HOME'/.antigen.zsh'); then
   source $HOME/.antigen.zsh
   # ref. https://github.com/zsh-users/zsh-autosuggestions
   antigen bundle zsh-users/zsh-autosuggestions
