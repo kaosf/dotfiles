@@ -86,6 +86,8 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
 }
+-- Enable to override the layouts order.
+pcall(dofile, os.getenv("HOME") .. "/.config/awesome/layouts.override.lua")
 -- }}}
 
 -- {{{ Helper functions
