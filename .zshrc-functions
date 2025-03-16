@@ -78,8 +78,3 @@ gpom() {
     git push origin main $@
   fi
 }
-
-vanilla-prompt() {
-  PROMPT="$ "
-  cd() { builtin cd }
-}
