@@ -51,11 +51,6 @@ if [ ! -s $HOME/.emacs.d/packages.el ]; then
   ln -sf $PWD/.emacs.d_packages.el $HOME/.emacs.d/packages.el
 fi
 
-mkdir -p $HOME/.lein
-if [ ! -f $HOME/.lein/profiles.clj ]; then
-  cp $PWD/.lein_profiles.clj $HOME/.lein/profiles.clj
-fi
-
 mkdir -p $HOME/.w3m
 if [ ! -s $HOME/.w3m/keymap ]; then
   ln -sf $PWD/.w3m/keymap $HOME/.w3m/keymap

@@ -8,8 +8,6 @@
 ./x-setup # for X (e.g. Desktop Edition, VNC Server)
 ```
 
-`~/.lein/profiles.clj` is created as a copy. Modify it after `./setup` command.
-
 `~/.xmodmap` and `/.xmodmap-revert` are not created as a symlink.
 
 ### Simple `.bashrc` or `.bash_profile` and `.tmux.conf` setup
