@@ -37,3 +37,5 @@ peco-select-history() {
   READLINE_POINT=${#l}
 }
 bind -x '"\C-r": peco-select-history'
+
+[ -f $HOME/.bashrc-local ] && . $HOME/.bashrc-local
