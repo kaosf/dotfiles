@@ -110,4 +110,6 @@
   ],
   "makefile.configureOnOpen": true,
   "workbench.colorTheme": "Spinel",
+
+  "editor.experimentalEditContextEnabled": false,
 }
