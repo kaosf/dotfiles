@@ -102,12 +102,13 @@ else
   alias codezshhistory="echo No VSCode"
 fi
 
-if [ -f $HOME/.asdf/asdf.sh ]; then
-  . $HOME/.asdf/asdf.sh
-  fpath=(${ASDF_DIR}/completions $fpath)
-  #autoload -Uz compinit && compinit
-  # Too much time to run this. Run `compinit` manually on using asdf.
-fi
+#export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+asdfcompletions() {
+  fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+  autoload -Uz compinit && compinit
+  # Too much time to run this. Run `asdfcompletions` manually on using asdf.
+}
 
 if [ -z $ANTIGEN_DISABLE ]; then
   # Antigen
