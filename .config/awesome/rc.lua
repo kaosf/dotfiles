@@ -241,6 +241,10 @@ awful.screen.connect_for_each_screen(function(s)
             s.mylayoutbox,
         },
     }
+
+    if s.index == 2 then
+        wibox.widget.systray():set_screen(s)
+    end
 end)
 -- }}}
 
