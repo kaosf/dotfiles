@@ -111,5 +111,8 @@
   "makefile.configureOnOpen": true,
   "workbench.colorTheme": "Spinel",
 
+  // Prevent the Vim extension crush on inputting Japanese
   "editor.experimentalEditContextEnabled": false,
+  // Remove `experimental` for after 1.102.0
+  "editor.editContext": false,
 }
