@@ -54,6 +54,7 @@ call dein#add('thinca/vim-quickrun') " Run program
 call dein#add('Shougo/neosnippet.vim') " neosnippet
 call dein#add('Shougo/deoplete.nvim') " For neosnippet
 call dein#add('Shougo/neosnippet-snippets') " some default snippets
+call dein#add('kyoh86/vim-jsonl')
 
 " ddu plugins
 " ref. https://github.com/Shougo/ddu.vim

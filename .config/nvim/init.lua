@@ -100,7 +100,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "json" },
+	pattern = { "json", "jsonl" },
 	callback = function()
 		vim.opt_local.conceallevel = 0
 	end,
