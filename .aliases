@@ -25,7 +25,8 @@ alias df='df -Th'
 alias google='w3m https://www.google.co.jp'
 
 # Ruby
-alias bclpvb='bundle config --local path vendor/bundle'
+alias bclpvb='echo Use "bcslpv"; bundle config --local path vendor/bundle'
+alias bcslpvb='bundle config set --local path vendor/bundle'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bi-pvb='echo deprecated! Use "bclpvb" for "bundle config --local path vendor/bundle"'
