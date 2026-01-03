@@ -73,6 +73,10 @@ call dein#add('lambdalisue/mr.vim') " For mr feature (data is stored in ~/.cache
 call dein#add('kuuote/ddu-source-mr') " For `Ddu mr`
 call dein#add('shun/ddu-source-buffer') " For `Ddu buffer`
 
+if filereadable($HOME . "/.config/nvim/dein-local.vim")
+  source ~/.config/nvim/dein-local.vim
+endif
+
 """" Added by ka END
 
 " Finish dein initialization (required)
