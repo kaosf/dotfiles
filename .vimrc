@@ -645,7 +645,7 @@ endif
 """" Highlight zenkaku spaces
 " ref. http://inari.hatenablog.com/entry/2014/05/05/231307
 function! ZenkakuSpace()
-  highlight ZenkakuSpace cterm=reverse ctermfg=238 gui=reverse guifg=cyan
+  highlight ZenkakuSpace cterm=reverse ctermfg=238 gui=reverse guifg=grey33
 endfunction
 if has('syntax')
   augroup ZenkakuSpace

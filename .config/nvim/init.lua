@@ -187,7 +187,7 @@ vim.keymap.set("n", "<Leader>m", ":<C-u>/ oldfiles<Home>browse filter /", {})
 -- ref. http://inari.hatenablog.com/entry/2014/05/05/231307
 vim.cmd([[
 function! ZenkakuSpace()
-  highlight ZenkakuSpace cterm=reverse ctermfg=238 gui=reverse guifg=cyan
+  highlight ZenkakuSpace cterm=reverse ctermfg=238 gui=reverse guifg=grey20
 endfunction
 if has('syntax')
   augroup ZenkakuSpace
