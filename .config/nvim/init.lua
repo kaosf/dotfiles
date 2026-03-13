@@ -207,6 +207,9 @@ vim.api.nvim_create_user_command("Reload", ":source ~/.config/nvim/init.lua", {}
 if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/dein.vim") ~= 0 then
 	vim.cmd("source ~/.config/nvim/dein.vim")
 end
+if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/lua/dein-config.lua") ~= 0 then
+	require("dein-config")
+end
 
 -- Local configuration
 if vim.fn.filereadable(vim.env.HOME .. "/.config/nvim/init-local.vim") ~= 0 then

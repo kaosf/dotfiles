@@ -26,9 +26,11 @@ if [ ! -s $HOME/.config/git/ignore ]; then
 fi
 
 mkdir -p $HOME/.config/nvim
+mkdir -p $HOME/.config/nvim/lua
 for i in \
   .config/nvim/init.lua \
   .config/nvim/dein.vim \
+  .config/nvim/lua/dein-config.lua \
   .config/nvim/neosnippet.vim \
   .config/nvim/ddu.vim \
 ; do
@@ -36,7 +38,6 @@ for i in \
     ln -sf $PWD/$i $HOME/$i
   fi
 done
-mkdir -p $HOME/.config/nvim/lua
 
 mkdir -p $HOME/.docker
 if [ ! -f $HOME/.docker/config.json ]; then
