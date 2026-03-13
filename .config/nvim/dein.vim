@@ -41,7 +41,6 @@ call dein#add(s:dein_src)
 "call dein#add('Shougo/neosnippet-snippets')
 
 """" Added by ka
-call dein#add('scrooloose/nerdtree') " File manager
 call dein#add('kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}) " Totsuzen no shi!!!!
 call dein#add('tyru/caw.vim') " Toggle comment out by C-/
 call dein#add('Shougo/neomru.vim') " MRU (Most Recently Used)
@@ -100,14 +99,6 @@ command DeinUpdate call dein#update()<CR>
 command DeinRecache call dein#recache_runtimepath()<CR>
 
 """" My configurations for some plugins
-
-"" NERDTree
-" ref. http://vim.1045645.n5.nabble.com/NERDTree-plugin-side-bar-width-td3747483.html
-let g:NERDTreeWinSize=20
-" Show hidden files
-let NERDTreeShowHidden=1
-" Shortcut for NERDTree command
-nnoremap <silent> <leader>f :NERDTreeFocus<CR>
 
 "" caw.vim
 nmap <C-_> <Plug>(caw:hatpos:toggle)
