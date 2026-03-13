@@ -110,6 +110,11 @@ asdfcompletions() {
   # Too much time to run this. Run `asdfcompletions` manually on using asdf.
 }
 
+# Enable direnv
+if which direnv > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 if [ -z $ANTIGEN_DISABLE ]; then
   # Antigen
   # Install by
