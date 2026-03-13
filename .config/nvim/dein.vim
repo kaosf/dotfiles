@@ -42,6 +42,7 @@ call dein#add(s:dein_src)
 
 """" Added by ka
 call dein#add('nvim-mini/mini.files') " File manager
+call dein#add('sphamba/smear-cursor.nvim') " Animated cursor in all terminals
 call dein#add('kaosf/vim-sudden-death', {'rev': 'remove-linebreaks'}) " Totsuzen no shi!!!!
 call dein#add('tyru/caw.vim') " Toggle comment out by C-/
 call dein#add('Shougo/neomru.vim') " MRU (Most Recently Used)
