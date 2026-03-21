@@ -675,7 +675,7 @@ end
 
 -- My configurations (autostart)
 awful.util.spawn_with_shell("pgrep nm-applet || nm-applet")
-awful.util.spawn_with_shell("pgrep ibus-daemon || ibus-daemon -drx")
+awful.util.spawn_with_shell("pgrep fcitx5 || fcitx5 -d")
 -- ref. ibus-daemon -drx https://wiki.archlinux.org/index.php/IBus
 --awful.util.spawn_with_shell("pgrep gnome-terminal > /dev/null || gnome-terminal &")
 --awful.util.spawn_with_shell("pgrep xcompmgr > /dev/null || xcompmgr &")
