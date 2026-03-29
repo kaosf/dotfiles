@@ -2,6 +2,7 @@
   "Keymap": {
     "C-j": "peco.Finish",
     "C-k": "peco.KillEndOfLine",
-    "C-l": "peco.DeleteAll"
+    "C-l": "peco.DeleteAll",
+    "C-i": "peco.ToggleSelectionAndSelectNext"
   }
 }
