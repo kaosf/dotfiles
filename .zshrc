@@ -125,6 +125,8 @@ if [ -z $ANTIGEN_DISABLE ]; then
     # ref. https://github.com/zsh-users/zsh-autosuggestions
     antigen bundle zsh-users/zsh-autosuggestions
     antigen apply
+    # ref. https://github.com/zsh-users/zsh-completions#using-zsh-frameworks
+    antigen bundle zsh-users/zsh-completions
   fi
 fi
 
