@@ -410,9 +410,12 @@ globalkeys = gears.table.join(
     awful.key({}, "Hiragana_Katakana", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"})
     ,
-    awful.key({}, "F4", function () awful.util.spawn("awesome-my-command f4", false) end),
+    -- awful.key({}, "F4", function () awful.util.spawn("awesome-my-command f4", false) end),
+    -- awful.key({}, "F5", function () awful.util.spawn("awesome-my-command f5", false) end),
+    -- awful.key({}, "F6", function () awful.util.spawn("awesome-my-command f6", false) end),
     awful.key({}, "F7", function () awful.util.spawn("awesome-my-command f7", false) end),
     awful.key({}, "F8", function () awful.util.spawn("awesome-my-command f8", false) end)
+    -- awful.key({}, "F9", function () awful.util.spawn("awesome-my-command f9", false) end),
 )
 
 clientkeys = gears.table.join(
